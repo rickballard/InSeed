@@ -3,7 +3,6 @@
     <stop stop-color="#1b1464"/><stop offset="1" stop-color="#03a9f4"/>
   </linearGradient></defs>
   <rect width="1200" height="630" fill="url(#g)"/>
-  <text x="60" y="210" fill="white" font-size="70" font-family="Segoe UI, Arial, sans-serif" font-weight="700">InSeed</text>
-  <text x="60" y="280" fill="#cfe8ff" font-size="32" font-family="Segoe UI, Arial, sans-serif">Purpose-led consulting for human+AI orgs</text>
-  <text x="60" y="370" fill="white" font-size="26" font-family="Segoe UI, Arial, sans-serif">Weekly cadence · Congruence scaffolding · Zero-to-one</text>
+  <text x="60" y="210" fill="white" font-size="70" font-family="Segoe UI, Arial" font-weight="700">InSeed</text>
+  <text x="60" y="280" fill="#cfe8ff" font-size="30" font-family="Segoe UI, Arial">Purpose-led consulting for human+AI orgs</text>
 </svg>
