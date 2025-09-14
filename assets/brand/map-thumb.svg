@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="w" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#e9f2ff"/><stop offset="1" stop-color="#cfe6ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#w)"/>
+  <rect x="0" y="180" width="640" height="180" fill="#8fb6ff" />
+  <text x="20" y="40" font-family="Segoe UI,Arial" font-size="20" fill="#334">Mississauga — Lakeshore W (approx.)</text>
+  <circle cx="380" cy="210" r="6" fill="#f33"/>
+</svg>
