@@ -1,4 +1,4 @@
-
+﻿
 param(
   [Parameter()][string]$Repo = ".",
   [Parameter()][string]$Hero = "assets/InSeed_Hero.png",
@@ -175,3 +175,4 @@ jobs:
 
 Write-Host "InSeed Polish applied locally. Next: commit + push + open PR (squash preferred)."
 Pop-Location
+
