@@ -1,12 +1,7 @@
-## Why
-(Problem / context)
-
-## What
-(Small, reversible change; link issues/ADRs)
-
-## How to verify
-(steps / screenshots)
-
-## Ops
-- [ ] Update \docs/ops/OPERATING_LOG.md\ if meaningful
-- [ ] Rollback plan noted if risky
+# PR Checklist
+- [ ] Hero banner wired (`<!-- HERO:BEGIN -->` block present)
+- [ ] ODT text merged if applicable (`<!-- ODT:BEGIN -->` block)
+- [ ] README badges present and current (`<!-- BADGES:BEGIN -->` block)
+- [ ] Repo Smoke passes locally (`tools/Repo-Smoke.ps1`)
+- [ ] Assets manifest updated (`docs/assets/manifest.json`)
+- [ ] BPOE SESSION_STATUS updated
