@@ -9,3 +9,4 @@ _A rolling breadcrumb trail. Add short entries with timestamp → what/why/where
 - 2025-09-14 14:22:19 -04:00 — Day start: TLS monitor + polish backlog queued.
 - 2025-09-14 17:27:11 -04:00 — Replaced contact map with updated InSeedMap.png.
 - 2025-09-14 17:41:36 -04:00 — Replaced contact map with updated InSeedMap.png.
+- 2025-09-14 23:26:25 -04:00 — Site content promoted from 'site/content-pass-2' to main; deployment verified by marker.
