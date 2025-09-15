@@ -88,7 +88,8 @@ jobs:
           ./tools/Repo-Smoke.ps1 -Repo .
 "@ | Set-Content -Path (Join-Path $wfDir "readme-smoke.yml") -Encoding UTF8
 
-@"
+@'
+
 name: safety-gate
 on:
   pull_request:
@@ -114,7 +115,8 @@ jobs:
           path: .
           base: ${{ github.event.pull_request.base.sha }}
           head: ${{ github.sha }}
-"@ | Set-Content -Path (Join-Path $wfDir "safety-gate.yml") -Encoding UTF8
+
+'@ | Set-Content -Path (Join-Path $wfDir "safety-gate.yml") -Encoding UTF8
 
 @"
 name: self-evolve
