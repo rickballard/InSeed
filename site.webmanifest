@@ -1,0 +1,20 @@
+﻿{
+  "name": "InSeed",
+  "short_name": "InSeed",
+  "start_url": "/InSeed/",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    {
+        "type":  "image/x-icon",
+        "sizes":  "48x48",
+        "src":  "assets/icons/CatEye.ico"
+    },
+    {
+        "type":  "image/x-icon",
+        "sizes":  "48x48",
+        "src":  "assets/icons/RickPublic_Logo_on_Clear.ico"
+    }
+]
+}

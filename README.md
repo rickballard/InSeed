@@ -1,4 +1,15 @@
-﻿
+﻿<!-- BPOE:STATUS-BADGES BEGIN -->
+### Workflow Health
+
+Main:
+[![smoke](https://github.com/rickballard/InSeed/actions/workflows/smoke.yml/badge.svg)](https://github.com/rickballard/InSeed/actions/workflows/smoke.yml)
+[![safety-gate](https://github.com/rickballard/InSeed/actions/workflows/safety-gate.yml/badge.svg)](https://github.com/rickballard/InSeed/actions/workflows/safety-gate.yml)
+[![self-evolve](https://github.com/rickballard/InSeed/actions/workflows/self-evolve.yml/badge.svg)](https://github.com/rickballard/InSeed/actions/workflows/self-evolve.yml)
+
+Feature branch (temporary):
+[![smoke@polish/bpoe-centralize-20250915](https://github.com/rickballard/InSeed/actions/workflows/smoke.yml/badge.svg?branch=polish/bpoe-centralize-20250915)](https://github.com/rickballard/InSeed/actions/workflows/smoke.yml?query=branch%3Apolish%2Fbpoe-centralize-20250915)
+<!-- BPOE:STATUS-BADGES END -->
+
 # InSeed Polish Autopilot Kit
 
 Zero‑touch helpers to wire a hero image, harden READMEs, maintain an assets manifest,
@@ -30,4 +41,5 @@ If the hero image exists it’s wired into README. ODT text block is optional an
 - If enabled, commits are signed by `github-actions[bot]` with message prefix `auto:`.
 
 Generated: 2025-09-15T19:46:14.925019
+
 
