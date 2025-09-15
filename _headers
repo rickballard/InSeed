@@ -1,0 +1,6 @@
+﻿# Caching & content-types
+/assets/* 
+  Cache-Control: public, max-age=31536000, immutable
+
+/site.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
