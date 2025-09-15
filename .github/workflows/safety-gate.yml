@@ -1,0 +1,7 @@
+﻿name: safety-gate
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  call:
+    uses: rickballard/CoCache/.github/workflows/bpoe-safety-gate.yml@main
