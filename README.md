@@ -1,4 +1,4 @@
-
+﻿
 # InSeed Polish Autopilot Kit
 
 Zero‑touch helpers to wire a hero image, harden READMEs, maintain an assets manifest,
@@ -30,3 +30,4 @@ If the hero image exists it’s wired into README. ODT text block is optional an
 - If enabled, commits are signed by `github-actions[bot]` with message prefix `auto:`.
 
 Generated: 2025-09-15T19:46:14.925019
+
