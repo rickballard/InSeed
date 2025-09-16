@@ -1,7 +1,7 @@
-﻿name: safety-gate
+name: safety-gate
 on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
   call:
-    uses: rickballard/CoCache/.github/workflows/bpoe-safety-gate.yml@main
+    uses: rickballard/CoCache/.github/workflows/bpoe-safety-gate.yml@ae447f5a3f542798bd1ac3ba5c6112d7521550b5
