@@ -1,20 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rickballard.github.io/InSeed/.github/pull_request_template.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/docs/bpoe/SESSION_STATUS.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/docs/ops/BPOE.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/docs/ops/DECISIONS.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/docs/ops/OPERATING_LOG.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/docs/ops/TODO.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250914-145643.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250914-171122.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250914-215057.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250914-221149.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250914-235102.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250915-000816.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250915-114014.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250915-121944.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/index.html.bak-20250915-134535.html</loc></url>
-  <url><loc>https://rickballard.github.io/InSeed/README.html</loc></url>
+  <url><loc>https://inseed.com/</loc></url>
+  <url><loc>https://inseed.com/contact.html</loc></url>
 </urlset>

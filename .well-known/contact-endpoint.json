@@ -2,9 +2,13 @@
     "endpoint":  "https://your-worker.workers.dev",
     "to":  "rballard@InSeed.com",
     "allow":  [
-                  "https://rickballard.github.io",
                   "https://inseed.com",
-                  "https://groupbuild.org"
+                  "https://groupbuild.org",
+                  "https://entment.com",
+                  "https://cocivium.org",
+                  "https://rickpublic.com",
+                  "https://godspawn.com",
+                  "https://rickballard.github.io"
               ],
     "captcha":  {
                     "turnstile_sitekey":  ""

@@ -1,3 +1,4 @@
 ﻿User-agent: *
 Allow: /
-Sitemap: https://rickballard.github.io/InSeed/sitemap.xml
+Sitemap: https://inseed.com/sitemap.xml
+
