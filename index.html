@@ -1,266 +1,94 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- InSeedLayoutFix -->
-<style>
-  blockquote.quote{margin:0; padding:0;}
-  #opening-quote{max-width: 900px; margin: 32px auto 12px !important;}
-  #opening-quote .quote{display:block; font-size:1.10rem; line-height:1.45}
-  #opening-quote .muted{display:block; margin-top:8px}
-  /* prevent fancy pseudo-quote bullets from pushing content left if present */
-  blockquote.quote::before, blockquote.quote::after{content:''; display:none;}
-</style>
-<!-- InSeedDarkPolish -->
-<style>
-@media (prefers-color-scheme: dark){
-  .card{ background: rgba(255,255,255,.06); backdrop-filter: blur(6px); }
-  .btn{ background: rgba(255,255,255,.10); color:#fff; border-color: rgba(255,255,255,.22) }
-}
-</style>
-<link rel="canonical" href="https://inseed.com/">
-<link rel="icon" href="/assets/favicons/favicon.ico">
-<meta property="og:image" content="/assets/og/og.svg">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="/assets/icons/favicon-48.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:site_name" content="InSeed">
+<meta property="og:type" content="website">
+<meta property="og:title" content="InSeed — AI interim executives & delivery bench">
+<meta property="og:description" content="We help hybrid (human+AI) teams ship real improvements with guardrails and visible outcomes.">
+<meta property="og:image" content="https://inseed.com/assets/hero.png">
 <meta name="twitter:card" content="summary_large_image">
-<!-- POLISH: start -->
-<style>
-:root{
-  --bg:#ffffff; --ink:#0c0c18; --muted:#6d7182; --line:#eaeaf0;
-  --brand:#1b1464; --brand-2:#03a9f4;
-  --radius:14px; --radius-lg:22px; --space: clamp(14px,1.8vw,20px);
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0b0d12; --ink:#eef0f3; --muted:#9aa2b2; --line:#1f2430 }
-  body{ background:var(--bg); color:var(--ink);}
-}
-body{background:var(--bg);color:var(--ink);line-height:1.65;
-     font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
-h1,h2{line-height:1.2} h2{margin:40px 0 12px} .muted{color:var(--muted)}
-.grid{display:grid;gap:var(--space);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:#fff}
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
-  background: radial-gradient(1200px 600px at 10% -10%, rgba(27,20,100,.12), transparent 60%),
-              linear-gradient(180deg, rgba(3,169,244,.06), transparent 40%);}
-.hero .wrap{display:flex;gap:24px;align-items:center;min-height:180px;padding:28px 16px}
-.badge{display:inline-block;font-weight:600;padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:#fff}
-.btn{display:inline-block;padding:12px 16px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;background:#fff}
-.btn.primary{background:var(--brand);color:#fff;border-color:transparent}
-.btn:hover{filter:brightness(.97)}
-blockquote.quote{margin:18px 0;padding:14px 16px;border-left:4px solid var(--brand);background:rgba(3,169,244,.06);border-radius:12px}
-footer{margin:56px 0 40px;color:var(--muted);text-align:center}
-.brand img{height:56px}
-</style>
-<meta property="og:image" content="/assets/og/og.svg">
-<meta property="twitter:image" content="/assets/og/og.svg">
-<meta name="twitter:card" content="summary_large_image">
-<!-- POLISH: end -->
-<title>InSeed — Purpose-led consulting for human+AI orgs</title>
-<meta name="description" content="InSeed helps teams ship clarity: weekly human+AI cadence, congruence scaffolding, and zero-to-one sprints.">
-<link rel="icon" href="/favicon.svg">
-<style>
-:root{--w:980px}
-*{box-sizing:border-box}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;margin:0;color:#101010;line-height:1.65;background:#fff}
-.banner{background:#e7f3ff;border-bottom:1px solid #b7d8ff;padding:8px 16px;text-align:center;font-weight:600}
-header{padding:20px 16px;border-bottom:1px solid #eee;background:#fafafa}
-.wrap{max-width:var(--w);margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between}
-.brand{display:flex;gap:12px;align-items:center}
-.brand img{height:56px}
-.brand h1{margin:0;font-size:clamp(24px,3vw,36px)}
-nav a{margin-left:12px;color:inherit;text-decoration:none}
-nav a:hover{text-decoration:underline}
-main{max-width:var(--w);margin:28px auto;padding:0 16px}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{border:1px solid #eee;border-radius:14px;padding:16px;background:#fff}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 0}
-.btn{padding:12px 16px;border:1px solid #ddd;border-radius:12px;text-decoration:none;color:inherit;background:#fff}
-.btn:hover{background:#f5f5f5}
-small.muted{color:#666}
-footer{margin:56px 0 40px;color:#666;text-align:center}
-</style>
+<link rel="stylesheet" href="/assets/css/base.css">
+<script>window.CONTACT_CONFIG=window.CONTACT_CONFIG||{endpoint:"",to:"rballard@InSeed.com",allow:[],turnstile_sitekey:""};</script>
+<script src="/assets/js/contact-embed.js" defer></script>
+<body>
+  <div class="container">
+    <nav class="top">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/icons/logo-nav.png" alt="InSeed"></a>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/problems/">Problems</a>
+      <a href="/solutions/">Solutions</a>
+      <a href="/value/">Value Prop</a>
+      <a href="/resources/">Resources</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+</nav>
+<div class="announce"><b>AI Interim Executives</b> — when you need senior AI operating talent now. <a class="btn-mini" href="/contact/">Talk to us</a></div>
+    
 
-<div class="banner">Draft · Work in progress</div>
-<header>
-  <div class="wrap">
-    <div class="brand"><img src="assets/brand/inseed-logo.png" alt="InSeed logo"></div>
-    <nav>
-      <a href="#offer">Offer</a>
-      <a href="#bio">Bio</a>
-      <a href="#thesis">Thesis</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-<section class="wrap" id="opening-quote" style="margin:26px 0 8px">
-  <blockquote class="quote" style="font-size:1.05rem">“Teams became hybrid (human+AI) because even our watches are AI. No more denial or avoidance, let’s make it work for us.”</blockquote>
-  <p class="muted" style="margin-top:6px">AI brings opportunities, and risks.</p>
-</section>
-<section class="wrap" id="why-inseed" style="margin-top:24px">
-  <div class="grid">
-    <div class="card"><strong>Reality check</strong><br><span class="muted">AI is already in your workstreams — formal or shadow. If it happened faster than planning cycles, you may need InSeed.</span></div>
-    <div class="card"><strong>Risk surface</strong><br><span class="muted">Anyone can change a system with one click or auto-pen deliverables. That imports existential risks, including “catastrophic obsolescence”. Guardrails beat denial.</span></div>
-    <div class="card"><strong>How we work</strong><br><span class="muted">Human-gate AIs. Weekly cadence. Reversible moves. Tools we develop stay open, auditable, and not vendor-captive.</span></div>
-  </div>
-</section>
-<section class="wrap" id="steps" style="margin-top:28px">
-  <h2>What we do</h2>
-  <div class="grid">
-    <div class="card"><strong>CoAudit</strong><br><span class="muted">Independent human+AI audit (one week). Live map of systems, data flows, risk vectors, and an urgency-ranked mitigation plan. Produces a neutral RFP — you are not tied to us.</span></div>
-    <div class="card"><strong>CoFlow</strong><br><span class="muted">Install a weekly cadence. Briefs to reviews to visible metrics. Policy-driven automation and self-governance scaffolding.</span></div>
-    <div class="card"><strong>CoMirror</strong><br><span class="muted">One-day leadership seminar. Reflection, role clarity, narrative+numbers ritual, and alignment for “hybrid, social, self-governance”.</span></div>
-  </div>
-</section>
-<section class="wrap" id="offer" style="margin-top:28px">
-  <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-    <div>
-      <strong>Our offer</strong><br>
-      <span class="muted">Invite us to frame the problem. If we inspire each other, you get a week of free work that drafts a structured requirements brief you can share with competitors. We ask to meet the winner to learn and perhaps partner.</span>
-    </div>
-    <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap">
-      <a class="btn primary" href="#contact">Start a conversation</a>
-      <a class="btn" href="https://github\.com/rickballard/CoCivium/blob/main/docs/public-profile\.md" target="_blank" rel="noopener">Read bio</a>
-    </div>
-  </div>
-</section>
-<section class="wrap" id="values" style="margin-top:28px">
-  <h2>Where we stand</h2>
-  <p class="muted">Steward mindset. Reversible changes. Transparent logs. Many of us are un-retired to fix a broken world — one organization at a time.</p>
-  <ul>
-    <li><a href="https://github.com/rickballard/CoCivium" target="_blank" rel="noopener">CoCivium</a> — No corruption. No coercion. No kings.</li>
-    <li>Founder links — <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://rickpublis.substack.com/" target="_blank" rel="noopener">Substack</a></li>
-  </ul>
-</section>
-<!-- InSeedContentFromODT -->
-<section class="wrap" id="opening-quote" style="margin:26px 0 8px">
-  <blockquote class="quote" style="font-size:1.05rem">
-    �Teams became hybrid (human+AI) because even our watches are AI. No more denial�let�s make it work for us.�
-  </blockquote>
-  <p class="muted" style="margin-top:6px">AI brings opportunities�and risks.</p>
-</section>
-<section class="wrap" id="why-inseed" style="margin-top:24px">
-  <div class="grid">
-    <div class="card"><strong>Reality check</strong><br><span class="muted">AI is already in your workstreams (formal or shadow). If it happened faster than the org plans, you may need InSeed.</span></div>
-    <div class="card"><strong>Risk surface</strong><br><span class="muted">From one-click changes to auto-penned deliverables, risks abound�including �catastrophic obsolescence.� Guardrails beat denial.</span></div>
-    <div class="card"><strong>How we work</strong><br><span class="muted">Human-gated AIs, weekly cadence, reversible moves. Tools we develop stay open, auditable, and not vendor-captive.</span></div>
-  </div>
-</section>
-<section class="wrap" id="steps" style="margin-top:28px">
-  <h2>What we do</h2>
-  <div class="grid">
-    <div class="card"><strong>CoAudit</strong><br><span class="muted">Independent human+AI audit (1 week). Live map of systems, data, risk vectors, and an urgency-ranked mitigation plan. Produces a neutral RFP�you�re not tied to us.</span></div>
-    <div class="card"><strong>CoFlow</strong><br><span class="muted">Install a weekly cadence (briefs ? reviews ? visible metrics). Policy-driven automation and self-governance scaffolding.</span></div>
-    <div class="card"><strong>CoMirror</strong><br><span class="muted">Leadership reflection & role clarity. Narrative+numbers ritual and �hybrid, social, self-governance� alignment.</span></div>
-  </div>
-</section>
-<section class="wrap" id="offer" style="margin-top:28px">
-  <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-    <div>
-      <strong>Our offer</strong><br>
-      <span class="muted">Invite us to frame the problem. If we inspire each other, you get a week of free work drafting a structured RFP you can share with competitors. We ask to meet the winner to learn�and perhaps partner.</span>
-    </div>
-    <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap">
-      
-      
-    </div>
-  </div>
-</section>
-<section class="wrap" id="values" style="margin-top:28px">
-  <h2>Where we stand</h2>
-  <p class="muted">Steward mindset. Reversible changes. Transparent logs. Many of us are �un-retired� to fix a broken world�one org at a time. Income follows integrity.</p>
-  <ul>
-    <li><a href="https://github.com/rickballard/CoCivium">CoCivium</a> � No corruption. No coercion. No kings.</li>
-    <li>Founder links � <a href="https://www.linkedin.com/">LinkedIn</a> � <a href="https://rickpublis.substack.com/">Substack</a></li>
-  </ul>
-</section>
-<section class="hero" id="hero">
-  <div class="wrap">
-    <div>
-      <div class="badge">Draft · Work in progress</div>
-      <h1 style="margin:10px 0 6px">InSeed — purpose-led consulting for human+AI orgs</h1>
-      <p class="muted" style="max-width:60ch">Weekly cadence, congruence scaffolding, and zero-to-one sprints that replace ticket-hell with signal.</p>
-      <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
-        
-        
+    <section class="section hero">
+      <div class="narrow">
+        <img class="resp" src="/assets/hero.png?v=4" alt="InSeed hero">
+        <p class="small" style="margin-top:.6rem">The banner already carries the quote; no duplicate text here.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h1 class="h1">Build better products and defaults, together</h1>
+        <p class="lead">We provide AI-enabled interim executives and a senior delivery bench so your org can move fast with guardrails and visible outcomes.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h2 class="h1">Three ways to start</h2>
+        <div class="packages">
+          <div class="pkg">
+            <h3>CoAudit</h3>
+            <p class="small">Rapid audit of product and process with a risk and opportunity map plus a 30-60-90 plan.</p>
+            <p><a class="btn" href="/value/#coaudit">Details</a></p>
+          </div>
+          <div class="pkg">
+            <h3>CoFlow</h3>
+            <p class="small">Weekly workflow upgrades and instrumentation so shipped changes stick and show up on a scoreboard.</p>
+            <p><a class="btn" href="/value/#coflow">Details</a></p>
+          </div>
+          <div class="pkg">
+            <h3>CoMirror (leadership day)</h3>
+            <p class="small">Executive offsite: align on principles, choose bets, set constraints, commit to a 90-day scoreboard.</p>
+            <p><a class="btn" href="/value/#comirror">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h2 class="h1">For boards and CEOs</h2>
+        <p class="lead">Legacy CEO vs CoCEO: why operating as a networked executive function matters now.</p>
+        <ul>
+          <li><a href="https://rickballard.github.io/CoCivium/insights/insights_CoCEO_Whitepaper_execsum_draft_1of2.md">Executive summary</a></li>
+          <li><a href="https://rickballard.github.io/CoCivium/insights/insights_CoCEO_Whitepaper_transcript_draft_2of2.md">Working transcript</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <div class="card" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="/contact/">Start a conversation</a>
+          <a class="btn btn-mini" href="/problems/">See the real problems</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section"><div class="container small">© 2025 InSeed • Boutique 2–20 person bench with senior collaborators</div></footer>
   </div>
-</section>
-
-<main>
-  <section id="offer">
-    <h2>What I do (engagements)</h2>
-    <div class="grid">
-      <div class="card"><h3>CoAudit</h3><p>Diagnose workflows and governance for integrity. Flag coercion vectors. Recommend “no corruption, no coercion, no kings” patterns.</p></div>
-      <div class="card"><h3>CoFlow</h3><p>Install human+AI weekly cadence: briefs → reviews → metrics that matter. Replace ticket-hell with signal.</p></div>
-      <div class="card"><h3>CoMirror</h3><p>Leadership reflection & scaffolding. Congruence checks, role clarity, narrative+numbers ritual.</p></div>
-      <div class="card"><h3>Zero-to-One / Reposition</h3><p>Clarify purpose, sketch the goal tree, ship the first useful version. Hard pivots welcome.</p></div>
-    </div>
-    <div class="cta-row">
-      
-      <a class="btn" href="https://github\.com/rickballard/CoCivium/blob/main/docs/public-profile\.md" target="_blank" rel="noopener">Read my bio</a>
-    </div>
-  </section>
-
-  <section id="bio">
-    <h2>Who I am</h2>
-    <p>Founder, civic-tech architect, recovering dealmaker. Co-founded billion-dollar ventures, then chose a harder path: helping fix a world sliding into corruption, coercion, and kings. I live to work (and for my family). Most days are human+AI collaboration sprints.</p>
-    <p><strong>Available pro-bono</strong> when the mission advances just causes; for sustained work, we’ll route via InSeed. Financially independent and, I hope, uncorruptable.</p>
-    <p><small class="muted">Canonical bio → <a href="https://github\.com/rickballard/CoCivium/blob/main/docs/public-profile\.md" target="_blank" rel="noopener">CoCivium/public-profile.md</a>.</small></p>
-  </section>
-
-  <section id="thesis">
-    <h2>Thesis</h2>
-    <ul>
-      <li>Purpose beats process: when the aim is clear, the org can be small, fast, and honest.</li>
-      <li>Ship weekly: narrative + numbers + next bets.</li>
-      <li>Co-evolution: products should make people wiser, not just busier.</li>
-    </ul>
-  </section>
-<section class=""wrap"" id=""working"">
-  <h2>Working together</h2>
-  <div class=""grid"">
-    <div class=""card""><strong>1) Frame</strong><br><span class=""muted"">CoAudit call → define aim & constraints.</span></div>
-    <div class=""card""><strong>2) Install cadence</strong><br><span class=""muted"">Briefs → reviews → visible metrics.</span></div>
-    <div class=""card""><strong>3) Ship</strong><br><span class=""muted"">Useful first version; iterate weekly.</span></div>
-  </div>
-  <blockquote class=""quote"">“Rick ships clarity without politics.”<div class=""muted"" style=""margin-top:6px"">— Placeholder client</div></blockquote>
-</section>
-
-  <section>
-    <h2>Pro-bono “Needs Definition” offer</h2>
-    <p>Invite InSeed for a short problem-framing engagement. You’ll receive a structured RFP you can publish to me and any competitors. I reserve the right to support the winner so I can learn from superior approaches. My motive is not income generation; it is experience & wisdom development — even at my ripe old age.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Phone</strong> (Toronto &amp; London): <a href="tel:+14164148100">+1&nbsp;416&nbsp;414&nbsp;8100</a></p>
-    <details>
-      <summary>Show mailing address</summary>
-      <p>Ballard, 1673 Lakeshore Road West, Mississauga, Ontario, Canada L5J 1J4</p>
-    </details>
-    <div style="margin:12px 0">
-      <img src="assets/brand/map-inseed.png" alt="Mississauga area map (non-interactive)" style="max-width:560px;width:100%;border:1px solid #eee;border-radius:12px" style="max-width:620px;width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 10px 24px rgba(10,20,60,.08)" style="max-width:620px;width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 10px 24px rgba(10,20,60,.08)" style="max-width:620px;width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 10px 24px rgba(10,20,60,.08)" style="max-width:620px;width:100%;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 10px 24px rgba(10,20,60,.08)">
-    </div>
-    <p>LinkedIn → <a href="https://www.linkedin.com/in/richardballard/">richardballard</a> · Substack → <a href="https://rickpublic.substack.com/">RickPublic</a></p>
-  </section>
-<section class="wrap" id="canonical-bio-note" style="margin-top:28px">
-  <p class="muted">Bio is maintained in CoCivium. <a href="https://github.com/rickballard/CoCivium/blob/main/docs/public-profile.md" target="_blank" rel="noopener">Read the latest version</a>.</p>
-</section>
-</main>
-
-<footer>© InSeed<script defer data-domain="inseed.com" src="https://plausible.io/js/script.js"></script></footer>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
