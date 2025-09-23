@@ -21,3 +21,12 @@ img.resp{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--bo
 .announce b{font-weight:700}
 .btn-mini{display:inline-block;border:1px solid var(--border);border-radius:10px;padding:.35rem .6rem;background:transparent;color:var(--acc);text-decoration:none}
 .btn-mini:hover{text-decoration:underline}
+
+.announce{display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.55rem .9rem;border:1px solid var(--border);border-left:0;border-right:0;background:var(--card);margin:0 0 12px}
+.announce b{font-weight:700}
+.btn-mini{display:inline-block;border:1px solid var(--border);border-radius:10px;padding:.35rem .6rem;background:transparent;color:var(--acc);text-decoration:none}
+.btn-mini:hover{text-decoration:underline}
+.packages{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.pkg{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+@media(min-width:900px){.pkg{grid-column:span 4}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
