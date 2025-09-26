@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
-Sitemap: https://inseed.com/sitemap.xml
 
+Sitemap: https://inseed.com/sitemap.xml
