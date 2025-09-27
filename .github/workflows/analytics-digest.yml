@@ -1,0 +1,44 @@
+name: analytics-digest
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build digest
+        env:
+          PLAUSIBLE_API_TOKEN: ${{ secrets.PLAUSIBLE_API_TOKEN }}
+          SITE: inseed.com
+          PERIOD: 24h
+          LIMIT: 12
+        run: node tools/mk-digest.js
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: InSeed traffic digest (last 24h)
+          from: InSeed Analytics <analytics@inseed.com>
+          to: rballard@inseed.com
+          secure: true
+          content_type: text/plain; charset=utf-8
+          body: file://body.txt
+
+      - name: Upload digest artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: analytics-digest
+          path: body.txt
