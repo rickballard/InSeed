@@ -16,3 +16,12 @@ document.addEventListener('DOMContentLoaded', function(){
     if((el.textContent||'').match(/print/i)) el.addEventListener('click', ()=>plausible('Print to PDF'));
   });
 });
+// INSEED Lead Ping (Cloudflare Worker)
+(function(){
+  var PING = window.INSEED_LEAD_PING || "https://YOUR-SUBDOMAIN.workers.dev/ping"; // <-- replace after deploy
+  var p = location.pathname||"/";
+  var hi = /^\/resources\/(billing|partners|testimonials|tos-ai)\//.test(p) || /^\/services(\/|$)/.test(p);
+  var u = PING + "?u=" + encodeURIComponent(location.href) + "&hi=" + (hi?1:0);
+  if (navigator.sendBeacon) { try{ navigator.sendBeacon(u); } catch(_){} }
+  else { try{ fetch(u, {mode:"no-cors", keepalive:true}); } catch(_){} }
+})();
