@@ -1,0 +1,15 @@
+/* InSeed V4 shared */
+:root { --ink:#111; --muted:#666; --bg:#fff }
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;color:var(--ink);background:var(--bg)}
+.container{max-width:980px;margin:24px auto;padding:0 16px}
+.btn,.label{display:inline-block;padding:6px 10px;border:1px solid var(--ink);border-radius:8px;text-decoration:none;color:inherit;background:#fff}
+.topnav{border-bottom:1px solid #ddd;background:#fafafa}
+.topnav .container{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.topnav a{padding:8px 10px;text-decoration:none;color:var(--ink)}
+.topnav a:hover{text-decoration:underline}
+footer{margin-top:24px;color:var(--muted)}
+table{border-collapse:collapse;width:100%}
+th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
+th{background:#111;color:#fff}
+@media print { .print-hide{display:none !important} a{color:#000;text-decoration:none} }
