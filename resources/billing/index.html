@@ -55,7 +55,34 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
   <tr><td>Board briefing</td><td align="right">$15k flat (2 hours)</td><td align="center">Single session</td><td>Tailored explainer, exposure map, decision pathways</td></tr>
 </table>
 
-<h2>Discounts & exceptions</h2>
+<section id="calc-inseed" class="note" style="margin-top:12px">
+  <h3 style="margin-top:0">Quick cost sketch (private)</h3>
+  <label>Days this week: <input type="number" id="d" min="1" max="7" value="5" style="width:60px"></label>
+  <label style="margin-left:12px"># Specialists: <input type="number" id="n" min="0" value="2" style="width:60px"></label>
+  <label style="margin-left:12px">Discount: 
+    <select id="disc">
+      <option value="0">None</option>
+      <option value="0.5">NFP 50%</option>
+      <option value="0.7">NFP 70%</option>
+    </select>
+  </label>
+  <div style="margin-top:8px" id="out" class="muted"></div>
+  <script>
+  (function(){
+    var d=document, el=function(id){return d.getElementById(id)};
+    function fmt(x){return x.toLocaleString('en-US',{style:'currency', currency:'USD'})}
+    function calc(){
+      var days=+el('d').value||0, sp=+el('n').value||0, k=+el('disc').value||0;
+      var leadDay=30000, specDay=7000; // midpoint sticker
+      var gross = days*(leadDay + sp*specDay);
+      var net = gross*(1-(k||0));
+      el('out').textContent = "Sticker: " + fmt(gross) + " · After discount: " + fmt(net);
+    }
+    ['d','n','disc'].forEach(function(i){ el(i).addEventListener('input', calc) });
+    calc();
+  })();
+  </script>
+</section><h2>Discounts & exceptions</h2>
 <ul>
   <li>Not-for-profits & B-Corps: <strong>50–70%</strong> discount</li>
   <li>Mission-aligned causes: <strong>zero-cost</strong> (underwritten by InSeed impact capital)</li>
@@ -68,3 +95,4 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
 <p><a class="btn" href="/">Back to home</a></p>
 <p class="muted">Contact: +1.416.414.8100 • rballard@inseed.com • inseed.com</p>
 <p>Our greater mission: <a href="/resources/cocivium/">CoCivium</a>.</p></body></html>
+
