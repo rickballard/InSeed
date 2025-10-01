@@ -40,7 +40,7 @@ function highIntent(page){
 (async () => {
   const agg = await api("aggregate", { metrics: ["visitors","pageviews","bounce_rate"] });
 
-  const [pages, sources, referrers, countries] = await Promise.all([
+  const [pages, sources, referrers, countries, events] = await Promise.all([
     breakdown("event:page"),
     breakdown("visit:source"),
     breakdown("visit:referrer"),
@@ -86,6 +86,8 @@ ${fmtList(referrers, "visit:referrer")}
 Top countries:
 ${fmtList(countries, "visit:country")}
 
+Leads (Workers-derived orgs):
+${(()=>{const all=(events.results||[]).filter(x=>(x["event:name"]||"").startsWith("Lead: ")).slice(0,12); return all.length?all.map(x=>`- ${x["event:name"].replace(/^Lead: /,"")} (${x.visitors} u)`).join("\n"):"- (none in period)";})()}
 Possible companies (from referrer hostnames, heuristic):
 ${companies.length ? companies.join("\n") : "- (none detected; many visitors come via search/direct)"}
 `;
