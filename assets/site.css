@@ -13,3 +13,9 @@ table{border-collapse:collapse;width:100%}
 th,td{border:1px solid #ddd;padding:10px;vertical-align:top}
 th{background:#111;color:#fff}
 @media print { .print-hide{display:none !important} a{color:#000;text-decoration:none} }
+/* InSeed V4 footer polish */
+.site-footer{border-top:1px solid #1f2937;margin-top:48px}
+.site-footer .container{max-width:980px;margin:0 auto;padding:20px 16px;text-align:center}
+.site-footer p{margin:0;color:var(--muted);font-size:.9rem}
+.site-footer a{color:inherit;opacity:.9}
+.site-footer a:hover{text-decoration:underline;opacity:1}
