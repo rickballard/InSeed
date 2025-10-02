@@ -75,3 +75,14 @@ html[data-theme="light"] body{background:var(--bg);color:var(--ink)}
 .container{ max-width:var(--page); margin:0 auto; padding:0 16px }
 .topnav .container, .site-footer .container, .ribbon{ max-width:var(--page); margin-left:auto; margin-right:auto }
 .ribbon{ text-align:center; }
+/* InSeed v4 services helpers */
+.notice{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;margin:12px 0}
+.notice p{margin:0;color:var(--muted)}
+.btn{display:inline-block;border:1px solid var(--border);border-radius:8px;padding:6px 10px;text-decoration:none}
+.btn:hover{background:rgba(255,255,255,.05)}
+.print{float:right}
+@media print {.print{display:none}}
+/* Keep headings compact on printable briefs */
+.brief .wrap{max-width:960px;margin:24px auto;padding:0 16px}
+.brief h1{margin:0 0 8px}
+.brief h2{margin-top:20px}
