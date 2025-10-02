@@ -1,0 +1,121 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>CEO Survival Guide: InSeed</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/site.css">
+<meta name="color-scheme" content="dark light">
+
+<!-- InSeed V4 TopNav -->
+<nav class="topnav"><div class="container">
+  <a href="/">InSeed</a>
+  <a href="/about/">About</a>
+  <a href="/problems/">Problems</a>
+  <a href="/services/">Solutions</a>
+  <a href="/resources/">Resources</a>
+  <a href="/contact/">Contact</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+</div></nav>
+<script>
+(function(){
+  const k='inseed-theme'; const p=localStorage.getItem(k);
+  if(p){ document.documentElement.dataset.theme=p }
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{
+    const t=document.documentElement.dataset.theme==='light'?'':'light';
+    if(t) localStorage.setItem(k,t); else localStorage.removeItem(k);
+    document.documentElement.dataset.theme=t;
+  });
+})();
+</script>
+
+<div class="container" style="max-width:960px;margin-top:20px">
+  <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between">
+    <h1 style="margin:0">CEO Survival Guide</h1>
+    <div>
+      <button class="btn" onclick="window.print()">Print</button>
+      <a class="btn" href="/resources/insights/ceo-survival-guide.html" download>Download HTML</a>
+    </div>
+  </div>
+  <p class="muted" style="margin:6px 0 16px">Business vision perspective in the age of AI</p>
+  <p style="margin:0 0 8px"><strong>InSeed</strong> · <a href="mailto:rballard@inseed.com">rballard@inseed.com</a> · +1&nbsp;416-414-8100</p>
+  <div class="notice"><p style="margin:0">Client work is confidential. No client names or case details are published. Examples here are anonymized and generalized for broad relevance.</p></div>
+
+  <h2 id="exec-summary">Executive Summary</h2>
+  <p>Experienced CEOs learned what wins from decades of market structure that rewarded ownership, focus, and moats. The game has changed. Compute, data, and model ecosystems create new leverage, new exposure, and faster clocks. Winners shape principles and guardrails, keep strategy aligned to shipped evidence, and avoid lock-in by treating vendors as interchangeable lanes within an evolving architecture.</p>
+  <ul>
+    <li><strong>Vision first:</strong> define advantage and what will not change; invest where learning compounds.</li>
+    <li><strong>Guardrails in policy and practice:</strong> data access, provenance, model use, leakage mitigation, exit ramps.</li>
+    <li><strong>Evidence cadence:</strong> a 30-60-90 scoreboard with owners, weekly shipped deltas, and clear stop or continue decisions.</li>
+    <li><strong>Multi-vendor sourcing:</strong> RFP briefs, evaluation matrix, and a design that prevents single-AI bias and vendor lock-in.</li>
+    <li><strong>Operating rhythm:</strong> Week 0 CoAudit, 12 weeks of oversight and enablement, leadership day to reset principles and commitments.</li>
+    <li><strong>CoCivium lens:</strong> plan for interoperable markets and civic-scale coordination so your systems are ready for the ecosystem you will operate in.</li>
+  </ul>
+  <p><strong><em>TL;DR: InSeed gives CEOs new ways to be CEO.</em></strong></p>
+  <p class="muted">Independent and temporary by design; we enable your team and then step back.</p>
+
+  <h2>1. What legacy leadership got right</h2>
+  <p>Legacy playbooks worked. Scarce data, slower cycles, centralized vendors, and clear regulatory lines rewarded patient capital and strong moats. Experience, intuition, and disciplined portfolio pruning delivered durable returns.</p>
+
+  <h2>2. What changed</h2>
+  <ul>
+    <li>Cheap cognition: model-assisted work shifts cost curves and cycle times.</li>
+    <li>Data ubiquity: value depends on provenance, consent, and recomposability.</li>
+    <li>Ecosystems: advantage comes from integration pathways, not single stacks.</li>
+    <li>Regime risk: policies evolve; durability needs exit ramps and audit trails.</li>
+  </ul>
+
+  <h2>3. The CoCivium lens</h2>
+  <p>CoCivium refers to civic-scale, human-centered digital infrastructure and coordination tools. Think shared data contracts, verifiable provenance, and protocols that let markets and institutions cooperate while competing. Planning with this lens reduces stranded investment and improves long-run legitimacy.</p>
+
+  <h2>4. The new work of the CEO</h2>
+  <ul>
+    <li>Set principles, constraints, and red lines; write them down; rehearse incidents.</li>
+    <li>Choose a small number of bets; assign owners; measure shipped outcomes.</li>
+    <li>Design for multi-vendor operation; no single point of failure; plan exits.</li>
+    <li>Align incentives and training to hybrid workflows that mix human and model work.</li>
+  </ul>
+
+  <h2>5. An operating cadence that holds</h2>
+  <p><strong>Week 0 CoAudit:</strong> inventory workflows, risks, and quick wins; create a 30-60-90 scoreboard. <strong>Weeks 1-12 oversight:</strong> weekly evidence reviews, vendor evaluation against guardrails, and enablement so the team owns the change. <strong>Leadership day:</strong> principles, bets, constraints, and next 90-day commitments.</p>
+
+  <h2>6. Guardrails that move from slide to shop floor</h2>
+  <ul>
+    <li>Policy to practice: access controls, data contracts, and change log by default.</li>
+    <li>Model use: allowed sources, retraining triggers, and runbooks for failure.</li>
+    <li>Red team exercises: schedule them; measure time to detect and contain.</li>
+  </ul>
+
+  <h2>7. Multi-vendor sourcing with teeth</h2>
+  <ul>
+    <li>System requirements analysis, solution briefs, and RFPs with clear evaluation criteria.</li>
+    <li>Interoperability first: contracts that require exportability and compatibility.</li>
+    <li>Decision log and architecture notes that make future exits low friction.</li>
+  </ul>
+
+  <h2>8. Ninety days to visible outcomes</h2>
+  <ol>
+    <li>Weeks 0-2: scan and score; confirm guardrails; pick 3 to 5 bet lines.</li>
+    <li>Weeks 3-8: prototype in the workflow; instrument every change; publish evidence.</li>
+    <li>Weeks 9-12: standardize what works; update SOPs and incentives; decide stop or scale.</li>
+  </ol>
+
+  <h2>9. Questions Boards should ask</h2>
+  <ul>
+    <li>What outcomes will be true in 90 days and who owns them?</li>
+    <li>Where are we exposed to lock-in and how do we exit?</li>
+    <li>How do we verify data provenance and model behavior?</li>
+    <li>What training and incentive changes align with hybrid work?</li>
+  </ul>
+
+  <hr style="margin:24px 0">
+
+  <h2>About the author</h2>
+  <p><strong>R. Ballard</strong> is a principal at InSeed. He has led strategy and delivery programs in data-intensive environments, supported venture-backed launches, and invested as an angel with a long-run interest in civic-scale digital infrastructure.</p>
+  <p class="muted"><em>Personal note:</em> this paper was written to invite reflection and adaptation, not to offend. Legacy CEOs represent some of humanity’s best hopes for a benevolent future. Out of respect for that record, I would rather work through them than compete with them. Never bet against an old horse just because it is old; wisdom matters in ways even advanced systems cannot emulate.</p>
+
+  <p style="margin-top:20px"><a class="btn" href="/resources/">Back to Resources</a></p>
+</div>
+
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
+</div></footer>
