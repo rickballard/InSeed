@@ -1,4 +1,38 @@
-<!doctype html>
+<!doctype html><head><link rel="stylesheet" href="/assets/site.css?v=20251002111600">
+</head><body>
+<!-- InSeed V4 TopNav -->
+<nav class="topnav"><div class="container">
+  <a href="/?v=20251002111600">InSeed</a>
+  <a href="/about/">About</a>
+  <a href="/problems/">Problems</a>
+  <a href="/services/">Solutions</a>
+  <a href="/resources/">Resources</a>
+  <a href="/contact/">Contact</a>
+  <div class="lang-wrap">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+    <div class="lang-chooser" id="langChooser" aria-haspopup="listbox" aria-expanded="false">
+      <button class="lang-head" id="langHead" aria-label="Language menu">
+        <span class="l1">English</span>
+        <span class="l2">Gibberlink (AI)</span>
+      </button>
+      <div class="lang-menu" id="langMenu" role="listbox"></div>
+    </div>
+  </div>
+</div></nav>
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light'; if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},{code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},{code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||''; mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option'); b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code); location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script><!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>InSeed: purpose-led consulting for human+AI orgs</title>
 <link rel="icon" href="/assets/icons/favicon-48.png"><link rel="manifest" href="/site.webmanifest">
@@ -6,17 +40,41 @@
 <script>window.CONTACT_CONFIG = window.CONTACT_CONFIG || { endpoint:"", to:"rballard@InSeed.com", allow:[], turnstile_sitekey:"" };</script>
 <script src="/assets/js/contact-embed.js" defer></script>
 <body>
+<!-- InSeed V4 TopNav -->
+<nav class="topnav"><div class="container">
+  <a href="/?v=20251002111600">InSeed</a>
+  <a href="/about/">About</a>
+  <a href="/problems/">Problems</a>
+  <a href="/services/">Solutions</a>
+  <a href="/resources/">Resources</a>
+  <a href="/contact/">Contact</a>
+  <div class="lang-wrap">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+    <div class="lang-chooser" id="langChooser" aria-haspopup="listbox" aria-expanded="false">
+      <button class="lang-head" id="langHead" aria-label="Language menu">
+        <span class="l1">English</span>
+        <span class="l2">Gibberlink (AI)</span>
+      </button>
+      <div class="lang-menu" id="langMenu" role="listbox"></div>
+    </div>
+  </div>
+</div></nav>
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light'; if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},{code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},{code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||''; mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option'); b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code); location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script>
   <div class="container">
-    <nav class="top">
-      <a class="brand" href="/"><img src="/assets/icons/logo-nav.png" alt="InSeed"></a>
-      <div class="links">
-        <a href="/about/">About</a>
-        <a href="/services/">Services</a>
-        <a href="/projects/">Projects</a>
-        <a href="/insights/">Insights</a><a href="/resources/">Resources</a>
-        <a href="/#contact">Contact</a>
-      </div>
-    </nav>
+    
 <div class="announce"><b>AI-Expert Interim Executives</b>, planning and implementation talent. <a class="btn-mini" href="/contact/">Talk to us</a></div>
 
     <!-- Hero -->
@@ -104,3 +162,4 @@
 
 
 
+</body>
