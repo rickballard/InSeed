@@ -35,7 +35,7 @@ body{ margin:0; background:var(--bg); color:var(--ink) }
 .site-footer a{ color:inherit; opacity:.9 }
 .site-footer a:hover{ text-decoration:underline; opacity:1 }
 /* InSeed hero blurb */
-.hero-blurb p{font-size:0.96rem; line-height:1.6; margin:0 0 12px}
+.hero-blurb p{font-size:0.90rem; line-height:1.6; margin:0 0 12px}
 
 /* InSeed V4: readability + theme toggle */
 html{font-size:16px}
@@ -69,7 +69,7 @@ html[data-theme="light"] body{background:var(--bg);color:var(--ink)}
 
 /* Hero blurb (normal size, not shouty) */
 .hero-blurb{max-width:720px}
-.hero-blurb p{font-size:0.96rem;line-height:1.7;margin:0 0 12px;font-weight:500}
+.hero-blurb p{font-size:0.90rem;line-height:1.7;margin:0 0 12px;font-weight:500}
 /* InSeed v4 centering fixes */
 :root{ --page:1024px }
 .container{ max-width:var(--page); margin:0 auto; padding:0 16px }
@@ -87,3 +87,7 @@ html[data-theme="light"] body{background:var(--bg);color:var(--ink)}
 .brief h1{margin:0 0 8px}
 .brief h2{margin-top:20px}
 
+
+/* InSeed hero small */
+.small{font-size:.9rem}
+.hero-blurb .muted{font-size:.9rem}
