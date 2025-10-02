@@ -1,4 +1,4 @@
-<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/site.css"><meta name="color-scheme" content="dark light"><title>CoAudit: sample engagement brief</title>
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/site.css?v=6"><meta name="color-scheme" content="dark light"><title>CoAudit: sample engagement brief</title>
 <body class="brief">
 <!-- InSeed V4 TopNav -->
 <nav class="topnav"><div class="container">
@@ -8,27 +8,20 @@
   <a href="/services/">Solutions</a>
   <a href="/resources/">Resources</a>
   <a href="/contact/">Contact</a>
-
   <div class="lang-wrap">
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
-    <label for="langSelect" class="muted" style="font-size:.85rem">Lang</label>
-    <select id="langSelect" class="lang-select" aria-label="Select language">
-      <option value="en">English</option>
-      <option value="gib">Gibberlink (AI)</option>
-      <option value="de">Deutsch</option>
-      <option value="fr">Français</option>
-      <option value="ja">日本語</option>
-      <option value="ko">한국어</option>
-      <option value="zh">简体中文</option>
-      <option value="et">Eesti</option>
-      <option value="he">עברית</option>
-    </select>
+    <div class="lang-chooser" id="langChooser" aria-haspopup="listbox" aria-expanded="false">
+      <button class="lang-head" id="langHead" aria-label="Language menu">
+        <span class="l1">English</span>
+        <span class="l2">Gibberlink (AI)</span>
+      </button>
+      <div class="lang-menu" id="langMenu" role="listbox"></div>
+    </div>
   </div>
 </div></nav>
 <script>
 (function(){
-  const themeKey='inseed-theme';
-  const langKey='inseed-lang';
+  const themeKey='inseed-theme', langKey='inseed-lang';
   const savedTheme=localStorage.getItem(themeKey);
   if(savedTheme){ document.documentElement.dataset.theme=savedTheme }
   document.getElementById('themeToggle')?.addEventListener('click',()=>{
@@ -37,17 +30,27 @@
     document.documentElement.dataset.theme=t;
   });
 
-  const sel=document.getElementById('langSelect');
-  if(!sel) return;
-  const savedLang=localStorage.getItem(langKey) || 'en';
-  sel.value=savedLang;
-  sel.addEventListener('change',()=>{
-    const v=sel.value;
-    localStorage.setItem(langKey,v);
-    if(v==='en'){ location.href='/' }
-    else if(v==='gib'){ location.href='/gibberlink/' }
-    else { location.href='/intl/'+v+'/' }
-  });
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},{code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},{code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const byCode=Object.fromEntries(langs.map(l=>[l.code,l])); const here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const savedLang=localStorage.getItem(langKey)||here||'en';
+  function ordered(primary){ const rest=langs.filter(l=>l.code!==primary && l.code!=='gib'); return (primary==='gib')?[byCode.gib,byCode.en,...rest]:[byCode[primary]||byCode.en,byCode.gib,...rest]; }
+  const chooser=document.getElementById('langChooser'), head=document.getElementById('langHead'), menu=document.getElementById('langMenu');
+  function render(current){
+    const arr=ordered(current);
+    document.querySelector('#langHead .l1').textContent=arr[0].label;
+    document.querySelector('#langHead .l2').textContent=arr[1]?.label||'';
+    menu.innerHTML='';
+    arr.forEach(l=>{
+      const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+      b.setAttribute('aria-selected', l.code===current ? 'true':'false'); b.textContent=l.label;
+      b.addEventListener('click',()=>{ localStorage.setItem(langKey,l.code); location.href=l.href; });
+      menu.appendChild(b);
+    });
+  }
+  render(savedLang);
+  head.addEventListener('click',()=>{ const open=chooser.classList.toggle('open'); chooser.setAttribute('aria-expanded', open?'true':'false'); });
+  document.addEventListener('click',e=>{ if(!chooser.contains(e.target)){ chooser.classList.remove('open'); chooser.setAttribute('aria-expanded','false'); }});
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ chooser.classList.remove('open'); chooser.setAttribute('aria-expanded','false'); }});
 })();
 </script><div class="wrap">
 <button class="print" onclick="window.print()">Print</button>
@@ -75,3 +78,4 @@
   <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
 </div></footer>
 </body>
+
