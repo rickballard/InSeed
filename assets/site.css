@@ -118,3 +118,8 @@ body > h1, body > h2, body > h3, body > p, body > ul, body > ol, body > blockquo
 .lang-item:hover{background:rgba(255,255,255,.06)}
 .lang-item[aria-selected="true"]::before{content:"✓ ";font-weight:700}
 
+/* InSeed v4 tldr callout */
+.tldr{border-left:4px solid var(--border); padding:10px 12px; margin:14px 0; border-radius:10px; background:var(--card)}
+.tldr .kicker{margin:0 0 4px 0; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase; color:var(--muted)}
+.tldr p{margin:0; font-weight:600}
+@media (prefers-color-scheme: light){ .tldr{ background:rgba(0,0,0,.03) } }
