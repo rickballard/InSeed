@@ -19,3 +19,18 @@ th{background:#111;color:#fff}
 .site-footer p{margin:0;color:var(--muted);font-size:.9rem}
 .site-footer a{color:inherit;opacity:.9}
 .site-footer a:hover{text-decoration:underline;opacity:1}
+
+/* InSeed V4 nav+footer polish v2 */
+:root{ --ink:#e5e7eb; --muted:#9ca3af; --bg:#0b1220 }
+body{ margin:0; background:var(--bg); color:var(--ink) }
+.container{ max-width:1024px; margin:0 auto; padding:0 16px }
+.topnav{ position:sticky; top:0; z-index:100; background:#0f172a; border-bottom:1px solid #1f2937 }
+.topnav .container{ display:flex; gap:6px; align-items:center; padding:10px 16px }
+.topnav a{ display:inline-block; padding:8px 10px; border-radius:8px; color:#e5e7eb; text-decoration:none; background:transparent; border:0; box-shadow:none }
+.topnav a:hover{ background:#111827 }
+.topnav a:focus-visible{ outline:2px solid #60a5fa; outline-offset:2px }
+.site-footer{ border-top:1px solid #1f2937; margin-top:48px }
+.site-footer .container{ max-width:980px; margin:0 auto; padding:20px 16px; text-align:center }
+.site-footer p{ margin:0; color:var(--muted); font-size:.9rem }
+.site-footer a{ color:inherit; opacity:.9 }
+.site-footer a:hover{ text-decoration:underline; opacity:1 }
