@@ -1,7 +1,57 @@
-<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/site.css"><meta name="color-scheme" content="dark light"><title>CoFlow (delivery oversight & sourcing) — sample engagement brief</title>
-<body class="brief"><div class="wrap">
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="/assets/site.css"><meta name="color-scheme" content="dark light"><title>CoFlow (delivery oversight & sourcing): sample engagement brief</title>
+<body class="brief">
+<!-- InSeed V4 TopNav -->
+<nav class="topnav"><div class="container">
+  <a href="/">InSeed</a>
+  <a href="/about/">About</a>
+  <a href="/problems/">Problems</a>
+  <a href="/services/">Solutions</a>
+  <a href="/resources/">Resources</a>
+  <a href="/contact/">Contact</a>
+
+  <div class="lang-wrap">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+    <label for="langSelect" class="muted" style="font-size:.85rem">Lang</label>
+    <select id="langSelect" class="lang-select" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="gib">Gibberlink (AI)</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="zh">简体中文</option>
+      <option value="et">Eesti</option>
+      <option value="he">עברית</option>
+    </select>
+  </div>
+</div></nav>
+<script>
+(function(){
+  const themeKey='inseed-theme';
+  const langKey='inseed-lang';
+  const savedTheme=localStorage.getItem(themeKey);
+  if(savedTheme){ document.documentElement.dataset.theme=savedTheme }
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{
+    const t=document.documentElement.dataset.theme==='light'?'':'light';
+    if(t) localStorage.setItem(themeKey,t); else localStorage.removeItem(themeKey);
+    document.documentElement.dataset.theme=t;
+  });
+
+  const sel=document.getElementById('langSelect');
+  if(!sel) return;
+  const savedLang=localStorage.getItem(langKey) || 'en';
+  sel.value=savedLang;
+  sel.addEventListener('change',()=>{
+    const v=sel.value;
+    localStorage.setItem(langKey,v);
+    if(v==='en'){ location.href='/' }
+    else if(v==='gib'){ location.href='/gibberlink/' }
+    else { location.href='/intl/'+v+'/' }
+  });
+})();
+</script><div class="wrap">
 <button class="print" onclick="window.print()">Print</button>
-<h1>CoFlow (delivery oversight & sourcing) — sample engagement brief</h1>
+<h1>CoFlow (delivery oversight & sourcing): sample engagement brief</h1>
 <div class="notice"><p>Client work is confidential. These briefs are composites: anonymized, data-stripped, and generalized so the approach is relevant across industries.</p></div>
 <h2>Context</h2>
 <p>Enterprise opted to keep delivery with vendors. The board asked for independent oversight that prevents single-AI bias and vendor lock-in while keeping strategy congruent with implementation.</p>
@@ -21,4 +71,8 @@
 <h2>Timeline & team</h2>
 <p>12-week cadence. One InSeed lead as advisor, plus client owners. Vendor teams deliver; InSeed monitors evidence and alignment.</p>
 <p style="margin-top:16px"><a class="btn" href="/services/">Back to Services</a></p>
-</div></body>
+</div><!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
+</div></footer>
+</body>

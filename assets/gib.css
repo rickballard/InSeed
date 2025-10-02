@@ -1,0 +1,11 @@
+/* gib.css: deliberately alien-looking but lightweight */
+:root{ --bg:#05060a; --ink:#c7d2fe; --muted:#93a2c7; --grid:#0b1020 }
+html{font-size:12px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Noto Sans Symbols 2", "Segoe UI Symbol", monospace;line-height:1.5}
+.wrap{max-width:680px;margin:12px auto;padding:0 12px}
+.h{letter-spacing:.1em;text-transform:uppercase}
+.card{border:1px solid #1f2a4a;border-radius:12px;background:#0a1022;padding:12px;margin:10px 0}
+.g{font-size:1.1rem;display:block;word-break:break-word}
+.meta{color:var(--muted);font-size:.9rem}
+a{color:#a5b4fc}
+small{color:var(--muted)}

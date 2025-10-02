@@ -9,13 +9,13 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
 .btn{display:inline-block;padding:8px 12px;border:1px solid #111;border-radius:8px;text-decoration:none}
 .muted{color:#666}
 .note{background:#f7fbff;border:1px solid #bfe1ff;padding:12px;border-radius:8px}
-</style>  <meta property="og:title" content="Billing & Engagement — InSeed">
+</style>  <meta property="og:title" content="Billing & Engagement: InSeed">
   <meta property="og:description" content="Transparent rates. Interim execs only. Co-invest in profound pivots.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://inseed.com/resources/billing/">
   <meta property="og:image" content="https://inseed.com/assets/diagrams/og-inseed-v4.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Billing & Engagement — InSeed">
+  <meta name="twitter:title" content="Billing & Engagement: InSeed">
   <meta name="twitter:description" content="Transparent rates. Interim execs only. Co-invest in profound pivots.">
   <meta name="twitter:image" content="https://inseed.com/assets/diagrams/og-inseed-v4.png">
 <style media=""print"">
@@ -37,10 +37,48 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
   <a href="/services/">Solutions</a>
   <a href="/resources/">Resources</a>
   <a href="/contact/">Contact</a>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+
+  <div class="lang-wrap">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+    <label for="langSelect" class="muted" style="font-size:.85rem">Lang</label>
+    <select id="langSelect" class="lang-select" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="gib">Gibberlink (AI)</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="zh">简体中文</option>
+      <option value="et">Eesti</option>
+      <option value="he">עברית</option>
+    </select>
+  </div>
 </div></nav>
-<script>(function(){const k='inseed-theme';const p=localStorage.getItem(k);if(p){document.documentElement.dataset.theme=p}
-document.getElementById('themeToggle')?.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='light'?'':'light';if(t)localStorage.setItem(k,t);else localStorage.removeItem(k);document.documentElement.dataset.theme=t})})();</script>
+<script>
+(function(){
+  const themeKey='inseed-theme';
+  const langKey='inseed-lang';
+  const savedTheme=localStorage.getItem(themeKey);
+  if(savedTheme){ document.documentElement.dataset.theme=savedTheme }
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{
+    const t=document.documentElement.dataset.theme==='light'?'':'light';
+    if(t) localStorage.setItem(themeKey,t); else localStorage.removeItem(themeKey);
+    document.documentElement.dataset.theme=t;
+  });
+
+  const sel=document.getElementById('langSelect');
+  if(!sel) return;
+  const savedLang=localStorage.getItem(langKey) || 'en';
+  sel.value=savedLang;
+  sel.addEventListener('change',()=>{
+    const v=sel.value;
+    localStorage.setItem(langKey,v);
+    if(v==='en'){ location.href='/' }
+    else if(v==='gib'){ location.href='/gibberlink/' }
+    else { location.href='/intl/'+v+'/' }
+  });
+})();
+</script>
 <!-- InSeed V4 Ribbon -->
 <div class="container"><div class="ribbon">
   AI-Expert Advisors <span class="sep">·</span> Business Pivots <span class="sep">·</span> Operations Planning <span class="sep">·</span> Systems Evolution
@@ -66,10 +104,13 @@ document.getElementById('themeToggle')?.addEventListener('click',()=>{const t=do
 <!-- InSeed V4 SiteFooter -->
 
 <!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
 <footer class="site-footer"><div class="container">
   <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
 </div></footer>
 </body></html>
+
 
 
 
