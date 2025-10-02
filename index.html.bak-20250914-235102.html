@@ -1,7 +1,7 @@
-<!doctype html><head><link rel="stylesheet" href="/assets/site.css?v=20251002142724">
+<!doctype html><head><link rel="stylesheet" href="/assets/site.css?v=20251002150027">
 </head><body><!-- InSeed V4 TopNav -->
 <nav class="topnav"><div class="container">
-  <a href="/?v=20251002142724">InSeed</a>
+  <a href="/?v=20251002150027">InSeed</a>
   <a href="/about/">About</a>
   <a href="/problems/">Problems</a>
   <a href="/services/">Solutions</a>
@@ -21,13 +21,19 @@
 <script>(function(){
   const themeKey='inseed-theme', langKey='inseed-lang';
   const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
-  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light'; if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
-  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},{code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},{code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
   const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
   const cur=localStorage.getItem(langKey)||here||'en';
   function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
   const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
-  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||''; mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option'); b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code); location.href=l.href;}); mn.appendChild(b);});}
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
   render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
   document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
@@ -219,6 +225,7 @@ footer{margin:56px 0 40px;color:#666;text-align:center}
 
 
 
-<p class="micro"><p class="micro">Rev 784-7A5-AFE · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+<p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
 
 
