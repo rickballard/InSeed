@@ -10,6 +10,22 @@
   @media print {.print{display:none}}
 </style>
 <body>
+<!-- InSeed V4 TopNav -->
+<nav class="topnav"><div class="container">
+  <a href="/">InSeed</a>
+  <a href="/about/">About</a>
+  <a href="/problems/">Problems</a>
+  <a href="/services/">Solutions</a>
+  <a href="/resources/">Resources</a>
+  <a href="/contact/">Contact</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
+</div></nav>
+<script>(function(){const k='inseed-theme';const p=localStorage.getItem(k);if(p){document.documentElement.dataset.theme=p}
+document.getElementById('themeToggle')?.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='light'?'':'light';if(t)localStorage.setItem(k,t);else localStorage.removeItem(k);document.documentElement.dataset.theme=t})})();</script>
+<!-- InSeed V4 Ribbon -->
+<div class="container"><div class="ribbon">
+  AI-Expert Advisors <span class="sep">·</span> Business Pivots <span class="sep">·</span> Operations Planning <span class="sep">·</span> Systems Evolution
+</div></div>
   <div class="refs">
     <button class="print" onclick="window.print()">Print</button>
     <h1>Full references (living document)</h1>
@@ -46,4 +62,8 @@
       <li><!-- … --></li>
     </ul>
   </div>
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
+</div></footer>
 </body>

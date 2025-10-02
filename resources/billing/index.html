@@ -37,64 +37,14 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
   <a href="/services/">Solutions</a>
   <a href="/resources/">Resources</a>
   <a href="/contact/">Contact</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
 </div></nav>
-
-<p><a class="btn" href="/">← Back to InSeed</a></p>
-<h1>Billing & Engagement</h1>
-<p class="print-hide"><button onclick="window.print()" style="padding:6px 10px;border:1px solid #111;border-radius:8px;background:#fff;cursor:pointer">Print to PDF</button></p>
-<p class="muted">Week-0 CoAudit is free. We start small, learn fast, measure openly.</p>
-
-<div class="note"><strong>InSeed mandate (visible and simple):</strong>
-  <ul>
-    <li><strong>Interim execs only</strong> for a brief engagement. We are not building dependency.</li>
-    <li>When a profound pivot or new business unit emerges, we <strong>co-invest</strong> instead of “staying on the meter.”</li>
-    <li>We support <strong>CoCivium</strong> (independent, not-for-profit, open-source hybrid-society initiative). InSeed’s influence is temporary. This is not designed for financial return.</li>
-  </ul>
-</div>
-
-<h2>Week-0: CoAudit — Free</h2>
-<ul>
-  <li>Exposure map across product, process, governance</li>
-  <li>30-60-90 plan with a scoreboard and constraints</li>
-  <li>Board-safe brief for directors</li>
-  <li>Hard stop: continue with clarity or walk away with no obligation</li>
-</ul>
-
-<h2>Sticker rates (transparency first)</h2>
-<table>
-  <tr><th>Engagement</th><th>Sticker Rate (USD)</th><th>Typical Duration</th><th>What you get</th></tr>
-  <tr><td>Strategic Partner (Rick + curated squad)</td><td align="right">$25k–$35k / day</td><td align="center">1–5 days</td><td>Founder-level framing, bets, constraints, operating cadence, outcome scoreboard</td></tr>
-  <tr><td>Specialist Contributor (AI/Tech/Creative)</td><td align="right">$6k–$8k / day</td><td align="center">1–10 days</td><td>Co-branded experts (systems, data, product, brand)</td></tr>
-  <tr><td>Board briefing</td><td align="right">$15k flat (2 hours)</td><td align="center">Single session</td><td>Tailored explainer, exposure map, decision pathways</td></tr>
-</table>
-
-<section id="calc-inseed" class="note" style="margin-top:12px">
-  <h3 style="margin-top:0">Quick cost sketch (private)</h3>
-  <label>Days this week: <input type="number" id="d" min="1" max="7" value="5" style="width:60px"></label>
-  <label style="margin-left:12px"># Specialists: <input type="number" id="n" min="0" value="2" style="width:60px"></label>
-  <label style="margin-left:12px">Discount: 
-    <select id="disc">
-      <option value="0">None</option>
-      <option value="0.5">NFP 50%</option>
-      <option value="0.7">NFP 70%</option>
-    </select>
-  </label>
-  <div style="margin-top:8px" id="out" class="muted"></div>
-  <script>
-  (function(){
-    var d=document, el=function(id){return d.getElementById(id)};
-    function fmt(x){return x.toLocaleString('en-US',{style:'currency', currency:'USD'})}
-    function calc(){
-      var days=+el('d').value||0, sp=+el('n').value||0, k=+el('disc').value||0;
-      var leadDay=30000, specDay=7000; // midpoint sticker
-      var gross = days*(leadDay + sp*specDay);
-      var net = gross*(1-(k||0));
-      el('out').textContent = "Sticker: " + fmt(gross) + " · After discount: " + fmt(net);
-    }
-    ['d','n','disc'].forEach(function(i){ el(i).addEventListener('input', calc) });
-    calc();
-  })();
-  </script>
+<script>(function(){const k='inseed-theme';const p=localStorage.getItem(k);if(p){document.documentElement.dataset.theme=p}
+document.getElementById('themeToggle')?.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='light'?'':'light';if(t)localStorage.setItem(k,t);else localStorage.removeItem(k);document.documentElement.dataset.theme=t})})();</script>
+<!-- InSeed V4 Ribbon -->
+<div class="container"><div class="ribbon">
+  AI-Expert Advisors <span class="sep">·</span> Business Pivots <span class="sep">·</span> Operations Planning <span class="sep">·</span> Systems Evolution
+</div></div>
 </section><h2>Discounts & exceptions</h2>
 <ul>
   <li>Not-for-profits & B-Corps: <strong>50–70%</strong> discount</li>
@@ -114,12 +64,13 @@ th{background:#111;color:#fff}tr:nth-child(even) td{background:#f6f6f6}
 <!-- InSeed V4 SiteFooter -->
 
 <!-- InSeed V4 SiteFooter -->
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
-  </div>
-</footer>
+
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
+</div></footer>
 </body></html>
+
 
 
 

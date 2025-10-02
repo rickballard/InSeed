@@ -70,3 +70,8 @@ html[data-theme="light"] body{background:var(--bg);color:var(--ink)}
 /* Hero blurb (normal size, not shouty) */
 .hero-blurb{max-width:720px}
 .hero-blurb p{font-size:1.02rem;line-height:1.7;margin:0 0 12px;font-weight:500}
+/* InSeed v4 centering fixes */
+:root{ --page:1024px }
+.container{ max-width:var(--page); margin:0 auto; padding:0 16px }
+.topnav .container, .site-footer .container, .ribbon{ max-width:var(--page); margin-left:auto; margin-right:auto }
+.ribbon{ text-align:center; }

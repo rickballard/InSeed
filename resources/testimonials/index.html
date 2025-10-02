@@ -32,31 +32,14 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin
   <a href="/services/">Solutions</a>
   <a href="/resources/">Resources</a>
   <a href="/contact/">Contact</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark">☀︎/🌙</button>
 </div></nav>
-
-<p class="print-hide"><a href="/" style="border:1px solid #111;border-radius:8px;padding:6px 10px;text-decoration:none">← Back to InSeed</a>
-<button onclick="window.print()" style="margin-left:8px;padding:6px 10px;border:1px solid #111;border-radius:8px;background:#fff;cursor:pointer">Print to PDF</button></p>
-<h1>Testimonials</h1>
-<p>Selected quotes from leaders who engaged InSeed. Attributions say “LinkedIn recommendation” here; you can attribute by name internally if you have permission.</p>
-<div id="wrap"></div>
-<script>
-async function main(){
-  const res = await fetch('/data/testimonials.json', {cache:'no-store'});
-  const items = await res.json();
-  const c = document.createElement('div'); c.className='grid';
-  for(const t of items){
-    const el = document.createElement('div'); el.className='card';
-    el.innerHTML = '<div>' + escapeHtml(t.quote) + '</div>' +
-      '<div class="attrib">— ' + (t.attribution||'') +
-      (t.role?(', '+t.role):'') + (t.company?(' · '+t.company):'') +
-      (t.link?(' · <a href="'+t.link+'">link</a>'):'') + '</div>';
-    c.appendChild(el);
-  }
-  document.getElementById('wrap').appendChild(c);
-}
-function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',\"'\":'&#39;' }[m]))}
-main();
-</script>
+<script>(function(){const k='inseed-theme';const p=localStorage.getItem(k);if(p){document.documentElement.dataset.theme=p}
+document.getElementById('themeToggle')?.addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='light'?'':'light';if(t)localStorage.setItem(k,t);else localStorage.removeItem(k);document.documentElement.dataset.theme=t})})();</script>
+<!-- InSeed V4 Ribbon -->
+<div class="container"><div class="ribbon">
+  AI-Expert Advisors <span class="sep">·</span> Business Pivots <span class="sep">·</span> Operations Planning <span class="sep">·</span> Systems Evolution
+</div></div>
 <p style="color:#666">To update this page, edit <code>/data/testimonials.json</code> in the repo.</p>
 <p style="color:#666">Contact: +1.416.414.8100 • rballard@inseed.com</p>
 <!-- InSeed V4 SiteFooter -->
@@ -66,12 +49,13 @@ main();
 <!-- InSeed V4 SiteFooter -->
 
 <!-- InSeed V4 SiteFooter -->
-<footer class="site-footer">
-  <div class="container">
-    <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
-  </div>
-</footer>
+
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© 2025 InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium</a></p>
+</div></footer>
 </body></html>
+
 
 
 
