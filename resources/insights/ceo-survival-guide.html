@@ -1,13 +1,17 @@
-<!doctype html>
+<!doctype html><head><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+</head><body><!doctype html>
 <meta charset="utf-8">
 <title>CEO Survival Guide: InSeed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/site.css?v=6">
+<link rel="stylesheet" href="/assets/site.css?v=20251002105912">
 <meta name="color-scheme" content="dark light">
 
 <!-- InSeed V4 TopNav -->
 <nav class="topnav"><div class="container">
-  <a href="/">InSeed</a>
+  <a href="/?v=20251002105912">InSeed</a>
   <a href="/about/">About</a>
   <a href="/problems/">Problems</a>
   <a href="/services/">Solutions</a>
@@ -34,9 +38,9 @@
     if(t) localStorage.setItem(themeKey,t); else localStorage.removeItem(themeKey);
     document.documentElement.dataset.theme=t;
   });
-
   const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},{code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},{code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
-  const byCode=Object.fromEntries(langs.map(l=>[l.code,l])); const here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const byCode=Object.fromEntries(langs.map(l=>[l.code,l]));
+  const here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
   const savedLang=localStorage.getItem(langKey)||here||'en';
   function ordered(primary){ const rest=langs.filter(l=>l.code!==primary && l.code!=='gib'); return (primary==='gib')?[byCode.gib,byCode.en,...rest]:[byCode[primary]||byCode.en,byCode.gib,...rest]; }
   const chooser=document.getElementById('langChooser'), head=document.getElementById('langHead'), menu=document.getElementById('langMenu');
@@ -46,8 +50,10 @@
     document.querySelector('#langHead .l2').textContent=arr[1]?.label||'';
     menu.innerHTML='';
     arr.forEach(l=>{
-      const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
-      b.setAttribute('aria-selected', l.code===current ? 'true':'false'); b.textContent=l.label;
+      const b=document.createElement('button');
+      b.className='lang-item'; b.setAttribute('role','option');
+      b.setAttribute('aria-selected', l.code===current ? 'true':'false');
+      b.textContent=l.label;
       b.addEventListener('click',()=>{ localStorage.setItem(langKey,l.code); location.href=l.href; });
       menu.appendChild(b);
     });
@@ -152,3 +158,4 @@
 
 
 
+<p class="muted" style="margin-top:8px">Build 20251002105912</p></body>
