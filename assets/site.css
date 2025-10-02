@@ -135,3 +135,9 @@ body > a{display:block;max-width:var(--page);margin:0 auto;padding:0 16px}
 
 
 
+/* InSeed v5 quick-fixes */
+.topnav + .topnav{ display:none }                 /* if two navs slip in, hide the second one */
+.hero, .hero img, .hero-blurb{ margin-bottom:8px !important }
+.hero-blurb p{ margin-top:4px !important }
+body > footer .container{ max-width:var(--page); margin:0 auto; padding:0 16px; }
+.loose-links, footer .micro{ text-align:center }
