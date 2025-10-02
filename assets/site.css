@@ -36,3 +36,37 @@ body{ margin:0; background:var(--bg); color:var(--ink) }
 .site-footer a:hover{ text-decoration:underline; opacity:1 }
 /* InSeed hero blurb */
 .hero-blurb p{font-size:1rem; line-height:1.6; margin:0 0 12px}
+
+/* InSeed V4: readability + theme toggle */
+html{font-size:16px}
+body{margin:0;line-height:1.65}
+.container{max-width:1024px;margin:0 auto;padding:0 16px}
+
+/* Color tokens (dark default) */
+:root{ --ink:#f3f4f6; --muted:#c7cdd9; --bg:#0b1220; --link:#93c5fd; --card:#0f172a; --border:#1f2937 }
+body{ background:var(--bg); color:var(--ink) }
+a{color:var(--link)}
+.muted{color:var(--muted)}
+.card{background:var(--card); border:1px solid var(--border); border-radius:12px}
+
+/* Light theme */
+html[data-theme="light"]{
+  --ink:#111827; --muted:#6b7280; --bg:#ffffff; --link:#1d4ed8; --card:#ffffff; --border:#e5e7eb;
+}
+html[data-theme="light"] body{background:var(--bg);color:var(--ink)}
+
+/* Topnav & toggle */
+.topnav{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--border)}
+.topnav .container{display:flex;gap:8px;align-items:center;padding:10px 16px}
+.topnav a{display:inline-block;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none}
+.topnav a:hover{background:rgba(255,255,255,.04)}
+.theme-toggle{margin-left:auto;background:transparent;border:1px solid var(--border);border-radius:8px;padding:6px 10px;color:var(--ink);cursor:pointer}
+.theme-toggle:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+
+/* Ribbon */
+.ribbon{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:6px 10px;margin:8px 0}
+.ribbon .sep{opacity:.6;margin:0 .35rem}
+
+/* Hero blurb (normal size, not shouty) */
+.hero-blurb{max-width:720px}
+.hero-blurb p{font-size:1.02rem;line-height:1.7;margin:0 0 12px;font-weight:500}
