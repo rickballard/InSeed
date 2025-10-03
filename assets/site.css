@@ -220,3 +220,5 @@ nav.topnav ~ nav.topnav { display:none }
 html{ font-size:19px; } } body { line-height:1.6 }
 nav.topnav ~ nav.topnav { display:none }
 
+
+.hero,.hero-blurb{margin-bottom:6px!important}.hero+*{margin-top:.4rem!important}
