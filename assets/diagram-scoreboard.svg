@@ -1,4 +1,38 @@
 <!-- PASTE the single <svg>
+<style data-inseed-bluepop>
+  :root{
+    /* blues (light) */
+    --p50:#eef2ff; --p75:#eaf0ff; --p100:#e0e7ff; --p200:#c7d2fe; --p300:#a5b4fc;
+    --p400:#818cf8; --p500:#6366f1; --p600:#4f46e5;
+    --ink:#1e2330; --muted:#4b5563; --border:#b8c2ea; --accent:#eef2ff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      /* blues (dark) */
+      --p50:#0f162a; --p75:#121a33; --p100:#152042; --p200:#1b2a5a; --p300:#24367a;
+      --p400:#2f44a3; --p500:#485bf0; --p600:#8da2ff;
+      --ink:#e6e9f5; --muted:#9aa4b2; --border:#2b3246; --accent:#141a2a;
+    }
+  }
+
+  /* Give the big outer round-rect a soft panel look (rx=16 in your SVGs) */
+  rect[rx="16"] { fill: var(--accent); stroke: var(--border); }
+
+  /* Card boxes (your node rectangles use rx=12): fill + stronger stroke + shadow */
+  rect[rx="12"] { fill: var(--p75); stroke: var(--p300); stroke-width:1.25; filter: url(#pop); }
+
+  /* Text contrast */
+  text { fill: var(--ink); }
+
+  /* Connectors + arrow heads */
+  line, path { stroke: var(--p400); }
+  marker path { fill: var(--p400); }
+</style>
+<defs data-inseed-bluepop>
+  <filter id="pop">
+    <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity=".25"/>
+  </filter>
+</defs>
 <style data-inseed-palette>
   :root{
     --bg:#f6f7ff; --card:#ffffff; --ink:#1e2330; --muted:#4b5563;
@@ -12,6 +46,40 @@
   }
 </style>…</svg> block copied from Canvas here, nothing else -->
 <!-- e.g., starts with <svg ...>
+<style data-inseed-bluepop>
+  :root{
+    /* blues (light) */
+    --p50:#eef2ff; --p75:#eaf0ff; --p100:#e0e7ff; --p200:#c7d2fe; --p300:#a5b4fc;
+    --p400:#818cf8; --p500:#6366f1; --p600:#4f46e5;
+    --ink:#1e2330; --muted:#4b5563; --border:#b8c2ea; --accent:#eef2ff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      /* blues (dark) */
+      --p50:#0f162a; --p75:#121a33; --p100:#152042; --p200:#1b2a5a; --p300:#24367a;
+      --p400:#2f44a3; --p500:#485bf0; --p600:#8da2ff;
+      --ink:#e6e9f5; --muted:#9aa4b2; --border:#2b3246; --accent:#141a2a;
+    }
+  }
+
+  /* Give the big outer round-rect a soft panel look (rx=16 in your SVGs) */
+  rect[rx="16"] { fill: var(--accent); stroke: var(--border); }
+
+  /* Card boxes (your node rectangles use rx=12): fill + stronger stroke + shadow */
+  rect[rx="12"] { fill: var(--p75); stroke: var(--p300); stroke-width:1.25; filter: url(#pop); }
+
+  /* Text contrast */
+  text { fill: var(--ink); }
+
+  /* Connectors + arrow heads */
+  line, path { stroke: var(--p400); }
+  marker path { fill: var(--p400); }
+</style>
+<defs data-inseed-bluepop>
+  <filter id="pop">
+    <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity=".25"/>
+  </filter>
+</defs>
 <style data-inseed-palette>
   :root{
     --bg:#f6f7ff; --card:#ffffff; --ink:#1e2330; --muted:#4b5563;
@@ -24,3 +92,4 @@
     }
   }
 </style> and ends with </svg> -->
+
