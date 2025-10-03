@@ -146,3 +146,14 @@ body > footer .container{ max-width:var(--page); margin:0 auto; padding:0 16px; 
 .lang-item { display:flex; align-items:center; justify-content:flex-start; gap:.5rem }
 .lang-item::before { content:"☐"; font-size:.95em }
 .lang-item[aria-selected="true"]::before { content:"☑" }
+/* lang menu: align left + checkboxes */
+.lang-menu, .language-menu, .lang, .lang-wrap { text-align:left }
+.lang-item, .language-item, [class*="lang"] li { display:flex; align-items:center; justify-content:flex-start; gap:.5rem }
+.lang-item::before, .language-item::before, [class*="lang"] li::before { content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before, .language-item[aria-selected="true"]::before, [class*="lang"] li[aria-selected="true"]::before { content:"☑" }
+
+/* CTA blocks: center width like content */
+.cta, .cta-bar, .cta-wrap { max-width:900px; margin:1rem auto; padding:0 1rem }
+
+/* if a later .topnav survives for any reason, hide it */
+nav.topnav ~ nav.topnav { display:none }
