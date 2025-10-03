@@ -33,3 +33,16 @@ document.addEventListener("click", e=>{
   if(!a) return;
   try{ new Image().src="/__t?ev=contact&p="+encodeURIComponent(location.pathname); }catch(e){}
 }, {capture:true});
+(function(){
+  function dedupeTopnav(){
+    try{
+      const navs = Array.from(document.querySelectorAll('nav.topnav'));
+      if (navs.length > 1) navs.slice(1).forEach(n => n.remove());
+    }catch(_){}
+  }
+  if (document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", dedupeTopnav);
+  } else {
+    dedupeTopnav();
+  }
+})();
