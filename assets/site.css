@@ -157,3 +157,23 @@ body > footer .container{ max-width:var(--page); margin:0 auto; padding:0 16px; 
 
 /* if a later .topnav survives for any reason, hide it */
 nav.topnav ~ nav.topnav { display:none }
+/* --- global text size & rhythm --- */
+html { font-size: 17px; }
+body { line-height: 1.6; }
+
+/* hero spacing closer to body copy */
+.hero, .hero-blurb { margin-bottom: 10px !important; }
+.hero + * { margin-top: .5rem !important; }
+
+/* containerized footer/bottom alignment */
+footer > *, .site-footer > *, .page-end, .cta, .cta-bar, .cta-wrap { max-width:900px; margin:0 auto; padding:0 1rem; text-align:left; }
+
+/* language menu: left-aligned checkboxes */
+.lang-menu { text-align:left }
+.lang-item { display:flex; align-items:center; justify-content:flex-start; gap:.5rem }
+.lang-item::before { content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before { content:"☑" }
+
+/* theme toggle minimum style */
+.theme-toggle { border:1px solid var(--border, #444); background:var(--card, transparent); color:inherit; padding:.3rem .5rem; border-radius:.5rem; cursor:pointer }
+@media (prefers-color-scheme: dark){ .theme-toggle { border-color:#666 } }
