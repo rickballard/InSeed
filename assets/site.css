@@ -177,3 +177,24 @@ footer > *, .site-footer > *, .page-end, .cta, .cta-bar, .cta-wrap { max-width:9
 /* theme toggle minimum style */
 .theme-toggle { border:1px solid var(--border, #444); background:var(--card, transparent); color:inherit; padding:.3rem .5rem; border-radius:.5rem; cursor:pointer }
 @media (prefers-color-scheme: dark){ .theme-toggle { border-color:#666 } }
+/* autopatch: type/spacing/footer/lang/theme */
+html { font-size: 18px; }  /* larger body text */
+body { line-height: 1.6; }
+
+.hero, .hero-blurb { margin-bottom: 10px !important; }
+.hero + * { margin-top: .5rem !important; }
+
+footer > *, .site-footer > *, .page-end, .cta, .cta-bar, .cta-wrap { max-width:900px; margin:0 auto; padding:0 1rem; text-align:left; }
+
+/* language menu ticks */
+.lang-menu { text-align:left }
+.lang-item { display:flex; align-items:center; justify-content:flex-start; gap:.5rem }
+.lang-item::before { content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before { content:"☑" }
+
+/* theme button */
+.theme-toggle { border:1px solid var(--border,#444); background:var(--card,transparent); color:inherit; padding:.3rem .5rem; border-radius:.5rem; cursor:pointer }
+@media (prefers-color-scheme: dark){ .theme-toggle { border-color:#666 } }
+
+/* hide any stray duplicate nav if it somehow survives */
+nav.topnav ~ nav.topnav { display:none }

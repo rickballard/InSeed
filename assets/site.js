@@ -72,3 +72,26 @@ document.addEventListener("click", e=>{
   function dedupe(){ try{ const navs=[...document.querySelectorAll("nav.topnav")]; if(navs.length>1) navs.slice(1).forEach(n=>n.remove()); }catch(_){}} 
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", dedupe); else dedupe();
 })();
+/* autopatch: nav dedupe + theme + lang */
+(()=>{try{
+  const run=()=>{ const navs=[...document.querySelectorAll("nav.topnav")]; if(navs.length>1) navs.slice(1).forEach(n=>n.remove()); };
+  document.readyState==="loading" ? document.addEventListener("DOMContentLoaded",run) : run();
+}catch(_){}})();
+
+(()=>{try{
+  const root=document.documentElement, key="inseed-theme", btn=document.getElementById("themeToggle");
+  const apply=(m)=>{ m==="dark" ? root.classList.add("theme-dark") : root.classList.remove("theme-dark"); };
+  apply(localStorage.getItem(key)||"");
+  btn && btn.addEventListener("click",()=>{ const cur=root.classList.contains("theme-dark")?"dark":"light"; const next=cur==="dark"?"light":"dark"; localStorage.setItem(key,next); apply(next); });
+}catch(_){}})();
+
+(()=>{try{
+  const key="inseed-lang";
+  const cur=(localStorage.getItem(key)||(document.documentElement.getAttribute("lang")||"en")).toLowerCase();
+  document.documentElement.setAttribute("lang",cur);
+  document.querySelectorAll(".lang-item").forEach(li=>{
+    const v=(li.getAttribute("data-lang")||li.textContent||"").trim().toLowerCase();
+    li.setAttribute("aria-selected", v.startsWith(cur) ? "true" : "false");
+    li.addEventListener("click",()=>{ localStorage.setItem(key,v); location.reload(); });
+  });
+}catch(_){}})();
