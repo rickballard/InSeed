@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Executive Checklist • InSeed</title>
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js"></script>
+<style>
+.check{max-width:900px;margin:2rem auto;padding:0 1rem}
+.q{border:1px solid var(--border);border-radius:12px;margin:.75rem 0;background:var(--card)}
+.q header{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1rem}
+.q .advice{padding:.75rem 1rem;border-top:1px dashed var(--border)}
+.stepbar{display:flex;gap:.4rem;margin:1rem 0}
+.stepbar span{width:10px;height:10px;border-radius:50%;background:var(--border)}
+.stepbar span.on{background:var(--link)}
+.btns{display:flex;gap:.5rem}.btn{border:1px solid var(--border);background:var(--card);color:var(--text);padding:.4rem .75rem;border-radius:.5rem;cursor:pointer}
+</style></head><body>
+<nav class="topnav"><div class="container">
+  <a href="/">InSeed</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a>
+</div></nav>
+
+<main class="check" id="check">
+  <h1>Executive Checklist</h1>
+  <p>Answer a few quick Yes/No questions. Tips appear as you go. <a href="/privacy/">Privacy</a>.</p>
+  <div class="stepbar" id="bar"></div>
+
+  <details class="q" data-id="q1"><summary><header><strong>Q1.</strong> Are vendor contracts limiting your ability to move data between systems?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+    <div class="advice"><strong>Tip:</strong> Map “data egress” clauses per vendor; negotiate a standing export job to S3/Blob.</div>
+  </details>
+
+  <details class="q" data-id="q2"><summary><header><strong>Q2.</strong> Do you rely on manual spreadsheet joins for weekly metrics?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+    <div class="advice"><strong>Tip:</strong> Stand up a tiny ELT (one table) into a governed store; add one metric a week.</div>
+  </details>
+
+  <details class="q" data-id="q3"><summary><header><strong>Q3.</strong> Is there tension between “AI pilots” and production teams?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+    <div class="advice"><strong>Tip:</strong> Create a one-page “TOS-AI” runway: intake → sandbox → pilot → guardrails → service.</div>
+  </details>
+</main>
+
+<script>
+(function(){
+  const root=document.documentElement, main=document.getElementById('check'); if(!main) return;
+  const qs=[...main.querySelectorAll('.q')], storeKey='inseed-check-answers', saved=JSON.parse(localStorage.getItem(storeKey)||'{}');
+  const bar=document.getElementById('bar'); function barRender(){bar.innerHTML='';qs.forEach((_,i)=>{const s=document.createElement('span'); if(saved['q'+(i+1)]!==undefined) s.className='on'; bar.appendChild(s);});}
+  function show(i){qs.forEach((d,idx)=>{if(idx===i){d.open=true; d.scrollIntoView({block:'center',behavior:'smooth'});} else d.open=false;}); barRender();}
+
+  qs.forEach((d,idx)=>d.addEventListener('click',e=>{
+    const btn=e.target.closest('[data-yes]'); if(!btn) return;
+    const val = btn.getAttribute('data-yes')==='1' ? 1 : 0;
+    saved[d.dataset.id]=val; localStorage.setItem(storeKey, JSON.stringify(saved));
+    try{ new Image().src="/__t?ev=chk&p=/checklist/&q="+encodeURIComponent(d.dataset.id)+"&a="+val; }catch(e){}
+    setTimeout(()=>{ if(idx<qs.length-1) show(idx+1); }, 200);
+  }, {capture:true}));
+
+  const first = qs.findIndex((d,i)=> saved['q'+(i+1)]===undefined); show(first<0? qs.length-1 : first);
+})();
+</script>
+</body></html>
