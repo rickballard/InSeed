@@ -198,3 +198,24 @@ footer > *, .site-footer > *, .page-end, .cta, .cta-bar, .cta-wrap { max-width:9
 
 /* hide any stray duplicate nav if it somehow survives */
 nav.topnav ~ nav.topnav { display:none }
+/* language dropdown (two-line items) */
+.lang-dropdown { position: relative }
+.lang-button { border:1px solid var(--border,#444); background:var(--card,transparent); padding:.3rem .5rem; border-radius:.5rem; cursor:pointer }
+.lang-menu { position:absolute; right:0; top:115%; min-width:220px; background:var(--card,#fff);
+  border:1px solid var(--border,#ccc); border-radius:.5rem; padding:.4rem 0; list-style:none; margin:0; display:none; z-index:9999 }
+.lang-menu.show { display:block }
+.lang-item { display:flex; align-items:center; gap:.5rem; padding:.35rem .7rem; cursor:pointer; text-align:left }
+.lang-item::before { content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before { content:"☑" }
+.lang-item .twoline, .lang-item span { display:flex; flex-direction:column; line-height:1.2 }
+.lang-item .native { font-weight:600 }
+.lang-item .english { font-size:.85em; opacity:.8 }
+
+/* gibberlink list */
+.lang-list { list-style:none; padding:0; margin:1rem 0; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:.75rem }
+.lang-list li { border:1px solid var(--border,#ccc); background:var(--card,#fff); border-radius:.5rem; padding:.6rem .75rem; cursor:pointer }
+.lang-list .twoline .native{ font-weight:600 } .lang-list .twoline .english{ font-size:.9em; opacity:.8 }
+
+/* alignment and base sizing (kept) */
+html { font-size: 18px; } body { line-height:1.6 }
+nav.topnav ~ nav.topnav { display:none }

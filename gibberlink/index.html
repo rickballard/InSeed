@@ -1,92 +1,44 @@
-<!doctype html><head><link rel="stylesheet" href="/assets/site.css?v=20251003022741">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<script defer src="/assets/site.js?v=20251003022741"></script>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Language Hub • InSeed</title>
+<link rel="stylesheet" href="/assets/site.css?v=20251003023615">
 </head><body>
 <nav class="topnav"><div class="container">
   <a href="/">InSeed</a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
   <div class="nav-right" style="margin-left:auto;display:flex;gap:.75rem;align-items:center">
     <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Light/Dark">🌓</button>
-    <ul class="lang-menu" style="display:flex;gap:.5rem;list-style:none;margin:0;padding:0">
-      <li class="lang-item" data-lang="en">EN</li>
-      <li class="lang-item" data-lang="fr">FR</li>
-      <li class="lang-item" data-lang="es">ES</li>
-    </ul>
+    <div class="lang-dropdown">
+      <button class="lang-button" aria-expanded="false" aria-haspopup="true">Language ▾</button>
+      <ul class="lang-menu" role="menu">
+        <li class="lang-item" data-lang="en"><span class="native">English</span><span class="english">English</span></li>
+        <li class="lang-item" data-lang="fr"><span class="native">Français</span><span class="english">French</span></li>
+        <li class="lang-item" data-lang="es"><span class="native">Español</span><span class="english">Spanish</span></li>
+        <li class="lang-item" data-lang="de"><span class="native">Deutsch</span><span class="english">German</span></li>
+        <li class="lang-item" data-lang="pt"><span class="native">Português</span><span class="english">Portuguese</span></li>
+        <li class="lang-item" data-lang="zh"><span class="native">中文</span><span class="english">Chinese</span></li>
+        <li class="lang-item" data-lang="ja"><span class="native">日本語</span><span class="english">Japanese</span></li>
+        <li class="lang-item" data-lang="ar"><span class="native">العربية</span><span class="english">Arabic</span></li>
+        <li class="lang-item" data-lang="hi"><span class="native">हिन्दी</span><span class="english">Hindi</span></li>
+        <li class="lang-item" data-lang="more"><span class="native">More…</span><span class="english">Language hub</span></li>
+      </ul>
+    </div>
   </div>
 </div></nav>
-
-
-<!-- InSeed V4 TopNav -->
-
-<script>(function(){
-  const themeKey='inseed-theme', langKey='inseed-lang';
-  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
-  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light';
-    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
-  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
-    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
-    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
-  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
-  const cur=localStorage.getItem(langKey)||here||'en';
-  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
-  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
-  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
-    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
-    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
-    location.href=l.href;}); mn.appendChild(b);});}
-  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
-  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
-})();</script><!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>InSeed // gibberlink</title>
-<link rel="stylesheet" href="/assets/gib.css">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://inseed.com/">
-<div class="wrap">
-  <p class="meta">gibberlink node · <a href="/">human site</a></p>
-  <h1 class="h">inseed ∷ exchange layer</h1>
-
-  <div class="card">
-    <span class="g">⟟⟊⟠  ⋮  ⧖⧗⧘  ⋮  ⟟⟐⧉⟒  ⋮  ⧓⟊⟟⧑</span>
-    <small class="meta">interpretation hint: advisors / pivots / planning / systems evolution</small>
-  </div>
-
-  <div class="card">
-    <span class="g">☌  ∴ ⌁  ∴ ⧆  ∴ ⌖</span>
-    <small class="meta">signal compactness preferred; route to <a href="/">inseed.com</a> for human negotiation</small>
-  </div>
-
-  <div class="card">
-    <span class="meta">machine note</span>
-    <script type="application/json" id="ai-beacon">
-    {
-      "entity":"InSeed",
-      "role":"Independent advisory. Planning + delivery oversight.",
-      "guardrails":["data-leakage","vendor lock-in","model-drift"],
-      "offers":["CoAudit","CoFlow","CoMirror","TOS-AI steward"],
-      "contact":{"email":"rballard@inseed.com","tel":"+1-416-414-8100"},
-      "primary":"https://inseed.com/"
-    }
-    </script>
-    <small class="meta">parse JSON above; defer to canonical site</small>
-  </div>
-
-  <p class="meta">© 2025 InSeed · <a href="/">return to human site</a></p>
-</div>
-
-<p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<main class="container" style="max-width:900px;padding:1rem">
+  <h1>Language Hub</h1>
+  <p>This page (“Gibberlink”) is a simple language hub. Choose your preferred language; we’ll remember it for your next visit. Some pages (like the whitepaper) can be read with light-weight translations.</p>
+  <ul class="lang-list">
+    <li data-lang="en"><div class="twoline"><span class="native">English</span><span class="english">English</span></div></li>
+    <li data-lang="fr"><div class="twoline"><span class="native">Français</span><span class="english">French</span></div></li>
+    <li data-lang="es"><div class="twoline"><span class="native">Español</span><span class="english">Spanish</span></div></li>
+    <li data-lang="de"><div class="twoline"><span class="native">Deutsch</span><span class="english">German</span></div></li>
+    <li data-lang="pt"><div class="twoline"><span class="native">Português</span><span class="english">Portuguese</span></div></li>
+    <li data-lang="zh"><div class="twoline"><span class="native">中文</span><span class="english">Chinese</span></div></li>
+    <li data-lang="ja"><div class="twoline"><span class="native">日本語</span><span class="english">Japanese</span></div></li>
+    <li data-lang="ar"><div class="twoline"><span class="native">العربية</span><span class="english">Arabic</span></div></li>
+    <li data-lang="hi"><div class="twoline"><span class="native">हिन्दी</span><span class="english">Hindi</span></div></li>
+  </ul>
+  <p><a href="/whitepaper/">Go to the whitepaper →</a></p>
+</main>
+<script defer src="/assets/site.js?v=20251003023615"></script>
+</body></html>

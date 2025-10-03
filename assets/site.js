@@ -95,3 +95,49 @@ document.addEventListener("click", e=>{
     li.addEventListener("click",()=>{ localStorage.setItem(key,v); location.reload(); });
   });
 }catch(_){}})();
+/* lang dropdown + persistence */
+(()=>{try{
+  const key="inseed-lang"; const root=document.documentElement;
+  const cur=(localStorage.getItem(key)||(root.getAttribute("lang")||"en")).toLowerCase();
+  root.setAttribute("lang",cur);
+
+  // dropdown
+  const wrap=document.querySelector(".lang-dropdown");
+  if(wrap){
+    const btn=wrap.querySelector(".lang-button");
+    const menu=wrap.querySelector(".lang-menu");
+    const setTicks=()=>{
+      menu.querySelectorAll(".lang-item").forEach(li=>{
+        const v=(li.getAttribute("data-lang")||"").toLowerCase();
+        li.setAttribute("aria-selected", v===cur ? "true" : "false");
+      });
+    };
+    setTicks();
+    if(btn && menu){
+      btn.addEventListener("click",e=>{
+        e.stopPropagation();
+        const show=!menu.classList.contains("show");
+        document.querySelectorAll(".lang-menu.show").forEach(m=>m.classList.remove("show"));
+        if(show){ menu.classList.add("show"); setTicks(); }
+      });
+      document.addEventListener("click",()=>menu.classList.remove("show"));
+      menu.addEventListener("click",e=>{
+        const li=e.target.closest(".lang-item"); if(!li) return;
+        const v=(li.getAttribute("data-lang")||"").toLowerCase();
+        if(v==="more"){ location.href="/gibberlink/"; return; }
+        localStorage.setItem(key,v); root.setAttribute("lang",v); menu.classList.remove("show"); location.reload();
+      }, {capture:true});
+    }
+  }
+
+  // gibberlink page: clicking a card sets language
+  if(location.pathname.startsWith("/gibberlink/")){
+    document.querySelectorAll(".lang-list li").forEach(li=>{
+      li.addEventListener("click",()=>{
+        const v=(li.getAttribute("data-lang")||"").toLowerCase();
+        localStorage.setItem(key,v); root.setAttribute("lang",v);
+        location.href="/"; // back to home with chosen language
+      });
+    });
+  }
+}catch(_){}})();
