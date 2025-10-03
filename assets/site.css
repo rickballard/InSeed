@@ -240,3 +240,11 @@ nav.topnav ~ nav.topnav { display:none }
 figure{margin:1rem 0}
 figure img{max-width:100%;height:auto;display:block;border:1px solid var(--border,#ddd);border-radius:.5rem}
 figure figcaption{font-size:.9em;opacity:.8;margin-top:.25rem}
+/* site strapline */
+.site-strap{border-top:1px solid var(--border,#ddd);border-bottom:1px solid var(--border,#ddd);background:var(--card,#f7f8fb)}
+.site-strap .container{display:flex;gap:.75rem;align-items:center;justify-content:space-between;padding:.5rem 1rem;max-width:1000px;margin:0 auto}
+.site-strap .strap-text{font-size:.95rem;opacity:.9}
+.site-strap .strap-cta{border:1px solid var(--border,#444);padding:.25rem .6rem;border-radius:.5rem;text-decoration:none}
+@media (prefers-color-scheme: dark){
+  .site-strap{background:var(--card,#0f1115)}
+}
