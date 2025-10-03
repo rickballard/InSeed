@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" role="img" aria-label="Assemble vs Buy (AI era) matrix">
+  <style>
+    :root{ --p75:#eaf0ff; --p300:#a5b4fc; --p400:#818cf8; --border:#b8c2ea; --ink:#1e2330; --accent:#eef2ff }
+    @media (prefers-color-scheme: dark){
+      :root{ --p75:#121a33; --p300:#24367a; --p400:#2f44a3; --border:#2b3246; --ink:#e6e9f5; --accent:#141a2a }
+    }
+    rect.panel{ fill:var(--accent); stroke:var(--border) }
+    rect.cell{ fill:var(--p75); stroke:var(--p300); stroke-width:1.25 }
+    line.axis{ stroke:var(--p400); stroke-width:3 }
+    text{ fill:var(--ink); font:14px ui-sans-serif,system-ui,Segoe UI,Arial }
+    .h{ font-weight:600; font-size:16px }
+  </style>
+  <rect x="10" y="10" width="1080" height="340" rx="16" class="panel"/>
+  <text x="40" y="48" class="h">Assemble vs Buy (AI era)</text>
+  <line x1="160" y1="90" x2="980" y2="90" class="axis"/>
+  <text x="160" y="82" class="h">Low differentiation →</text>
+  <text x="740" y="82" class="h">← High differentiation</text>
+  <line x1="120" y1="120" x2="120" y2="300" class="axis"/>
+  <text x="40" y="130" class="h" transform="rotate(-90 40,130)">Slow to adapt → Fast</text>
+  <rect x="160" y="120" width="360" height="180" rx="12" class="cell"/>
+  <text x="176" y="144" class="h">Buy (commodities)</text>
+  <text x="176" y="166">Auth, logging, base models, vector, billing.</text>
+  <text x="176" y="186">Keep artifacts exportable; avoid lock-in.</text>
+  <rect x="560" y="120" width="420" height="180" rx="12" class="cell"/>
+  <text x="576" y="144" class="h">Assemble (differentiators)</text>
+  <text x="576" y="166">Prompts, tools, flows, evals, guardrails in your repos.</text>
+  <text x="576" y="186">Weekly shipped slices; adapters for multiple vendors.</text>
+</svg>

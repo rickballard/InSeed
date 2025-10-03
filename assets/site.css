@@ -248,3 +248,10 @@ figure figcaption{font-size:.9em;opacity:.8;margin-top:.25rem}
 @media (prefers-color-scheme: dark){
   .site-strap{background:var(--card,#0f1115)}
 }
+/* whitepaper table + card */
+.wp-table-wrap{overflow:auto;margin:.5rem 0 1rem}
+.wp-table{border-collapse:collapse;min-width:640px}
+.wp-table th,.wp-table td{border:1px solid var(--border,#b8c2ea);padding:.5rem .6rem;text-align:left}
+.wp-table thead th{background:var(--accent,#eef2ff)}
+.wp-card{border:1px solid var(--border,#b8c2ea);background:var(--p75,#eaf0ff);border-radius:.5rem;padding:.6rem .75rem;margin:.75rem 0}
+.wp-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
