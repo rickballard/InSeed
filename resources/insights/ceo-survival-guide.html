@@ -2,7 +2,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<script defer src="/assets/site.js?v=20251003174730"></script>
+<script defer src="/assets/site.js?v=20251003183837"></script>
 </head><body>
 <nav class="topnav"><div class="container">
   <a href="/">InSeed</a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
@@ -32,7 +32,7 @@
 <meta charset="utf-8">
 <title>CEO Survival Guide: InSeed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/site.css?v=20251003174730">
+<link rel="stylesheet" href="/assets/site.css?v=20251003183837">
 <meta name="color-scheme" content="dark light">
 
 <!-- InSeed V4 TopNav -->
@@ -61,6 +61,38 @@
 <div class="container" style="max-width:960px;margin-top:20px">
   <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between">
     <h1 style="margin:0">CEO Survival Guide</h1>
+<!-- Vendor lock-in section (inserted) -->
+<section id="vendor-lockin" class="container" style="max-width:900px;padding:1rem 1rem 0">
+  <h2>Vendor lock-in is costlier in the AI era</h2>
+  <p><strong>When solutions can “auto-make themselves,” static products become a drag.</strong> Competitive advantage now comes from fast ideation, workflow design, and weekly shipped slices—not from buying a one-size-fits-many product. If your prompts, tools, workflows and evaluation harness live inside someone else’s product, you’re renting your edge and slowing your learning.</p>
+  <ul>
+    <li><strong>Adaptation speed gap:</strong> Off-the-shelf roadmaps move slower than your pivots.</li>
+    <li><strong>Agent/prompt lock-in:</strong> Your differentiators (prompts, chains, tools, guardrails) must live in your repos, not trapped in a UI.</li>
+    <li><strong>Data gravity:</strong> Keep access to artifacts, usage exhaust and eval results so compounding gains remain yours.</li>
+    <li><strong>Exit friction:</strong> Require portable exports of <em>all</em> artifacts (prompts, flows, evals, metrics, model states) to switch quickly.</li>
+  </ul>
+
+  <h3>Assemble > Buy (most of the time)</h3>
+  <p>Use vendors for commodities (infra, base models, logging, auth). Assemble differentiation in a vendor-agnostic repo with open interfaces. Prefer “reference designs” you can fork and co-evolve over closed products.</p>
+
+  <h3>Independent systems integration</h3>
+  <p>Implementation becomes a <em>systems integration</em> project. Use an independent SI (or a small outside bench) to facilitate ideation and concept development without vertical conflicts. Keep adapters for multiple providers to avoid dead-ends.</p>
+
+  <figure>
+    <img src="/assets/diagram-scoreboard.svg" alt="Sample 30–60–90 scoreboard">
+    <figcaption>Scoreboard thumbnail: ship weekly slices; track lead time, adoption, rework, and “decisions improved”.</figcaption>
+  </figure>
+
+  <h3>Procurement guardrails (anti-lock-in)</h3>
+  <ul>
+    <li><strong>Portability:</strong> Export prompts/flows/tools/evals/metrics as files (automatable).</li>
+    <li><strong>IP:</strong> You own all derived workflows, fine-tunes, and evaluation assets.</li>
+    <li><strong>Benchmarks allowed:</strong> Explicit evaluation rights; no anti-benchmark clauses.</li>
+    <li><strong>Observability:</strong> Usage & quality metrics accessible via API; raw logs on request.</li>
+    <li><strong>Exit plan:</strong> Named artifacts to receive on termination; assistance SLAs.</li>
+    <li><strong>Self-host option:</strong> Right to run vendor components in your cloud.</li>
+  </ul>
+</section>
 <div class="notice" style="margin-top:8px">
   <p style="margin:0"><strong>Living document: co-evolving.</strong> We welcome improvements. <a href="/contact/?topic=feedback">Share feedback</a>. 
   We routinely review global best practice; proposals are routed via Humangate into CoCivium CoModules and approved edits auto-publish. The goal isn’t “build it and they will come,” but “co-evolve so people, systems, and incentives can align.”</p>
@@ -156,6 +188,7 @@
 
 
 <p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
 
 
 
