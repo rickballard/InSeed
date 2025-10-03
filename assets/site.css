@@ -222,3 +222,17 @@ nav.topnav ~ nav.topnav { display:none }
 
 
 .hero,.hero-blurb{margin-bottom:6px!important}.hero+*{margin-top:.4rem!important}
+/* lang: two-line items + ticks */
+.lang-item { display:flex; gap:.5rem; align-items:center; padding:.35rem .7rem; cursor:pointer; text-align:left }
+.lang-item .native{ font-weight:600 }
+.lang-item .english{ font-size:.85em; opacity:.8; line-height:1.2 }
+.lang-item::before{ content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before{ content:"☑" }
+
+/* Gibberlink preview banner (when active) */
+.gibberlink-banner{position:sticky; top:0; z-index:999; background:var(--card,#111);
+  color:var(--muted,#eee); border-bottom:1px solid var(--border,#333); padding:.4rem .8rem; font-size:.9rem}
+
+/* Theme toggle halo on first visit (draw attention) */
+@keyframes haloPulse { 0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)} 70%{box-shadow:0 0 0 8px rgba(255,255,255,0)} 100%{box-shadow:0 0 0 0 rgba(255,255,255,0)} }
+.theme-toggle.attn { animation: haloPulse 1.2s ease-out 2; }
