@@ -141,3 +141,30 @@ document.addEventListener("click", e=>{
     });
   }
 }catch(_){}})();
+/* a11y: language dropdown keyboard + aria */
+(()=>{try{
+  const wrap=document.querySelector(".lang-dropdown");
+  if(!wrap) return;
+  const btn=wrap.querySelector(".lang-button");
+  const menu=wrap.querySelector(".lang-menu");
+  if(!btn||!menu) return;
+
+  const setOpen=(open)=>{ menu.classList.toggle("show",open); btn.setAttribute("aria-expanded", open?"true":"false"); };
+  btn.addEventListener("click",(e)=>{ e.stopPropagation(); setOpen(!menu.classList.contains("show")); });
+  document.addEventListener("click",()=>setOpen(false));
+
+  // keyboard: Down/Up/Enter/Escape
+  btn.addEventListener("keydown",(e)=>{
+    if(e.key==="ArrowDown"||e.key==="Enter"||e.key===" "){ e.preventDefault(); setOpen(true); menu.querySelector(".lang-item")?.focus(); }
+  });
+  menu.addEventListener("keydown",(e)=>{
+    const items=[...menu.querySelectorAll(".lang-item")];
+    let i=items.indexOf(document.activeElement);
+    if(e.key==="Escape"){ setOpen(false); btn.focus(); }
+    if(e.key==="ArrowDown"){ e.preventDefault(); (items[i+1]||items[0])?.focus(); }
+    if(e.key==="ArrowUp"){ e.preventDefault(); (items[i-1]||items[items.length-1])?.focus(); }
+    if(e.key==="Enter"){ e.preventDefault(); document.activeElement?.click(); }
+  });
+  // make items focusable
+  menu.querySelectorAll(".lang-item").forEach(li=>li.setAttribute("tabindex","0"));
+}catch(_){}})();
