@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320">
+  <rect x="10" y="10" width="980" height="300" rx="16" fill="#f7f7fb" stroke="#ccd" />
+  <g font-family="ui-sans-serif,system-ui,Segoe UI,Arial" font-size="16" fill="#334">
+    <rect x="30" y="60" width="270" height="200" rx="12" fill="#fff" stroke="#aac"/>
+    <text x="45" y="95">Discover → Prioritize</text>
+    <rect x="365" y="60" width="270" height="200" rx="12" fill="#fff" stroke="#aac"/>
+    <text x="380" y="95">Pilot → Guardrail</text>
+    <rect x="700" y="60" width="270" height="200" rx="12" fill="#fff" stroke="#aac"/>
+    <text x="715" y="95">Operationalize → Measure</text>
+  </g>
+  <path d="M310 160 L365 160 M635 160 L700 160" stroke="#88a" stroke-width="3" marker-end="url(#a)" />
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L9,3 z" fill="#88a" /></marker>
+  </defs>
+</svg>

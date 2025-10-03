@@ -1,38 +1,93 @@
-<!doctype html><html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>InSeed Whitepaper • Executive Summary + Full</title>
-  <meta name="color-scheme" content="dark light">
-  <link rel="stylesheet" href="/assets/site.css">
-</head>
-<body>
-<nav class="topnav"><div class="container"><a href="/">InSeed</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a></div></nav>
-  <main class="container" style="max-width:900px;margin:2rem auto;padding:0 1rem">
-    <h1>InSeed Whitepaper</h1>
-    <p class="muted">This page contains a short Executive Summary followed by the complete paper. One canonical version; no alternates.</p>
-    <hr>
-    <h2 id="exec-summary">Executive Summary (2–3 minutes)</h2>
-    <p><em>[Replace this with the final executive summary text.]</em></p>
-    <ul>
-      <li>Problem frame: [replace]</li>
-      <li>Approach: [replace]</li>
-      <li>Guardrails & value: [replace]</li>
-      <li>Suggested first steps: [replace]</li>
-    </ul>
-    <p><a href="#full-paper">Jump to full whitepaper ↓</a></p>
-    <hr>
-    <h2 id="full-paper">Full Whitepaper</h2>
-    <p><em>[Replace with full paper body  -  headings, sections, references.]</em></p>
-    <hr>
-    <section aria-labelledby="feedback">
-      <h3 id="feedback">Feedback</h3>
-      <p>Help us improve: this site <strong>co‑evolves</strong> with reader input. We don’t collect personal information. We may log anonymous signals (e.g., which sections were viewed) to prioritize future improvements.</p>
-      <p><button onclick="inseedPulse('wp_feedback',{a:'agree'})">Agree</button> <button onclick="inseedPulse('wp_feedback',{a:'disagree'})">Disagree</button></p>
-      <p><a href="/contact/?topic=whitepaper">Share a detailed comment</a></p>
-    </section>
-  </main>
-  <script src="/assets/site.js"></script>
-</body>
-</html>
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InSeed Whitepaper — Executive Guide to an AI-Enabled Operating Model</title>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/print.css" media="print">
+<style>
+  .doc {max-width:900px;margin:2rem auto;padding:0 1rem}
+  .meta {color:var(--muted); font-size:.9rem}
+  .toc ol{margin-left:1.25rem}
+  .lead {font-size:1.1rem}
+  .callout{border:1px solid var(--border);background:var(--card);padding:1rem;border-radius:.75rem}
+  .btn-print{display:inline-block;border:1px solid var(--border);padding:.5rem .8rem;border-radius:.5rem}
+  figure{margin:1rem 0;text-align:center}
+  figure img{max-width:100%}
+  figure figcaption{font-size:.9rem;color:var(--muted)}
+</style>
+</head><body>
+<nav class="topnav"><div class="container">
+  <a href="/">InSeed</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
+</div></nav>
 
+<main class="doc">
+  <h1>Executive Guide to an AI-Enabled Operating Model</h1>
+  <p class="meta">Rev 1.0 · This paper will evolve with field experience.</p>
+  <p><a class="btn-print" href="#" onclick="window.print();return false;">Print / Save as PDF</a></p>
+
+  <section class="callout">
+    <h2>Executive Summary</h2>
+    <ul>
+      <li><strong>What’s changing:</strong> Value shifts from big quarterly drops to a steady stream of small wins that compound.</li>
+      <li><strong>What this needs:</strong> A lightweight run-way from idea → sandbox → guarded pilot → serviced capability.</li>
+      <li><strong>How to start:</strong> 90-day plan: 1) pick two workflows, 2) ship weekly slices, 3) publish guardrails and KPIs.</li>
+      <li><strong>Governance:</strong> “TOS-AI” one-pager: allowed uses, review gates, data boundaries, human-in-the-loop.</li>
+      <li><strong>Proof:</strong> Track a handful of <em>decision-making</em> and <em>cycle-time</em> metrics; make wins visible.</li>
+    </ul>
+  </section>
+
+  <section class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li>Signals CEOs Are Seeing</li>
+      <li>Operating Model Shifts</li>
+      <li>A Practical 90-Day Plan</li>
+      <li>Guardrails &amp; Risk (TOS-AI)</li>
+      <li>Metrics That Matter</li>
+      <li>Case Sketches</li>
+      <li>Appendix: Methods</li>
+    </ol>
+  </section>
+
+  <figure>
+    <img src="/assets/diagram-placeholder.svg" alt="Three-stage runway from discovery to service">
+    <figcaption>A small, repeatable runway beats a big one-off program.</figcaption>
+  </figure>
+
+  <h2>1) Signals CEOs Are Seeing</h2>
+  <p class="lead">Customers expect faster cycles; teams spin up “AI pilots” that stall at hand-off; and data portability issues slow everything down.</p>
+
+  <h2>2) Operating Model Shifts</h2>
+  <ul>
+    <li>From ad-hoc pilots → to <strong>guarded services</strong> with owners.</li>
+    <li>From PPT roadmaps → to <strong>weekly slices</strong> with real users.</li>
+    <li>From isolated data → to <strong>governed sharing</strong> (egress clauses, S3/Blob drops).</li>
+  </ul>
+
+  <h2>3) A Practical 90-Day Plan</h2>
+  <ol>
+    <li><strong>Week 1–2:</strong> pick two workflows, write the “one-page win”.</li>
+    <li><strong>Week 3–6:</strong> sandbox → pilot; ship weekly; measure usage &amp; cycle time.</li>
+    <li><strong>Week 7–12:</strong> guardrails, owner, change notes; publish KPIs; decide “keep / kill / expand”.</li>
+  </ol>
+
+  <h2>4) Guardrails &amp; Risk (TOS-AI)</h2>
+  <p>One page: allowed data, review gates, prompts are content, incident path, vendor responsibilities.</p>
+
+  <h2>5) Metrics That Matter</h2>
+  <ul>
+    <li>Lead time from idea → shipped slice</li>
+    <li># of decisions per week improved by new capability</li>
+    <li>Incident count / prompt-injection escapes (should trend to zero)</li>
+  </ul>
+
+  <h2>6) Case Sketches</h2>
+  <ul>
+    <li><em>Sales ops:</em> cut report prep from 3h → 15m; reps click through to source rows.</li>
+    <li><em>Support:</em> deflect “known” tickets via GPT+RAG; SLOs visible in the dashboard.</li>
+  </ul>
+
+  <div class="page-break"></div>
+  <h2>Appendix: Methods</h2>
+  <p>Lightweight ELT, prompt versioning, eval harnesses, “comply by default”.</p>
+</main>
+</body></html>

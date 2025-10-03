@@ -1,0 +1,9 @@
+@media print {
+  nav.topnav, footer, .lang-wrap, .theme-toggle { display:none !important }
+  body { color:#000; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  a[href^="http"]:after { content:" (" attr(href) ")"; font-size:0.9em }
+  h1,h2,h3 { page-break-after: avoid }
+  h2 { margin-top:1.2em }
+  .page-break { page-break-before: always }
+  .toc { page-break-after: always }
+}
