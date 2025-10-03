@@ -1,0 +1,26 @@
+<!-- PASTE the single <svg>
+<style data-inseed-palette>
+  :root{
+    --bg:#f6f7ff; --card:#ffffff; --ink:#1e2330; --muted:#4b5563;
+    --primary:#4f46e5; --border:#b8c2ea; --accent:#e8edff; --good:#16a34a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1117; --card:#0b0d12; --ink:#e6e9f5; --muted:#9aa4b2;
+      --primary:#8da2ff; --border:#2b3246; --accent:#141a2a;
+    }
+  }
+</style>…</svg> block copied from Canvas here, nothing else -->
+<!-- e.g., starts with <svg ...>
+<style data-inseed-palette>
+  :root{
+    --bg:#f6f7ff; --card:#ffffff; --ink:#1e2330; --muted:#4b5563;
+    --primary:#4f46e5; --border:#b8c2ea; --accent:#e8edff; --good:#16a34a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1117; --card:#0b0d12; --ink:#e6e9f5; --muted:#9aa4b2;
+      --primary:#8da2ff; --border:#2b3246; --accent:#141a2a;
+    }
+  }
+</style> and ends with </svg> -->
