@@ -141,3 +141,8 @@ body > a{display:block;max-width:var(--page);margin:0 auto;padding:0 16px}
 .hero-blurb p{ margin-top:4px !important }
 body > footer .container{ max-width:var(--page); margin:0 auto; padding:0 16px; }
 .loose-links, footer .micro{ text-align:center }
+/* language menu tweaks */
+.lang-menu { text-align:left }
+.lang-item { display:flex; align-items:center; justify-content:flex-start; gap:.5rem }
+.lang-item::before { content:"☐"; font-size:.95em }
+.lang-item[aria-selected="true"]::before { content:"☑" }
