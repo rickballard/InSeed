@@ -158,7 +158,7 @@ body > footer .container{ max-width:var(--page); margin:0 auto; padding:0 16px; 
 /* if a later .topnav survives for any reason, hide it */
 nav.topnav ~ nav.topnav { display:none }
 /* --- global text size & rhythm --- */
-html { font-size: 17px; }
+html{ font-size:19px; } }
 body { line-height: 1.6; }
 
 /* hero spacing closer to body copy */
@@ -178,7 +178,7 @@ footer > *, .site-footer > *, .page-end, .cta, .cta-bar, .cta-wrap { max-width:9
 .theme-toggle { border:1px solid var(--border, #444); background:var(--card, transparent); color:inherit; padding:.3rem .5rem; border-radius:.5rem; cursor:pointer }
 @media (prefers-color-scheme: dark){ .theme-toggle { border-color:#666 } }
 /* autopatch: type/spacing/footer/lang/theme */
-html { font-size: 18px; }  /* larger body text */
+html{ font-size:19px; } }  /* larger body text */
 body { line-height: 1.6; }
 
 .hero, .hero-blurb { margin-bottom: 10px !important; }
@@ -217,5 +217,6 @@ nav.topnav ~ nav.topnav { display:none }
 .lang-list .twoline .native{ font-weight:600 } .lang-list .twoline .english{ font-size:.9em; opacity:.8 }
 
 /* alignment and base sizing (kept) */
-html { font-size: 18px; } body { line-height:1.6 }
+html{ font-size:19px; } } body { line-height:1.6 }
 nav.topnav ~ nav.topnav { display:none }
+
