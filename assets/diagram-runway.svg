@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="320" role="img" aria-label="Runway from discovery to operational service">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L12,4 z" fill="#6b7bb8"/>
+    </marker>
+  </defs>
+  <rect x="10" y="10" width="1080" height="300" rx="16" fill="#f7f8fb" stroke="#d4dae6"/>
+  <g font-family="ui-sans-serif,system-ui,Segoe UI,Arial" font-size="15" fill="#223">
+    <rect x="40"  y="70" width="240" height="180" rx="12" fill="#fff" stroke="#b9c3de"/>
+    <text x="60" y="105" font-weight="600">Discover &amp; Prioritize</text>
+    <text x="60" y="130">• One-page win</text>
+    <text x="60" y="150">• Data access notes</text>
+    <text x="60" y="170">• Owner identified</text>
+
+    <rect x="320" y="70" width="240" height="180" rx="12" fill="#fff" stroke="#b9c3de"/>
+    <text x="340" y="105" font-weight="600">Pilot (sandbox)</text>
+    <text x="340" y="130">• Weekly shipped slice</text>
+    <text x="340" y="150">• Usage + cycle-time</text>
+    <text x="340" y="170">• Click-through to source</text>
+
+    <rect x="600" y="70" width="240" height="180" rx="12" fill="#fff" stroke="#b9c3de"/>
+    <text x="620" y="105" font-weight="600">Guardrail</text>
+    <text x="620" y="130">• TOS-AI gates + owners</text>
+    <text x="620" y="150">• Data boundaries</text>
+    <text x="620" y="170">• Incident path</text>
+
+    <rect x="880" y="70" width="200" height="180" rx="12" fill="#fff" stroke="#b9c3de"/>
+    <text x="900" y="105" font-weight="600">Service</text>
+    <text x="900" y="130">• Change notes</text>
+    <text x="900" y="150">• KPIs (lead time,</text>
+    <text x="900" y="168">  decisions improved)</text>
+  </g>
+  <path d="M280 160 L320 160 M560 160 L600 160 M840 160 L880 160" stroke="#6b7bb8" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" role="img" aria-label="CoFlow weekly cadence timeline">
+  <rect x="10" y="10" width="1080" height="240" rx="16" fill="#f7f8fb" stroke="#d4dae6"/>
+  <g font-family="ui-sans-serif,system-ui,Segoe UI,Arial" fill="#223" font-size="14">
+    <text x="40" y="50" font-size="16" font-weight="600">CoFlow cadence (quarter)</text>
+    <line x1="60" y1="120" x2="1040" y2="120" stroke="#6b7bb8" stroke-width="4"/>
+    <!-- weeks -->
+    <!-- 12 tick labels -->
+    <g text-anchor="middle">
+      <!-- ticks -->
+      <g stroke="#6b7bb8" stroke-width="2">
+        <!-- generate ticks every ~80px -->
+        <line x1="60" y1="110" x2="60"  y2="130"/><text x="60"  y="155">W1</text>
+        <line x1="140" y1="110" x2="140" y2="130"/><text x="140" y="155">W2</text>
+        <line x1="220" y1="110" x2="220" y2="130"/><text x="220" y="155">W3</text>
+        <line x1="300" y1="110" x2="300" y2="130"/><text x="300" y="155">W4</text>
+        <line x1="380" y1="110" x2="380" y2="130"/><text x="380" y="155">W5</text>
+        <line x1="460" y1="110" x2="460" y2="130"/><text x="460" y="155">W6</text>
+        <line x1="540" y1="110" x2="540" y2="130"/><text x="540" y="155">W7</text>
+        <line x1="620" y1="110" x2="620" y2="130"/><text x="620" y="155">W8</text>
+        <line x1="700" y1="110" x2="700" y2="130"/><text x="700" y="155">W9</text>
+        <line x1="780" y1="110" x2="780" y2="130"/><text x="780" y="155">W10</text>
+        <line x1="860" y1="110" x2="860" y2="130"/><text x="860" y="155">W11</text>
+        <line x1="940" y1="110" x2="940" y2="130"/><text x="940" y="155">W12</text>
+      </g>
+    </g>
+    <!-- callouts -->
+    <rect x="70"  y="70" width="180" height="34" rx="8" fill="#fff" stroke="#b9c3de"/>
+    <text x="80" y="92">Pick 2 priority workflows</text>
+    <rect x="300" y="70" width="210" height="34" rx="8" fill="#fff" stroke="#b9c3de"/>
+    <text x="310" y="92">Weekly shipped slice + KPIs</text>
+    <rect x="650" y="70" width="210" height="34" rx="8" fill="#fff" stroke="#b9c3de"/>
+    <text x="660" y="92">Guardrails (TOS-AI) + owner</text>
+    <rect x="880" y="70" width="180" height="34" rx="8" fill="#fff" stroke="#b9c3de"/>
+    <text x="890" y="92">Monthly review &amp; pivots</text>
+  </g>
+</svg>

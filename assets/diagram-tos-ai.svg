@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" role="img" aria-label="TOS-AI guardrails overview">
+  <rect x="10" y="10" width="1080" height="240" rx="16" fill="#f7f8fb" stroke="#d4dae6"/>
+  <g font-family="ui-sans-serif,system-ui,Segoe UI,Arial" font-size="14" fill="#223">
+    <text x="40" y="45" font-size="16" font-weight="600">TOS-AI guardrails (one-pager)</text>
+    <g>
+      <rect x="40"  y="60" width="240" height="160" rx="12" fill="#fff" stroke="#b9c3de"/>
+      <text x="60" y="85" font-weight="600">Allowed uses</text>
+      <text x="60" y="110">• Data classes</text><text x="60" y="130">• Prohibited prompts</text><text x="60" y="150">• Human-in-the-loop</text>
+    </g>
+    <g>
+      <rect x="310" y="60" width="240" height="160" rx="12" fill="#fff" stroke="#b9c3de"/>
+      <text x="330" y="85" font-weight="600">Review gates</text>
+      <text x="330" y="110">• Eval harness</text><text x="330" y="130">• Red team</text><text x="330" y="150">• Sign-off</text>
+    </g>
+    <g>
+      <rect x="580" y="60" width="240" height="160" rx="12" fill="#fff" stroke="#b9c3de"/>
+      <text x="600" y="85" font-weight="600">Data boundaries</text>
+      <text x="600" y="110">• Egress clauses</text><text x="600" y="130">• Vendor duty-of-care</text><text x="600" y="150">• Retention</text>
+    </g>
+    <g>
+      <rect x="850" y="60" width="240" height="160" rx="12" fill="#fff" stroke="#b9c3de"/>
+      <text x="870" y="85" font-weight="600">Incidents &amp; metrics</text>
+      <text x="870" y="110">• Prompt escapes (target: 0)</text><text x="870" y="130">• Lead time</text><text x="870" y="150">• “Decisions improved”</text>
+    </g>
+  </g>
+</svg>
