@@ -1,4 +1,7 @@
 <!-- PASTE the single <svg>
+<style data-inseed-pop-override>
+  rect.node, .node { stroke-width:1.35 }
+</style>
 <style data-inseed-bluepop>
   :root{
     /* blues (light) */
@@ -46,6 +49,9 @@
   }
 </style>…</svg> block copied from Canvas here, nothing else -->
 <!-- e.g., starts with <svg ...>
+<style data-inseed-pop-override>
+  rect.node, .node { stroke-width:1.35 }
+</style>
 <style data-inseed-bluepop>
   :root{
     /* blues (light) */
@@ -92,4 +98,5 @@
     }
   }
 </style> and ends with </svg> -->
+
 
