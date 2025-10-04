@@ -1,0 +1,25 @@
+InSeed link/stub audit — 2025-10-03T21:23:19
+Repo: C:\Users\Chris\Documents\GitHub\InSeed
+---------------------------------------------
+checklist/index.html -> MISSING: /__t
+checklist/index.html -> NO HERO PLACEHOLDER
+deprecated/funny.html -> NO HERO PLACEHOLDER
+deprecated/index_backup_20250923_142357.html -> NO HERO PLACEHOLDER
+deprecated/index_v3_backup_20250923_135618.html -> NO HERO PLACEHOLDER
+docs/whitepaper/index.html -> NO HERO PLACEHOLDER
+gibberlink/index.html -> NO HERO PLACEHOLDER
+insights/index.html -> NO HERO PLACEHOLDER
+privacy/index.html -> NO HERO PLACEHOLDER
+problems/index.html -> NO HERO PLACEHOLDER
+projects/index.html -> NO HERO PLACEHOLDER
+resources/billing/index.html -> NO HERO PLACEHOLDER
+resources/map/index.html -> MISSING: /assets/inseed-map.png
+resources/testimonials/index.html -> NO HERO PLACEHOLDER
+services/includes/service-lines.html -> NO HERO PLACEHOLDER
+solutions/index.html -> NO HERO PLACEHOLDER
+value/index.html -> NO HERO PLACEHOLDER
+404.html -> NO HERO PLACEHOLDER
+contact.html -> NO HERO PLACEHOLDER
+index.html.bak-20250914-235102.html -> NO HERO PLACEHOLDER
+index.html.bak-20250915-000816.html -> NO HERO PLACEHOLDER
+index.html.bak-20250915-114014.html -> NO HERO PLACEHOLDER
