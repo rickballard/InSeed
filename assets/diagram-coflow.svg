@@ -1,4 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="260" role="img" aria-label="CoFlow weekly cadence timeline">
+<style data-inseed-pop-override>
+  rect.node, .node { stroke-width:1.35 }
+</style>
+<defs><filter id="pop"><feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-opacity=".25"/></filter></defs>
+<style data-inseed-bluepop>
+  :root{
+    --p75:#eaf0ff; --p300:#a5b4fc; --p400:#818cf8; --border:#b8c2ea; --ink:#1e2330; --accent:#eef2ff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --p75:#121a33; --p300:#24367a; --p400:#2f44a3; --border:#2b3246; --ink:#e6e9f5; --accent:#141a2a;
+    }
+  }
+  rect[rx="16"], .panel { fill:var(--accent); stroke:var(--border) }
+  rect[rx="12"], .node, .card { fill:var(--p75); stroke:var(--p300); stroke-width:1.25; filter:url(#pop) }
+  text { fill:var(--ink); }
+  line, path { stroke:var(--p400); }
+  marker path { fill:var(--p400); }
+</style>
   <rect x="10" y="10" width="1080" height="240" rx="16" fill="#f7f8fb" stroke="#d4dae6"/>
   <g font-family="ui-sans-serif,system-ui,Segoe UI,Arial" fill="#223" font-size="14">
     <text x="40" y="50" font-size="16" font-weight="600">CoFlow cadence (quarter)</text>
@@ -34,3 +53,4 @@
     <text x="890" y="92">Monthly review &amp; pivots</text>
   </g>
 </svg>
+
