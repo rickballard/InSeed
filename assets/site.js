@@ -168,3 +168,27 @@ document.addEventListener("click", e=>{
   // make items focusable
   menu.querySelectorAll(".lang-item").forEach(li=>li.setAttribute("tabindex","0"));
 }catch(_){}})();
+/* footer+feedback rev + anonymous id + whitepaper print button */
+(() => { try {
+  const build = (new URLSearchParams(location.search)).get("v") || "";
+  // Anonymous visitor id
+  const k="inseed-uid"; let uid=localStorage.getItem(k);
+  if(!uid){ const d=new Date(); const p=(n)=>String(n).padStart(2,"0");
+    uid = `User${String(d.getFullYear()).slice(2)}${p(d.getMonth()+1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}`;
+    localStorage.setItem(k, uid);
+  }
+  // Footer rewrite (if there is a footer container)
+  const footer = document.querySelector("footer .container, footer");
+  if (footer && !footer.querySelector(".footer-note")) {
+    const p = document.createElement("p"); p.className="footer-note";
+    p.innerHTML = `Rev ${build || 'site'} · Website continually coevolves based on usage and <a href="/feedback/">shared feedback</a>.`;
+    footer.appendChild(p);
+  }
+  // show uid on feedback page
+  const uids = document.querySelectorAll("[data-uid]");
+  uids.forEach(el => el.textContent = uid);
+
+  // Whitepaper print button
+  const pb = document.querySelector(".button.print");
+  if(pb){ pb.addEventListener("click", e => { e.preventDefault(); window.print(); }); }
+} catch(_){} })();
