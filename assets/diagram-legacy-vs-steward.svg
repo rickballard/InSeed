@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="280" role="img" aria-label="Legacy vs Steward (AI era)">
+  <style>
+    :root{ --p75:#eaf0ff; --p300:#a5b4fc; --p400:#818cf8; --border:#b8c2ea; --ink:#1e2330; --accent:#eef2ff }
+    @media (prefers-color-scheme: dark){
+      :root{ --p75:#121a33; --p300:#24367a; --p400:#2f44a3; --border:#2b3246; --ink:#e6e9f5; --accent:#141a2a }
+    }
+    rect.panel{ fill:var(--accent); stroke:var(--border) }
+    rect.card{ fill:var(--p75); stroke:var(--p300); stroke-width:1.25; rx:12; }
+    text{ fill:var(--ink); font:14px ui-sans-serif,system-ui,"Segoe UI",Arial }
+    .h{ font-weight:700; font-size:16px }
+    line{ stroke:var(--p400); stroke-width:3 }
+  </style>
+  <rect x="10" y="10" width="1080" height="260" rx="16" class="panel"/>
+  <text x="40" y="48" class="h">Legacy vs Steward (AI era)</text>
+  <g>
+    <rect x="60" y="80" width="460" height="160" class="card"/>
+    <text x="80" y="108" class="h">Legacy CEO</text>
+    <text x="80" y="132">• Buy product → implement → request features</text>
+    <text x="80" y="152">• Roadmap follows vendor cadence</text>
+    <text x="80" y="172">• Differentiators trapped in UI/DB</text>
+    <text x="80" y="192">• Evidence = slideware & anecdotes</text>
+  </g>
+  <g>
+    <rect x="580" y="80" width="460" height="160" class="card"/>
+    <text x="600" y="108" class="h">Steward CEO</text>
+    <text x="600" y="132">• Assemble differentiators in your repos</text>
+    <text x="600" y="152">• Ship a usable slice weekly; pivot monthly</text>
+    <text x="600" y="172">• File-based prompts/flows/evals = portable</text>
+    <text x="600" y="192">• Evidence = shared scoreboard & guardrails</text>
+  </g>
+</svg>
