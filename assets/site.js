@@ -274,3 +274,22 @@ document.addEventListener("click", e=>{
     }
   }
 } catch(_){} })();
+/* plain-english toggle */
+(() => { try {
+  const KEY='inseed-plain'; const root=document.documentElement;
+  let on = localStorage.getItem(KEY) === '1';
+  root.classList.toggle('plain', on);
+
+  if(!document.querySelector('.plain-toggle')){
+    const btn = document.createElement('button');
+    btn.className='plain-toggle';
+    btn.type='button';
+    const setTxt = () => { btn.textContent = on ? 'Plain-English: ON' : 'Plain-English: OFF'; btn.setAttribute('aria-pressed', on?'true':'false'); };
+    setTxt();
+    btn.addEventListener('click', () => { on = !on; root.classList.toggle('plain', on); localStorage.setItem(KEY, on?'1':'0'); setTxt(); });
+    document.body.appendChild(btn);
+  }
+
+  // Ensure keyboard access to tooltips
+  document.querySelectorAll('abbr.tt').forEach(a => { a.tabIndex = 0; });
+} catch(_){} })();

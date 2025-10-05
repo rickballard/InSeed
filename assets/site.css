@@ -371,3 +371,22 @@ section.container{ padding-left:1rem; padding-right:1rem; }
   figure, .hero-figure { break-inside: avoid; page-break-inside: avoid; }
   section { break-inside: avoid-column; }
 }
+/* plain-english mode */
+.plain-toggle{
+  position:fixed; right:1rem; top:4rem; z-index:999;
+  background:#2f44a3; color:#fff; border:1px solid #24367a;
+  padding:.45rem .7rem; border-radius:.55rem; cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,.15)
+}
+.plain-toggle:focus{ outline:3px solid #a5b4fc; outline-offset:2px }
+@media print{ .plain-toggle{ display:none !important } }
+
+/* when plain mode is on, show definitions inline and remove tooltip styling */
+:root.plain abbr.tt[data-def]{ text-decoration:none; cursor:text }
+:root.plain abbr.tt[data-def]::after{ content:" (" attr(data-def) ")"; font-weight:400; }
+
+/* ensure print always expands definitions */
+@media print{
+  abbr.tt[data-def]{ text-decoration:none; cursor:text }
+  abbr.tt[data-def]::after{ content:" (" attr(data-def) ")"; font-weight:400 }
+}
