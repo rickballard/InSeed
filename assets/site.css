@@ -299,7 +299,7 @@ details.glossary summary{font-weight:700;cursor:pointer}
 details.glossary ul{margin:.6rem 0 .2rem 1.2rem}
 details.glossary li{margin:.2rem 0}
 /* tooltips */
-abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; cursor: help }
+abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; cursor: pointer }
 @media print{
   /* Expand definitions inline for print; remove “tooltip look” */
   abbr[title]{ text-decoration:none }
@@ -329,7 +329,7 @@ abbr.tt[data-def]{
   text-decoration: underline dotted;
   text-underline-offset: 2px;
   position: relative;
-  cursor: help; /* visually helpful; no native title tooltip anymore */
+  cursor: pointer; /* visually helpful; no native title tooltip anymore */
 }
 abbr.tt[data-def]:hover::after, abbr.tt[data-def]:focus::after{
   content: attr(data-def);
@@ -363,3 +363,4 @@ section.container{ padding-left:1rem; padding-right:1rem; }
 @media (min-width: 880px){
   section.container{ padding-left:1rem; padding-right:1rem; }
 }
+
