@@ -498,3 +498,16 @@ a.button, .button{
 @media (prefers-color-scheme: dark){
   .js-email-reveal img{ border-color:#2b3246 }
 }
+/* site logo sizing + light/dark swap */
+.header .brand { display:flex; align-items:center; gap:.6rem }
+.brand .site-logo { display:inline-block; line-height:0 }
+.brand .site-logo img { height:54px; width:auto } /* ~3× typical 18px */
+@media (max-width:720px){ .brand .site-logo img{ height:44px } }
+@media (prefers-color-scheme: dark){
+  .brand .site-logo img[data-scheme="light"]{ display:inline }
+  .brand .site-logo img[data-scheme="dark"]{ display:none }
+}
+@media (prefers-color-scheme: light){
+  .brand .site-logo img[data-scheme="light"]{ display:none }
+  .brand .site-logo img[data-scheme="dark"]{ display:inline }
+}
