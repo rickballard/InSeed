@@ -1,4 +1,4 @@
-InSeed link/stub audit — 2025-10-03T21:23:19
+InSeed link/stub audit — 2025-10-05T05:05:59
 Repo: C:\Users\Chris\Documents\GitHub\InSeed
 ---------------------------------------------
 checklist/index.html -> MISSING: /__t
