@@ -409,3 +409,26 @@ section.container{ padding-left:1rem; padding-right:1rem; }
 /* figures & headings */
 figure, .hero-figure{ margin-left:0; margin-right:0; }
 h2{ margin-top:1.2rem; }
+/* section verbose toggle */
+.sec-verbose-toggle{
+  float:right; margin:.25rem 0 .5rem .5rem; padding:.35rem .6rem;
+  background:#2f44a3; color:#fff; border:1px solid #24367a;
+  border-radius:.5rem; cursor:pointer; font-size:.9rem;
+}
+.sec-verbose-toggle:focus{ outline:3px solid #a5b4fc; outline-offset:2px }
+
+/* brief/long swap */
+section .brief{ display:block }
+section .long{ display:none }
+section.verbose .brief{ display:none }
+section.verbose .long{ display:block }
+
+/* print: always expand long, hide toggle */
+@media print{
+  .sec-verbose-toggle{ display:none !important }
+  section .brief{ display:none !important }
+  section .long{ display:block !important }
+}
+
+/* de-emphasize old global toggle */
+.plain-toggle{ display:none !important }

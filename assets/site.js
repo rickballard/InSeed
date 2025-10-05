@@ -293,3 +293,33 @@ document.addEventListener("click", e=>{
   // Ensure keyboard access to tooltips
   document.querySelectorAll('abbr.tt').forEach(a => { a.tabIndex = 0; });
 } catch(_){} })();
+/* section verbose toggles */
+(() => { try {
+  const key = id => `inseed-vsec-${id}`;
+  document.querySelectorAll('main section').forEach(sec => {
+    const h2 = sec.querySelector('h2'); if(!h2) return;
+    // Ensure an id to key localStorage
+    if(!sec.id){
+      const t = h2.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+      sec.id = t || ('s-' + Math.random().toString(36).slice(2));
+    }
+    // Button (idempotent)
+    if(!h2.querySelector('.sec-verbose-toggle')){
+      const btn = document.createElement('button');
+      btn.className = 'sec-verbose-toggle'; btn.type='button';
+      const apply = () => {
+        const on = localStorage.getItem(key(sec.id)) === '1';
+        sec.classList.toggle('verbose', on);
+        btn.textContent = on ? 'Condense section' : 'Verbose section';
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      };
+      btn.addEventListener('click', () => {
+        const cur = localStorage.getItem(key(sec.id)) === '1';
+        localStorage.setItem(key(sec.id), cur ? '0' : '1');
+        apply();
+      });
+      h2.appendChild(btn);
+      apply();
+    }
+  });
+} catch(_){} })();
