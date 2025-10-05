@@ -2,7 +2,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<script defer src="/assets/site.js?v=20251005070208"></script>
+<script defer src="/assets/site.js?v=20251005070943"></script>
 </head><body>
 <nav class="topnav"><div class="container">
   <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
@@ -32,7 +32,7 @@
 <meta charset="utf-8">
 <title>CEO Survival Guide: InSeed</title>
 <meta name="description" content="A CEO survival guide for the AI era: shock, contrast, risks, checklists, legal guardrails, and a weekly Steward operating model." /><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/assets/site.css?v=20251005070208">
+<link rel="stylesheet" href="/assets/site.css?v=20251005070943">
 <meta name="color-scheme" content="dark light">
 
 <!-- InSeed V4 TopNav -->
@@ -87,8 +87,8 @@
       <ul class="ticks">
         <li><em>Assembles</em> differentiators in own repos</li>
         <li>Ships a <em>usable slice weekly</em>, pivots monthly</li>
-        <li>File-based prompts/flows/<abbr title="Repeatable tests/harnesses to measure quality and regressions">evals</abbr> are portable</li>
-        <li>Evidence = shared <abbr title="Simple shared metrics: adoption, lead time, rework %, decision quality">scoreboard</abbr> & <abbr title="Practical rules for safety, data, compliance, and operations">guardrails</abbr></li>
+        <li>File-based prompts/flows/<abbr class="tt" data-def="Repeatable tests/harnesses to measure quality and regressions">evals</abbr> are portable</li>
+        <li>Evidence = shared <abbr class="tt" data-def="Simple shared metrics: adoption, lead time, rework %, decision quality">scoreboard</abbr> & <abbr class="tt" data-def="Practical rules for safety, data, compliance, and operations">guardrails</abbr></li>
       </ul>
     </div>
   </div>
@@ -100,7 +100,7 @@
   <h2>4) Assemble vs Buy (AI era)</h2>
   <figure>
     <img src="/assets/diagram-make-vs-buy.svg" alt="Assemble vs Buy (AI era) matrix">
-    <figcaption>Buy commodities (infra, auth, logging, base models). Assemble differentiators (prompts, tools, flows, <abbr title="Repeatable tests/harnesses to measure quality and regressions">evals</abbr>, <abbr title="Practical rules for safety, data, compliance, and operations">guardrails</abbr>) in your repos with vendor-agnostic <abbr title="Thin layers that let one capability work across vendors">adapters</abbr>.</figcaption>
+    <figcaption>Buy commodities (infra, auth, logging, base models). Assemble differentiators (prompts, tools, flows, <abbr class="tt" data-def="Repeatable tests/harnesses to measure quality and regressions">evals</abbr>, <abbr class="tt" data-def="Practical rules for safety, data, compliance, and operations">guardrails</abbr>) in your repos with vendor-agnostic <abbr class="tt" data-def="Thin layers that let one capability work across vendors">adapters</abbr>.</figcaption>
   </figure>
 </section><section id="wp-risks" class="container" style="max-width:900px;padding:1rem">
   <h2>5) If you don’t adapt</h2>
@@ -127,15 +127,15 @@
         <li>Adoption KPI tracked (e.g., WAU/MAU of new capability)</li>
         <li>Lead time & rework % trend reviewed</li>
         <li>Guardrail gate reviewed; incidents closed with “efficiency wisdom” captured</li>
-        <li><abbr title="Simple shared metrics: adoption, lead time, rework %, decision quality">Scoreboard</abbr> updated; pivot note written</li>
+        <li><abbr class="tt" data-def="Simple shared metrics: adoption, lead time, rework %, decision quality">Scoreboard</abbr> updated; pivot note written</li>
       </ul>
     </div>
     <div>
       <h3>Board governance tick-boxes</h3>
       <ul class="ticks">
-        <li>Evidence over claims (shared <abbr title="Simple shared metrics: adoption, lead time, rework %, decision quality">scoreboard</abbr>)</li>
+        <li>Evidence over claims (shared <abbr class="tt" data-def="Simple shared metrics: adoption, lead time, rework %, decision quality">scoreboard</abbr>)</li>
         <li>Anti-lock-in stance (portable artifacts, exit plan)</li>
-        <li><abbr title="Terms-of-service plus AI-specific gates that enforce boundaries">TOS-AI</abbr> / data boundaries in force</li>
+        <li><abbr class="tt" data-def="Terms-of-service plus AI-specific gates that enforce boundaries">TOS-AI</abbr> / data boundaries in force</li>
         <li>Benchmarking rights retained</li>
         <li>Named artifacts on termination; vendor assistance SLAs</li>
       </ul>
@@ -212,7 +212,60 @@
   <p><strong>Why weekly slices?</strong> Real usage beats decks. It de-risks spend and accelerates learning.</p>
   <p><strong>Can this coexist with big firms?</strong> Yes. Use a pre-SI boutique first. Bring in large firms after the approach is proven.</p>
 </section>
-<section id="wp-cta" class="container" style="max-width:900px;padding:1rem"><h2>Next steps</h2><p><a class="button print" href="#">Print this whitepaper</a> <a class="button" href="/engagement/">Start with a free CoAudit</a> <a class="button" href="/feedback/">Give shared feedback</a></p></section>
+<section id="wp-shift-functions" class="container" style="max-width:900px;padding:1rem">
+  <h2>13) What changes by function</h2>
+  <p><strong>Product:</strong> plan by <em>workflows</em> not features. Ship usable slices weekly; treat prompts, tools, flows and evals as first-class artifacts. Roadmaps reference evidence, not vendor slides.</p>
+  <p><strong>Operations:</strong> move from ticket queues to <em>instrumented flows</em>. Track lead time and rework %, retire steps that add latency without raising quality. Incident reviews capture “efficiency wisdom.”</p>
+  <p><strong>Engineering:</strong> use adapters to keep options open. Prefer portable file formats for prompts/flows/evals. Bake evals into CI to catch regressions.</p>
+  <p><strong>Finance:</strong> measure learning-per-dollar and <em>time-to-slice</em>. Contracts name exit rights and artifact portability; licenses scale with adoption, not seats alone.</p>
+  <p><strong>Legal & Risk:</strong> codify <abbr class="tt" data-def="Transition Office Steward — time-boxed facilitator for the transition; not a co-CEO">TxO Steward</abbr> gates, benchmarking rights, and data boundaries. Ban anti-evaluation clauses.</p>
+  <p><strong>People:</strong> steward craft, not compliance. Upskill PMs and leads to write specs as tests and evals. Celebrate evidence, not heroics.</p>
+</section>
+
+<section id="wp-verticals" class="container" style="max-width:900px;padding:1rem">
+  <h2>14) Industry sketches (portable patterns)</h2>
+  <p><strong>Telecom & Datacoms:</strong> ticket triage + doc agents reduce lead time from weeks to days; adapters prevent vendor lock-in as networks modernize.</p>
+  <p><strong>Healthcare:</strong> intake, prior auth, and discharge summaries become evidence loops; privacy gates and audit trails are part of the slice, not an afterthought.</p>
+  <p><strong>Financial Services:</strong> decisioning agents run inside guardrails; evaluators catch drift before it hits customers; portability defends against pricing shocks.</p>
+  <p><strong>Industrial:</strong> SOPs become executable checklists; on-device assist + offline fallbacks; human overrides logged as learnable signals.</p>
+  <p><strong>Public Sector & Education:</strong> transparent scoreboards build trust; bias/impact tests live with the code; adoption gates align with policy cycles.</p>
+</section>
+
+<section id="wp-change-risks" class="container" style="max-width:900px;padding:1rem">
+  <h2>15) Common risks & anti-patterns</h2>
+  <p><strong>Deck-driven programs:</strong> evidence arrives last. Flip it: show slices first; then talk slideware.</p>
+  <p><strong>One-vendor capture:</strong> differentiators trapped in someone else’s UI/DB. Keep artifacts in your repos with slim adapters.</p>
+  <p><strong>Shadow pilots:</strong> half-owned experiments with no adoption path. Every slice names its eventual owner and KPI before week one.</p>
+  <p><strong>“Co-CEO” posturing:</strong> the TxO Steward is a facilitator, not a rival executive. Language matters; so does time-box.</p>
+</section>
+
+<section id="wp-cadence" class="container" style="max-width:900px;padding:1rem">
+  <h2>16) Cadence: the weekly evidence loop</h2>
+  <p>Pick two workflows, ship one usable slice weekly, review adoption and rework %, and write a one-paragraph pivot note. Share a visible scoreboard so decisions compound.</p>
+  <p>Board oversight moves from annual surveys to <em>the same scoreboard</em>. The aim is not certainty; it’s a faster, safer learning rate.</p>
+</section>
+
+<section id="wp-economics" class="container" style="max-width:900px;padding:1rem">
+  <h2>17) Economics that matter</h2>
+  <p><strong>Time-to-slice:</strong> idea → first usable slice. <strong>Adoption velocity:</strong> WAU/MAU of the new capability. <strong>Rework %:</strong> changes after exposure. <strong>Decision quality:</strong> % backed by evidence. These are leading indicators of margin and resilience.</p>
+</section>
+
+<section id="wp-data-safety" class="container" style="max-width:900px;padding:1rem">
+  <h2>18) Data, safety, and auditability</h2>
+  <p>Design gates where data flows, not where org charts sit. Keep a changelog of prompts/tools/flows; evaluate accuracy, bias, and impact routinely; log human overrides as learn-signals. Make audits boring by being consistent.</p>
+</section>
+
+<section id="wp-txo" class="container" style="max-width:900px;padding:1rem">
+  <h2>19) The TxO Steward engagement (time-boxed)</h2>
+  <p>A TxO Steward (Transition Office Steward) is a short-term facilitator who sets the cadence, gates, and scoreboards that let a Steward organization learn weekly. They do not hold executive authority and are never presented as a co-CEO. Typical arc: week 0–1 CoAudit; weeks 1–4 slices; weeks 5–12 scale or stop; CoMirror after 4–12 weeks.</p>
+</section>
+
+<section id="wp-appendix" class="container" style="max-width:900px;padding:1rem">
+  <h2>20) Appendix: quick references</h2>
+  <p><strong>Assemble vs Buy:</strong> buy commodities (infra, auth, logging, base models); assemble your differentiators (prompts, tools, flows, evals) in your repos with vendor-agnostic adapters.</p>
+  <p><strong>Scoreboard examples:</strong> Adoption, Lead time, Rework %, Decision quality.</p>
+  <p><strong>Legal guardrails:</strong> benchmarking rights, no anti-eval terms, named artifacts on termination, vendor assistance SLAs.</p>
+</section><section id="wp-cta" class="container" style="max-width:900px;padding:1rem"><h2>Next steps</h2><p><a class="button print" href="#">Print this whitepaper</a> <a class="button" href="/engagement/">Start with a free CoAudit</a> <a class="button" href="/feedback/">Give shared feedback</a></p></section>
 <section class="container" style="max-width:900px;padding:1rem">
   <blockquote class="wp-warning" style="border-left-color:#2f44a3">
     <p><strong>A respectful note to Legacy CEOs:</strong> the point isn’t to erase you; it’s to upgrade you. Many of the leaders who built the last era remain our best chance at a benevolent next one if they adopt a Steward stance and coevolve with their teams.</p>
@@ -222,6 +275,8 @@
   <p><strong>Rick Ballard</strong> has worked in 30+ countries, co-founded multiple $-billion datacoms unicorns, and has “failed to retire” more than once out of a stubborn obligation to help fix the world. <a href="https://www.linkedin.com/in/richardballard/">LinkedIn</a>.</p>
   <p><strong>CoCivium</strong> — <a href="https://www.cocivium.org/">CoCivium.org</a> — is InSeed’s primary sponsee: a not-for-profit commons of toolsets for hybrid societies (human+AI), designed to be unowned and uncapturable.</p>
 </section>
+
+
 
 
 

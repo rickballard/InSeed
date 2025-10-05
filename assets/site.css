@@ -324,3 +324,42 @@ abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; curs
   a[href^="http"]:after{ content:" (" attr(href) ")"; font-weight:400; }
   img, svg { break-inside: avoid; page-break-inside: avoid; }
 }
+/* tooltips (custom, accessible) */
+abbr.tt[data-def]{
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  position: relative;
+  cursor: help; /* visually helpful; no native title tooltip anymore */
+}
+abbr.tt[data-def]:hover::after, abbr.tt[data-def]:focus::after{
+  content: attr(data-def);
+  position:absolute; left:0; top:calc(100% + .35rem);
+  max-width:min(36rem, 90vw);
+  background:#0f172a; color:#fff; border:1px solid #334155; border-radius:.5rem;
+  padding:.45rem .6rem; font-size:.9rem; line-height:1.25rem; z-index:9999;
+  box-shadow:0 8px 22px rgba(2,6,23,.25);
+}
+abbr.tt[data-def]:hover::before, abbr.tt[data-def]:focus::before{
+  content:""; position:absolute; left:.6rem; top:100%; width:.6rem; height:.6rem;
+  background:#0f172a; transform:translateY(.05rem) rotate(45deg);
+  border-left:1px solid #334155; border-top:1px solid #334155;
+}
+@media (prefers-color-scheme: light){
+  abbr.tt[data-def]:hover::after, abbr.tt[data-def]:focus::after{ background:#0b1220; }
+  abbr.tt[data-def]:hover::before, abbr.tt[data-def]:focus::before{ background:#0b1220; }
+}
+/* print: expand definition inline and remove the tooltip look */
+@media print{
+  abbr.tt[data-def]{ text-decoration:none }
+  abbr.tt[data-def]::after, abbr.tt[data-def]::before{ display:none !important; }
+  abbr.tt[data-def]::after{ content:" (" attr(data-def) ")"; display:inline; color:inherit }
+}
+/* layout normalization: avoid progressive left indent */
+.container{ margin-left:auto; margin-right:auto; }
+.container .container{ padding-left:0 !important; padding-right:0 !important; }
+.container ul{ padding-left:1.1rem; }
+.container ul.ticks{ padding-left:0; } /* ticks manage their own padding */
+section.container{ padding-left:1rem; padding-right:1rem; }
+@media (min-width: 880px){
+  section.container{ padding-left:1rem; padding-right:1rem; }
+}
