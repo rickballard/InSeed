@@ -511,3 +511,6 @@ a.button, .button{
   .brand .site-logo img[data-scheme="light"]{ display:none }
   .brand .site-logo img[data-scheme="dark"]{ display:inline }
 }
+/* footer hardening */
+footer .container{max-width:1100px;margin:0 auto;padding:1rem}
+footer .legal{ text-align:center; opacity:.85 }
