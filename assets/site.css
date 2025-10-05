@@ -317,3 +317,10 @@ abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; curs
 .sticky-feedback:focus{outline:3px solid #a5b4fc;outline-offset:2px}
 
 @media print{ .reaction-bar, .sticky-feedback { display:none !important } }
+/* print polish */
+@media print{
+  nav.topnav, footer, .sticky-feedback, .reaction-bar, #skip-link { display:none !important }
+  main, .container { max-width:100% !important; }
+  a[href^="http"]:after{ content:" (" attr(href) ")"; font-weight:400; }
+  img, svg { break-inside: avoid; page-break-inside: avoid; }
+}
