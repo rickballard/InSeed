@@ -323,3 +323,55 @@ document.addEventListener("click", e=>{
     }
   });
 } catch(_){} })();
+/* feedback combobox + hints + user id + email reveal + © year */
+(() => { try {
+  // Typeable selects → input+datalist (non-destructive)
+  document.querySelectorAll("#feedback form select:not([data-comboboxed])").forEach((sel,i)=>{
+    sel.dataset.comboboxed="1";
+    const id = sel.id || ("fbsel-"+i); sel.id=id;
+    const dl = document.createElement("datalist"); dl.id = id+"-list";
+    Array.from(sel.options).forEach(o => { const opt=document.createElement("option"); opt.value=o.textContent; dl.appendChild(opt); });
+    const input = document.createElement("input");
+    input.setAttribute("list", dl.id);
+    input.name = sel.name; input.className = sel.className || "";
+    input.placeholder = sel.getAttribute("placeholder") || "Type or choose…";
+    sel.insertAdjacentElement("beforebegin", input);
+    sel.parentNode.insertBefore(dl, input.nextSibling);
+    sel.disabled = true; sel.style.display="none";
+  });
+
+  // Number inputs: show "7 = typical"
+  document.querySelectorAll("#feedback form input[type=number]").forEach(n=>{
+    if(!n.placeholder) n.placeholder = "7 (typical)";
+    n.title = "7 = typical";
+  });
+
+  // Stronger User ID (yyMMddHHmmssfff)
+  const uidInput = Array.from(document.querySelectorAll("#feedback input, form input")).find(el=>{
+    const n=(el.name||"").toLowerCase(), id=(el.id||"").toLowerCase(), v=(el.value||"");
+    return /user.*id/.test(n) || /user.*id/.test(id) || /^user\d+$/.test(v);
+  });
+  if(uidInput){
+    const d=new Date(), pad=n=>n.toString().padStart(2,"0"), ms=d.getMilliseconds().toString().padStart(3,"0");
+    const uid=`User${d.getFullYear().toString().slice(2)}${pad(d.getMonth()+1)}${pad(d.getDate())}${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}${ms}`;
+    uidInput.value=uid;
+  }
+
+  // Email reveal: draw to canvas to reduce scraping
+  document.querySelectorAll(".js-email-reveal").forEach(slot=>{
+    if(slot.dataset.built) return; slot.dataset.built="1";
+    const u="contact", d="inseed.com";
+    const btn=document.createElement("button"); btn.type="button"; btn.textContent="Show email"; btn.className="button";
+    btn.addEventListener("click", ()=>{
+      const c=document.createElement("canvas"); const ctx=c.getContext("2d"); c.width=440; c.height=64;
+      ctx.fillStyle="#1e2330"; ctx.font="28px Georgia";
+      ctx.fillText(`${u}@${d}`, 12, 40);
+      const img=document.createElement("img"); img.alt="contact email"; img.src=c.toDataURL("image/png");
+      slot.replaceChildren(img);
+    });
+    slot.appendChild(btn);
+  });
+
+  // Dynamic © year
+  document.querySelectorAll(".js-year").forEach(el => el.textContent = new Date().getFullYear());
+} catch(_){} })();

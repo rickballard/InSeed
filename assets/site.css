@@ -447,3 +447,17 @@ section.verbose .long{ display:block }
 /* contact map */
 .contact-map img{width:100%;height:auto;border:1px solid var(--border,#b8c2ea);border-radius:.6rem}
 .contact-map figcaption{font-size:.9rem;opacity:.8;margin-top:.25rem}
+/* buttons: ensure contrast & legibility */
+a.button, .button{
+  display:inline-block; background:#2f44a3; color:#fff; border:1px solid #24367a;
+  border-radius:.55rem; padding:.55rem .9rem; text-decoration:none; font-weight:600
+}
+a.button:visited{ color:#fff }
+a.button:hover{ filter:brightness(1.08) }
+/* footer legal centering */
+footer .legal{ text-align:center; opacity:.8 }
+/* tiny hint text */
+.hint{ font-size:.9rem; opacity:.8 }
+/* contact-map already present from earlier pass */
+/* visually hide email source until revealed by JS */
+.email-raw{ display:none }
