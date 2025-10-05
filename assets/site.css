@@ -291,3 +291,5 @@ figure figcaption{font-size:.9em;opacity:.8;margin-top:.25rem}
 .footer-note{opacity:.85}
 
 .button:focus{outline:3px solid #a5b4fc;outline-offset:2px}
+/* brand logo */
+.topnav .brand img{ height:28px; width:auto; vertical-align:middle }
