@@ -466,3 +466,35 @@ fieldset.qualify{ border:1px solid var(--border,#b8c2ea); border-radius:.6rem; p
 fieldset.qualify legend{ font-weight:700; padding:0 .25rem }
 fieldset.qualify .row{ display:flex; gap:.8rem; flex-wrap:wrap; margin:.5rem 0 }
 fieldset.qualify label{ display:flex; flex-direction:column; gap:.25rem; min-width:12rem }
+/* button system (contrast-safe) */
+a.button, .button{
+  display:inline-block; font-weight:600; text-decoration:none;
+  padding:.6rem 1rem; border-radius:.6rem; border:1px solid transparent;
+  transition:filter .15s ease, transform .02s ease;
+}
+.button:active{ transform:translateY(1px) }
+
+/* primary brand button (default) */
+.button.brand, .button:not(.light):not(.outline){
+  background:#2f44a3; color:#fff !important; border-color:#24367a;
+}
+.button.brand:hover, .button:hover{ filter:brightness(1.08) }
+
+/* light button (white background for dark pages) */
+.button.light{
+  background:#fff; color:#0b1220 !important; border-color:#cbd5e1;
+}
+@media (prefers-color-scheme: dark){
+  .button.light{ border-color:#4b5563 }
+}
+
+/* outline button, if ever needed */
+.button.outline{
+  background:transparent; color:#2f44a3 !important; border-color:#2f44a3;
+}
+
+/* email image in reveal pill */
+.js-email-reveal img{ display:inline-block; vertical-align:middle; border-radius:.5rem; border:1px solid #b8c2ea }
+@media (prefers-color-scheme: dark){
+  .js-email-reveal img{ border-color:#2b3246 }
+}

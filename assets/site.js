@@ -375,3 +375,56 @@ document.addEventListener("click", e=>{
   // Dynamic © year
   document.querySelectorAll(".js-year").forEach(el => el.textContent = new Date().getFullYear());
 } catch(_){} })();
+/* email reveal v2: high-contrast pill for light/dark */
+(() => { try {
+  const buildEmailImage = (email) => {
+    const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const padX=16, padY=12, r=12;
+    const font = '700 22px ui-sans-serif, system-ui, "Segoe UI", Arial';
+    // temp canvas to measure text
+    const m = document.createElement('canvas').getContext('2d');
+    m.font = font;
+    const tw = Math.ceil(m.measureText(email).width);
+    const w  = tw + padX*2, h = 22 + padY*2;
+
+    // real canvas @ devicePixelRatio for crispness
+    const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+    const c = document.createElement('canvas'); c.width = Math.ceil(w*dpr); c.height = Math.ceil(h*dpr);
+    const ctx = c.getContext('2d'); ctx.scale(dpr,dpr); ctx.font = font;
+
+    const bg   = dark ? '#2f44a3' : '#eaf0ff';
+    const fg   = dark ? '#ffffff' : '#1e2330';
+    const bdr  = dark ? '#24367a' : '#b8c2ea';
+
+    const round = (x,y,w,h,r) => { ctx.beginPath();
+      ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+      ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+    };
+
+    // background + border
+    round(0.5,0.5,w-1,h-1,r);
+    ctx.fillStyle = bg; ctx.fill();
+    ctx.lineWidth = 1; ctx.strokeStyle = bdr; ctx.stroke();
+
+    // text with subtle shadow for cross-background separation
+    ctx.fillStyle = fg;
+    ctx.shadowColor = dark ? 'rgba(0,0,0,.25)' : 'rgba(0,0,0,.06)';
+    ctx.shadowBlur = dark ? 2 : 1;
+    ctx.fillText(email, padX, h - padY - 2);
+
+    const img = new Image(); img.width = w; img.height = h; img.alt = 'contact email';
+    img.src = c.toDataURL('image/png');
+    return img;
+  };
+
+  document.querySelectorAll('.js-email-reveal').forEach(slot => {
+    if (slot.dataset.v2) return; slot.dataset.v2 = '1';
+    const u='contact', d='inseed.com', email = `${u}@${d}`;
+    const btn=document.createElement('button'); btn.type='button'; btn.className='button light';
+    btn.textContent='Show email';
+    btn.addEventListener('click', ()=>{
+      slot.replaceChildren(buildEmailImage(email));
+    });
+    slot.replaceChildren(btn);
+  });
+} catch(_){} })();
