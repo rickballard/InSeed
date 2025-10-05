@@ -390,3 +390,22 @@ section.container{ padding-left:1rem; padding-right:1rem; }
   abbr.tt[data-def]{ text-decoration:none; cursor:text }
   abbr.tt[data-def]::after{ content:" (" attr(data-def) ")"; font-weight:400 }
 }
+/* indent & rhythm cleanup */
+.container{ margin-left:auto; margin-right:auto; }
+.container .container{
+  padding-left:0 !important; padding-right:0 !important;
+  margin-left:0 !important;  margin-right:0 !important;
+}
+/* sections already carry inline padding; prevent compounding */
+section.container{ padding-left:1rem; padding-right:1rem; }
+@media (min-width:880px){ section.container{ padding-left:1rem; padding-right:1rem; } }
+
+/* lists */
+.container ul{ padding-left:1.1rem; margin-left:0; }
+.container ul.ticks{ padding-left:0; margin-left:0; }    /* ticks control their own bullets */
+.ticks li{ padding-left:1.4rem; }                        /* room for ☑ */
+.ticks ul{ padding-left:1.1rem; margin-top:.25rem; }     /* nested lists stay tidy */
+
+/* figures & headings */
+figure, .hero-figure{ margin-left:0; margin-right:0; }
+h2{ margin-top:1.2rem; }
