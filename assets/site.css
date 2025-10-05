@@ -298,3 +298,10 @@ details.glossary{border:1px solid var(--border,#b8c2ea);border-left:4px solid #2
 details.glossary summary{font-weight:700;cursor:pointer}
 details.glossary ul{margin:.6rem 0 .2rem 1.2rem}
 details.glossary li{margin:.2rem 0}
+/* tooltips */
+abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; cursor: help }
+@media print{
+  /* Expand definitions inline for print; remove “tooltip look” */
+  abbr[title]{ text-decoration:none }
+  abbr[title]::after{ content:" (" attr(title) ")"; font-weight:400 }
+}
