@@ -305,3 +305,15 @@ abbr[title]{ text-decoration: underline dotted; text-underline-offset: 2px; curs
   abbr[title]{ text-decoration:none }
   abbr[title]::after{ content:" (" attr(title) ")"; font-weight:400 }
 }
+/* reactions */
+.reaction-bar{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin:.5rem 0 0;font-size:.92rem}
+.reaction-bar .rx-label{opacity:.8;margin-right:.25rem}
+.reaction-bar button{border:1px solid var(--border,#b8c2ea);background:var(--card,#fff);padding:.25rem .55rem;border-radius:.5rem;cursor:pointer}
+.reaction-bar button.on{outline:2px solid #a5b4fc;outline-offset:1px}
+.reaction-bar .rx-send{margin-left:.25rem}
+
+.sticky-feedback{position:fixed;right:1rem;bottom:1rem;background:#2f44a3;color:#fff;text-decoration:none;
+  padding:.6rem .8rem;border-radius:.6rem;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.sticky-feedback:focus{outline:3px solid #a5b4fc;outline-offset:2px}
+
+@media print{ .reaction-bar, .sticky-feedback { display:none !important } }

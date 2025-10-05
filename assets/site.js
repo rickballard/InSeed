@@ -192,3 +192,85 @@ document.addEventListener("click", e=>{
   const pb = document.querySelector(".button.print");
   if(pb){ pb.addEventListener("click", e => { e.preventDefault(); window.print(); }); }
 } catch(_){} })();
+/* quick reactions + sticky feedback + feedback prefill */
+(() => { try {
+  const qs = new URLSearchParams(location.search);
+  const build = qs.get("v") || "";
+  const K="inseed-uid"; let uid = localStorage.getItem(K);
+  if(!uid){ const d=new Date(),p=n=>String(n).padStart(2,"0");
+    uid = `User${String(d.getFullYear()).slice(2)}${p(d.getMonth()+1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}`;
+    localStorage.setItem(K,uid);
+  }
+
+  // Sticky button (once per page)
+  if(!document.querySelector('.sticky-feedback')){
+    const a = document.createElement('a');
+    a.className='sticky-feedback'; a.href='/feedback/'; a.textContent='Share feedback';
+    a.setAttribute('aria-label','Share feedback (opens feedback page)');
+    document.body.appendChild(a);
+  }
+
+  // Section reactions (for pages with main content)
+  const secs = Array.from(document.querySelectorAll('main section'))
+    .filter(s => s.querySelector('h2'));
+  secs.forEach(sec => {
+    if(sec.querySelector('.reaction-bar')) return;
+    if(!sec.id){
+      // derive a stable id from the H2 text (runtime only; no file write)
+      const title = sec.querySelector('h2')?.textContent?.trim() || 'section';
+      sec.id = 's-' + title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    }
+    const title = sec.querySelector('h2')?.textContent?.trim() || sec.id;
+    const bar = document.createElement('div');
+    bar.className='reaction-bar';
+    bar.innerHTML = `
+      <span class="rx-label">Quick reaction:</span>
+      <button type="button" data-rx="helpful"   aria-label="Mark helpful">Helpful</button>
+      <button type="button" data-rx="unclear"   aria-label="Mark unclear">Unclear</button>
+      <button type="button" data-rx="pushback"  aria-label="Push back">Push back</button>
+      <a class="rx-send" href="#" hidden>Open feedback →</a>`;
+    sec.appendChild(bar);
+
+    bar.addEventListener('click', async (e) => {
+      const b = e.target;
+      if(!(b instanceof HTMLButtonElement)) return;
+      const rx = b.dataset.rx || 'note';
+      const payload = {
+        uid,
+        path: location.pathname + '#' + sec.id,
+        section: sec.id,
+        title,
+        reaction: rx,
+        ts: new Date().toISOString()
+      };
+      const j = JSON.stringify(payload);
+      try { await navigator.clipboard.writeText(j); } catch(_){}
+      const link = bar.querySelector('.rx-send');
+      link.href = '/feedback/?prefill=' + encodeURIComponent(j);
+      link.hidden = false;
+      b.classList.add('on');
+      setTimeout(() => b.classList.remove('on'), 1500);
+    });
+  });
+
+  // Feedback page: prefill from ?prefill= JSON
+  if(location.pathname.startsWith('/feedback/')){
+    const raw = qs.get('prefill');
+    if(raw){
+      try{
+        const o = JSON.parse(decodeURIComponent(raw));
+        // Prefer notes field; keep whatever was typed, append payload summary
+        const notes = document.getElementById('notes');
+        if(notes){
+          const lines = [];
+          if(o.title)   lines.push(`Section: ${o.title}`);
+          if(o.path)    lines.push(`From: ${o.path}`);
+          if(o.reaction)lines.push(`Reaction: ${o.reaction}`);
+          if(o.uid)     lines.push(`UID: ${o.uid}`);
+          if(o.note)    lines.push(o.note);
+          notes.value = (notes.value ? notes.value + '\n' : '') + lines.join('\n');
+        }
+      }catch(_){}
+    }
+  }
+} catch(_){} })();
