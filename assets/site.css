@@ -364,3 +364,10 @@ section.container{ padding-left:1rem; padding-right:1rem; }
   section.container{ padding-left:1rem; padding-right:1rem; }
 }
 
+/* print pagination polish */
+@page { margin: 16mm; }
+@media print{
+  h1,h2,h3 { break-after: avoid; }
+  figure, .hero-figure { break-inside: avoid; page-break-inside: avoid; }
+  section { break-inside: avoid-column; }
+}
