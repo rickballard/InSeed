@@ -461,3 +461,8 @@ footer .legal{ text-align:center; opacity:.8 }
 /* contact-map already present from earlier pass */
 /* visually hide email source until revealed by JS */
 .email-raw{ display:none }
+/* feedback qualifiers */
+fieldset.qualify{ border:1px solid var(--border,#b8c2ea); border-radius:.6rem; padding:.8rem 1rem; margin:1rem 0 }
+fieldset.qualify legend{ font-weight:700; padding:0 .25rem }
+fieldset.qualify .row{ display:flex; gap:.8rem; flex-wrap:wrap; margin:.5rem 0 }
+fieldset.qualify label{ display:flex; flex-direction:column; gap:.25rem; min-width:12rem }
