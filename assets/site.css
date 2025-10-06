@@ -514,3 +514,18 @@ a.button, .button{
 /* footer hardening */
 footer .container{max-width:1100px;margin:0 auto;padding:1rem}
 footer .legal{ text-align:center; opacity:.85 }
+/* header brand/logo: ensure consistent size */
+.header .brand { display:flex; align-items:center; gap:.6rem }
+.brand .site-logo { display:inline-block; line-height:0 }
+.brand .site-logo img{ height:56px; width:auto }
+@media (max-width:720px){ .brand .site-logo img{ height:46px } }
+
+/* catch-all for other headers that still use a plain <img alt="InSeed"> */
+header img[alt*="InSeed"]{ height:56px; width:auto }
+
+/* nuke any floating/sticky corner CTA variants */
+#corner-cta, .sticky-cta, .floating-cta { display:none !important }
+
+/* footer hardening (center + readable) */
+footer .container{ max-width:1100px; margin:0 auto; padding:1rem }
+footer .legal{ text-align:center; opacity:.85 }
