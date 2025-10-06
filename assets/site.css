@@ -553,3 +553,9 @@ a[href*="/resources/billing/"][class*="floating"],
 a[href*="/resources/billing/"][class*="sticky"],
 #corner-cta,.sticky-cta,.floating-cta{display:none!important}
 
+
+/* homepage CTA trio */
+.cta-trio{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin:1.25rem auto 2.25rem;max-width:900px}
+.cta-trio .button{min-width:13rem;text-align:center;padding:.7rem 1rem}
+@media (max-width:640px){ .cta-trio .button{flex:1 1 100%} }
+
