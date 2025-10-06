@@ -529,3 +529,27 @@ header img[alt*="InSeed"]{ height:56px; width:auto }
 /* footer hardening (center + readable) */
 footer .container{ max-width:1100px; margin:0 auto; padding:1rem }
 footer .legal{ text-align:center; opacity:.85 }
+
+/* ——— header/logo sizing (force) ——— */
+.header .brand{display:flex;align-items:center;gap:.6rem}
+.header .brand img,
+.brand .site-logo img,
+header img[alt*="InSeed"]{height:60px!important;max-height:60px!important;width:auto}
+@media (max-width:720px){
+  .header .brand img,
+  .brand .site-logo img,
+  header img[alt*="InSeed"]{height:48px!important;max-height:48px!important}
+}
+
+/* ——— strap row readability ——— */
+.strap,.announce,.top-strap,.strapline{font-size:1.04rem;line-height:1.25}
+.strap a,.announce a,.strapline a{padding:.2rem .45rem}
+
+/* ——— nuke any fixed Billing chip ——— */
+a[href*="/resources/billing/"][style*="position:fixed"],
+a[href*="/resources/billing/"][class*="corner"],
+a[href*="/resources/billing/"][class*="chip"],
+a[href*="/resources/billing/"][class*="floating"],
+a[href*="/resources/billing/"][class*="sticky"],
+#corner-cta,.sticky-cta,.floating-cta{display:none!important}
+
