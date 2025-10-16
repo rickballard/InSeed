@@ -10,41 +10,86 @@ $PSScriptRoot = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 $destAbs  = Join-Path $repoRoot $To
 $gallery  = Join-Path $repoRoot "content/diagrams.md"
+$captions = Join-Path $repoRoot "content/diagrams.captions.yml"
 
 ni -ItemType Directory -Force $destAbs | Out-Null
+ni -ItemType Directory -Force (Split-Path $gallery -Parent) | Out-Null
+
+function Get-SrcImages {
+  # IMPORTANT: -Include needs wildcard or -Recurse; use wildcard on path.
+  $p = Join-Path $From '*'
+  @(Get-ChildItem -Path $p -File -Include *.png,*.svg -ErrorAction SilentlyContinue)
+}
 
 # Accept .png / .svg starting with 3-digit index
-$src = @(Get-ChildItem -File $From -Include *.png,*.svg -ErrorAction SilentlyContinue |
-  Where-Object { $_.BaseName -match '^\d{3}_[^ ]+' })
+$src = Get-SrcImages | Where-Object { $_.BaseName -match '^\d{3}_[^ ]+' }
 
-if(-not $RebuildOnly){
+if(-not $RebuildOnly -and $src.Count){
   foreach($f in $src){
     $leaf = ($f.Name -replace '\s+','-')
     Copy-Item $f.FullName (Join-Path $destAbs $leaf) -Force
   }
 }
 
+# Build captions overrides (optional YAML: filename: { alt: "...", caption: "..." })
+$override = @{}
+if(Test-Path $captions){
+  try {
+    $raw = Get-Content $captions -Raw
+    # Tiny YAML reader for simple key: value pairs
+    # Expecting:
+    #   020_partner-ecosystem__intro-to-deal.svg:
+    #     alt: "Partner ecosystem: key path from intro to signed deal"
+    #     caption: "Flow from lead sources..."
+    $current = $null
+    $raw -split "`r?`n" | ForEach-Object {
+      if($_ -match '^\s*([^\:\s]+)\s*:\s*$'){ $current = $matches[1]; $override[$current] = @{} }
+      elseif($_ -match '^\s+alt:\s*"(.*)"\s*$' -and $current){ $override[$current]['alt']=$matches[1] }
+      elseif($_ -match '^\s+caption:\s*"(.*)"\s*$' -and $current){ $override[$current]['caption']=$matches[1] }
+    }
+  } catch { }
+}
+
 # Build gallery Markdown
-$figs = @(Get-ChildItem -File $destAbs -Include *.png,*.svg -ErrorAction SilentlyContinue | Sort-Object Name)
+$figs = @(Get-ChildItem -Path (Join-Path $destAbs '*') -File -Include *.png,*.svg -ErrorAction SilentlyContinue | Sort-Object Name)
 
 $lines = @("# InSeed Diagram Gallery","")
 foreach($g in $figs){
-  # Name pattern: NNN_title__context.ext
-  if($g.BaseName -match '^(?<n>\d{3})_(?<title>[^_]+?)(?:__?(?<ctx>.*))?$'){
-    $title = ($matches.title -replace '-', ' ')
-    $ctx   = $matches.ctx
-  } else { $title = $g.BaseName; $ctx = "" }
+  # Filename pattern: NNN_title__context.ext
+  $title = $g.BaseName
+  $ctx   = ""
+  if($g.BaseName -match '^(?<n>\d{3})_(?<t>[^_]+?)(?:__?(?<c>.*))?$'){
+    $title = ($matches.t -replace '-', ' ')
+    $ctx   = $matches.c
+  }
 
   $rel = ($g.FullName.Replace($repoRoot, '')).TrimStart('\').Replace('\','/')
+  $alt = "$title"
+  if($ctx){ $alt = "$title — $ctx" }
+
+  if($override.ContainsKey($g.Name)){
+    if($override[$g.Name].ContainsKey('alt') -and $override[$g.Name]['alt']){ $alt = $override[$g.Name]['alt'] }
+  }
+
   $lines += "## $title"
   if($ctx){ $lines += "$ctx" }
+
+  # Render with HTML figure so captions appear nicely on the site
+  $caption = ""
+  if($override.ContainsKey($g.Name) -and $override[$g.Name].ContainsKey('caption')){
+    $caption = $override[$g.Name]['caption']
+  } elseif($ctx){
+    $caption = $ctx
+  }
+
   $lines += ""
-  $lines += "![${title}](/$rel)"
+  $lines += "<figure>"
+  $lines += $"  <img src=""{('/' + $rel)}"" alt=""{($alt -replace '"','&quot;')}"" />"
+  if($caption){ $lines += $"  <figcaption>{($caption -replace '<','&lt;' -replace '>','&gt;')}</figcaption>" }
+  $lines += "</figure>"
   $lines += ""
 }
 
-# Ensure content folder exists even if no figures yet
-ni -ItemType Directory -Force (Split-Path $gallery -Parent) | Out-Null
 $lines -join "`r`n" | Set-Content -Encoding UTF8 $gallery
 
 $cnt = ($figs | Measure-Object).Count
