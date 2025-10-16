@@ -1,0 +1,9 @@
+020_partner-ecosystem__intro-to-deal.svg:
+  alt: "Partner ecosystem: key path from intro to signed deal"
+  caption: "Flow from lead sources through triage, founder call, diligence, offer, and close."
+030_content-loop__weekly-cycle.svg:
+  alt: "InSeed weekly content loop"
+  caption: "Inputs → Curate (Corpus Sweep) → Draft → Edit → Publish → Feedback → Backlog → Curate."
+040_cosuite-architecture__high-level.svg:
+  alt: "CoSuite high-level architecture"
+  caption: "Operators feed CoCache & InSeed → CoPolitic → Viewers; CI/CD supports; CoAgent future paths."
