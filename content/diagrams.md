@@ -4,24 +4,24 @@
 intro-to-deal
 
 <figure>
-  <img src="/assets/diagrams/020_partner-ecosystem__intro-to-deal.svg" alt="partner ecosystem — intro-to-deal" />
-  <figcaption>intro-to-deal</figcaption>
+  <img src="/assets/diagrams/020_partner-ecosystem__intro-to-deal.svg" alt="Partner ecosystem: key path from intro to signed deal" />
+  <figcaption>Flow from lead sources through triage, founder call, diligence, offer, and close.</figcaption>
 </figure>
 
 ## content loop
 weekly-cycle
 
 <figure>
-  <img src="/assets/diagrams/030_content-loop__weekly-cycle.svg" alt="content loop — weekly-cycle" />
-  <figcaption>weekly-cycle</figcaption>
+  <img src="/assets/diagrams/030_content-loop__weekly-cycle.svg" alt="InSeed weekly content loop" />
+  <figcaption>Inputs → Curate (Corpus Sweep) → Draft → Edit → Publish → Feedback → Backlog → Curate.</figcaption>
 </figure>
 
 ## cosuite architecture
 high-level
 
 <figure>
-  <img src="/assets/diagrams/040_cosuite-architecture__high-level.svg" alt="cosuite architecture — high-level" />
-  <figcaption>high-level</figcaption>
+  <img src="/assets/diagrams/040_cosuite-architecture__high-level.svg" alt="CoSuite high-level architecture" />
+  <figcaption>Operators feed CoCache &amp; InSeed → CoPolitic → Viewers; CI/CD supports; CoAgent future paths.</figcaption>
 </figure>
 
 ## dog-racehorse-hero
