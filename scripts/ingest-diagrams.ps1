@@ -82,15 +82,24 @@ foreach($g in $figs){
     $caption = $ctx
   }
 
-  $lines += ""
-  $lines += "<figure>"
-  $lines += $"  <img src=""{('/' + $rel)}"" alt=""{($alt -replace '"','&quot;')}"" />"
-  if($caption){ $lines += $"  <figcaption>{($caption -replace '<','&lt;' -replace '>','&gt;')}</figcaption>" }
-  $lines += "</figure>"
-  $lines += ""
+  # Build <figure> block (encode first)
+$lines += ""
+$lines += "<figure>"
+
+$encodedAlt = [System.Net.WebUtility]::HtmlEncode($alt)
+$imgLine    = "  <img src=""{0}"" alt=""{1}"" />" -f ('/' + $rel), $encodedAlt
+$lines     += $imgLine
+
+if($caption){
+  $encodedCaption = [System.Net.WebUtility]::HtmlEncode($caption)
+  $lines += "  <figcaption>$encodedCaption</figcaption>"
+}
+$lines += "</figure>"
+$lines += ""
 }
 
 $lines -join "`r`n" | Set-Content -Encoding UTF8 $gallery
 
 $cnt = ($figs | Measure-Object).Count
 Write-Host ("✅ Gallery rebuilt with {0} image(s): {1}" -f $cnt, $gallery) -ForegroundColor Green
+
