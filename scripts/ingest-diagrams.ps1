@@ -58,9 +58,52 @@ foreach($g in $figs){
   # Filename pattern: NNN_title__context.ext
   $title = $g.BaseName
   $ctx   = ""
-  if($g.BaseName -match '^(?<n>\d{3})_(?<t>[^_]+?)(?:__?(?<c>.*))?$'){
-    $title = ($matches.t -replace '-', ' ')
-    $ctx   = $matches.c
+    if($g.BaseName -match '^(?<n>\d{3})_(?<t>[^_]+?)(?:__?(?<c>.*))?
+
+  $rel = ($g.FullName.Replace($repoRoot, '')).TrimStart('\').Replace('\','/')
+  $alt = "$title"
+  if($ctx){ $alt = "$title — $ctx" }
+
+  if($override.ContainsKey($g.Name)){
+    if($override[$g.Name].ContainsKey('alt') -and $override[$g.Name]['alt']){ $alt = $override[$g.Name]['alt'] }
+  }
+
+  $lines += "## $title"
+  if($ctx){ $lines += "$ctx" }
+
+  # Render with HTML figure so captions appear nicely on the site
+  $caption = ""
+  if($override.ContainsKey($g.Name) -and $override[$g.Name].ContainsKey('caption')){
+    $caption = $override[$g.Name]['caption']
+  } elseif($ctx){
+    $caption = $ctx
+  }
+
+  # Build <figure> block (encode first)
+$lines += ""
+$lines += "<figure>"
+
+$encodedAlt = [System.Net.WebUtility]::HtmlEncode($alt)
+$imgLine    = "  <img src=""{0}"" alt=""{1}"" />" -f ('/' + $rel), $encodedAlt
+$lines     += $imgLine
+
+if($caption){
+  $encodedCaption = [System.Net.WebUtility]::HtmlEncode($caption)
+  $lines += "  <figcaption>$encodedCaption</figcaption>"
+}
+$lines += "</figure>"
+$lines += ""
+}
+
+$lines -join "`r`n" | Set-Content -Encoding UTF8 $gallery
+
+$cnt = ($figs | Measure-Object).Count
+Write-Host ("✅ Gallery rebuilt with {0} image(s): {1}" -f $cnt, $gallery) -ForegroundColor Green
+
+
+){
+    $title = ($matches['t'] -replace '-', ' ')
+    if($matches.Groups['c'].Success){ $ctx = $matches['c'] } else { $ctx = '' }
   }
 
   $rel = ($g.FullName.Replace($repoRoot, '')).TrimStart('\').Replace('\','/')
@@ -102,5 +145,6 @@ $lines -join "`r`n" | Set-Content -Encoding UTF8 $gallery
 
 $cnt = ($figs | Measure-Object).Count
 Write-Host ("✅ Gallery rebuilt with {0} image(s): {1}" -f $cnt, $gallery) -ForegroundColor Green
+
 
 
