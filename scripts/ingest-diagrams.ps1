@@ -103,3 +103,4 @@ $lines -join "`r`n" | Set-Content -Encoding UTF8 $gallery
 $cnt = ($figs | Measure-Object).Count
 Write-Host ("✅ Gallery rebuilt with {0} image(s): {1}" -f $cnt, $gallery) -ForegroundColor Green
 
+
