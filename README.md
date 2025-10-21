@@ -1,4 +1,4 @@
-﻿<!-- BPOE:STATUS-BADGES BEGIN -->
+<!-- BPOE:STATUS-BADGES BEGIN -->
 ### Workflow Health
 
 Main:
@@ -42,4 +42,8 @@ If the hero image exists it’s wired into README. ODT text block is optional an
 
 Generated: 2025-09-15T19:46:14.925019
 
+<!-- BEGIN: STATUS -->
+### Operational Status
+CoDrift Index: n/a% (n/a)
+<!-- END: STATUS -->
 
