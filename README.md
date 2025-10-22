@@ -41,7 +41,6 @@ If the hero image exists it’s wired into README. ODT text block is optional an
 - If enabled, commits are signed by `github-actions[bot]` with message prefix `auto:`.
 
 Generated: 2025-09-15T19:46:14.925019
-
 <!-- BEGIN: STATUS -->
 ### Operational Status
 CoDrift Index: n/a% (n/a)
