@@ -1,0 +1,24 @@
+name: placeholder-warning
+on:
+  pull_request:
+    paths:
+      - "site/**"
+      - ".github/workflows/placeholder-warning.yml"
+jobs:
+  warn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Warn when pages still use placeholder.svg
+        shell: bash
+        run: |
+          set -e
+          # Look for placeholder.svg in common content types
+          if grep -RIn --include="*.md" --include="*.mdx" --include="*.html" --include="*.liquid" "placeholder.svg" site >/tmp/ph_hits || true; then
+            if [ -s /tmp/ph_hits ]; then
+              echo "::group::Placeholder references"
+              cat /tmp/ph_hits
+              echo "::endgroup::"
+              echo "::warning::Pages reference placeholder.svg. Keep the content-first flow, but plan a follow-up PR to replace these."
+            fi
+          fi
