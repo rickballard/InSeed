@@ -1,0 +1,10 @@
+%% Impact Map
+flowchart LR
+  F[Funders] --> PRJ[Projects]
+  PRJ --> BENE[Beneficiaries]
+  BENE --> FEED[Feedback]
+  FEED --> PRJ
+  PRJ --> RPT[Reports / Evidence]
+  RPT --> F
+  classDef mild fill:#eef7ff,stroke:#69c,color:#111;
+  class F,PRJ,BENE,FEED,RPT mild;

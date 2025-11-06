@@ -1,0 +1,9 @@
+%% Guardrails (Mini)
+flowchart LR
+  PUB[Publish] --> OBJ{Objection Window}
+  OBJ -->|clear| CONF[Confirmed]
+  OBJ -->|issue| REV[Review]
+  REV -->|rollback| RB[Rollback]
+  REV -->|remedy| FIX[Remediate]
+  classDef mild fill:#f6efff,stroke:#96c,color:#111;
+  class PUB,OBJ,CONF,REV,RB,FIX mild;

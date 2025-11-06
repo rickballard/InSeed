@@ -45,4 +45,8 @@ Presence and basic sanity for images on **main**.
 | assets/map-placeholder.png | ✅ |
 | assets/map-placeholder.svg | ✅ |
 | resources/billing/inseed-billing-model.pdf | ✅ |
-| favicon.svg | ✅ |
+| favicon.svg | ✅ || docs/diagrams/inseed/flywheel.mmd | ✅ |
+| docs/diagrams/inseed/offer-stack.mmd | ✅ |
+| docs/diagrams/inseed/intake-to-advicebomb.mmd | ✅ |
+| docs/diagrams/inseed/guardrails-mini.mmd | ✅ |
+| docs/diagrams/inseed/impact-map.mmd | ✅ |

@@ -1,0 +1,9 @@
+%% InSeed Flywheel (seed)
+flowchart LR
+  D[Discovery] --> A1[Advice]
+  A1 --> ACT[Action Kits]
+  ACT --> EV[Evidence / Outcomes]
+  EV --> T[Trust & Referrals]
+  T --> D
+  classDef mild fill:#eef,stroke:#88a,color:#111;
+  class D,A1,ACT,EV,T mild;
