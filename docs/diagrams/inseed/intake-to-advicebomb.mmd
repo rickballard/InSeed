@@ -1,0 +1,9 @@
+%% Intake → AdviceBomb
+flowchart TD
+  WEB[Website form/email] --> B[Bundle Builder]
+  B --> H[SHA-256 Verify]
+  H --> L[INBOX_LOG append]
+  L --> PR[Create/Update PR]
+  PR --> RC[CoSync receipt note]
+  classDef mild fill:#ffe,stroke:#aa6,color:#111;
+  class WEB,B,H,L,PR,RC mild;

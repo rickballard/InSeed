@@ -43,4 +43,8 @@
 | assets/map-placeholder.png | 0 KB |  |
 | assets/map-placeholder.svg | 0.4 KB |  |
 | resources/billing/inseed-billing-model.pdf | 4.6 KB |  |
-| favicon.svg | 0.2 KB |  |
+| favicon.svg | 0.2 KB |  || InSeed Flywheel | [docs/diagrams/inseed/flywheel.mmd](docs/diagrams/inseed/flywheel.mmd) | InSeed Batch-1 plate |
+| InSeed Offer Stack | [docs/diagrams/inseed/offer-stack.mmd](docs/diagrams/inseed/offer-stack.mmd) | InSeed Batch-1 plate |
+| Intake → AdviceBomb | [docs/diagrams/inseed/intake-to-advicebomb.mmd](docs/diagrams/inseed/intake-to-advicebomb.mmd) | InSeed Batch-1 plate |
+| Guardrails (Mini) | [docs/diagrams/inseed/guardrails-mini.mmd](docs/diagrams/inseed/guardrails-mini.mmd) | InSeed Batch-1 plate |
+| Impact Map | [docs/diagrams/inseed/impact-map.mmd](docs/diagrams/inseed/impact-map.mmd) | InSeed Batch-1 plate |

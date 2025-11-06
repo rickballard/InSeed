@@ -1,0 +1,19 @@
+name: visual-asset-guard
+on:
+  pull_request:
+    paths:
+      - "site/**"
+      - ".github/workflows/visual-asset-guard.yml"
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Block candidate images from site content
+        run: |
+          set -e
+          # Grep all site content for references to candidates/
+          if grep -R --line-number --ignore-case "assets/images/candidates/" site; then
+            echo "::error::Site references candidate images. Promote to assets/images/approved/ after review."
+            exit 1
+          fi
