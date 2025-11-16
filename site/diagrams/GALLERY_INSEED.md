@@ -92,3 +92,11 @@ Together they form a stack where:
   - “Visual overview”
   - “How InSeed works”
   - “InSeed in the CoSuite ecosystem”
+
+# GALLERY INSEED
+
+This page is part of the **InSeed.com** site.
+It will eventually carry a clearer explanation of how this part of InSeed works.
+
+For now, treat it as a placeholder while we finish wiring up the full content.
+

@@ -8,3 +8,11 @@
   4) Reasonable file size; prefer SVG
   5) Brand-safe (colors/marks/naming)
 - **Do not** replace existing logos/marks without explicit approval.
+
+# README
+
+This page is part of the **InSeed.com** site.
+It will eventually carry a clearer explanation of how this part of InSeed works.
+
+For now, treat it as a placeholder while we finish wiring up the full content.
+
