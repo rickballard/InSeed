@@ -67,12 +67,12 @@ It helps new people understand that InSeed is one part of a larger civic-tech st
 
 ### How to interpret this diagram
 
-- Treat **InSeed** as the part focused on **commercial and engagement architecture**:
+- Treat <strong>InSeed</strong> as the part focused on <strong>engagements and commercial alignment</strong>:
   - Helping founders and funders navigate forced pivots.
-  - Designing offers and engagements that can plug into CoCivium later.
-- Treat **CoCivium** as the **civic kernel** that governs shared best-practice and civic infrastructure.
-- Treat **CoAgent** as the **AI-workbench / orchestrator** layer.
-- Treat **CoCache** as the **shared memory / reference library**.
+  - Designing offers and engagements that can later plug into CoCivium.
+- Treat <strong>CoCivium</strong> as the <strong>civic kernel</strong> that governs shared best-practice and civic infrastructure.
+- Treat <strong>CoAgent</strong> as the <strong>AI workbench / orchestrator</strong>.
+- Treat <strong>CoCache</strong> as the <strong>shared memory / reference library</strong>.
 
 Together they form a stack where:
 
@@ -86,7 +86,7 @@ Together they form a stack where:
 
 - Adjust the <code>href</code> and <code>src</code> paths
   (<code>/diagrams/...svg</code>) to match the real asset URLs on inseed.com.
-- Keep the **diagram names and purposes** aligned with
+- Keep the <strong>diagram names and purposes</strong> aligned with
   <code>CoCache/docs/diagrams/HUB_GRAPHICS_INVENTORY.md</code>.
 - Link to this page from a human-friendly place in the site nav, e.g.:
   - “Visual overview”
