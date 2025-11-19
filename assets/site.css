@@ -559,3 +559,34 @@ a[href*="/resources/billing/"][class*="sticky"],
 .cta-trio .button{min-width:13rem;text-align:center;padding:.7rem 1rem}
 @media (max-width:640px){ .cta-trio .button{flex:1 1 100%} }
 
+
+
+/* MW_InSeed_LogoTheme_v2: logo and background tuning for light and dark */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f5f5f7;
+    color: #111827;
+  }
+  nav.topnav {
+    background-color: #ffffff;
+  }
+  .topnav .brand img {
+    content: url("/assets/inseed-logo-128.png");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #020617;
+    color: #e5e7eb;
+  }
+  nav.topnav {
+    background-color: #020617;
+  }
+  .topnav .brand img {
+    content: url("/assets/inseed-logo-white.svg");
+  }
+}
+
+/* /MW_InSeed_LogoTheme_v2 */
