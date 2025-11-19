@@ -25,7 +25,10 @@
     <span style="flex:1"></span>
     <a href="/" class="lang">EN</a>
     <span class="muted" aria-hidden="true">&nbsp;·&nbsp;</span>
-    <a href="/gibberlink/" class="lang">CoPortal</a>
+    <a href="/gibberlink/" class="lang"
+       onclick="this.href='/gibberlink/?from='+encodeURIComponent(location.pathname+location.search+location.hash)">
+       CoPortal
+    </a>
   </div>
 </nav>
 
@@ -55,6 +58,7 @@
 </main>
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </body></html>
+
 
 
 
