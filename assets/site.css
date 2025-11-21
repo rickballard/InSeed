@@ -590,3 +590,132 @@ a[href*="/resources/billing/"][class*="sticky"],
 }
 
 /* /MW_InSeed_LogoTheme_v2 */
+
+
+/* MW_InSeed_ThemePalette_C_v1: Option C softer professional */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fafafa;
+    color: #111827;
+  }
+
+  nav.topnav {
+    background-color: #ffffff;
+    box-shadow: 0 1px 0 rgba(15,23,42,0.06);
+  }
+
+  /* Logo: standard color mark for light mode */
+  .topnav .brand img {
+    content: url("/assets/inseed-logo-128.png");
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+
+  nav.topnav {
+    background-color: #111827;
+    box-shadow: 0 1px 0 rgba(15,23,42,0.7);
+  }
+
+  /* Logo: white-on-transparent mark for dark mode */
+  .topnav .brand img {
+    content: url("/assets/inseed-logo-white.svg");
+  }
+}
+
+/* /MW_InSeed_ThemePalette_C_v1 */
+
+
+/* MW_InSeed_LangAndTheme_Toggles_v1: lang dropdown + theme toggle */
+
+.topnav .theme-toggle{
+  border:1px solid rgba(15,23,42,0.2);
+  background:transparent;
+  color:inherit;
+  border-radius:999px;
+  padding:0.25rem 0.55rem;
+  font-size:0.75rem;
+  margin-right:0.5rem;
+  cursor:pointer;
+}
+
+.topnav .theme-toggle:hover{
+  background:rgba(15,23,42,0.05);
+}
+
+.lang-switcher{
+  position:relative;
+  font-size:0.8rem;
+}
+
+.lang-switcher .lang-current{
+  border:1px solid rgba(15,23,42,0.2);
+  border-radius:999px;
+  background:transparent;
+  color:inherit;
+  padding:0.25rem 0.6rem;
+  cursor:pointer;
+}
+
+.lang-switcher .lang-menu{
+  position:absolute;
+  right:0;
+  top:120%;
+  min-width:180px;
+  background:#ffffff;
+  color:#111827;
+  border-radius:0.5rem;
+  border:1px solid rgba(15,23,42,0.15);
+  box-shadow:0 10px 25px rgba(15,23,42,0.18);
+  padding:0.35rem 0;
+  display:none;
+  z-index:20;
+}
+
+.lang-switcher .lang-menu.is-open{
+  display:block;
+}
+
+.lang-switcher .lang-menu button{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:none;
+  padding:0.3rem 0.8rem;
+  font-size:0.8rem;
+  cursor:pointer;
+}
+
+.lang-switcher .lang-menu button:hover{
+  background:rgba(15,23,42,0.06);
+}
+
+/* Dark mode override for dropdown */
+@media (prefers-color-scheme: dark) {
+  .lang-switcher .lang-menu{
+    background:#111827;
+    color:#e5e7eb;
+    border-color:rgba(15,23,42,0.7);
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+  }
+}
+
+/* Explicit theme override via data-theme takes precedence */
+:root[data-theme="light"] body,
+body[data-theme="light"]{
+  background-color:#fafafa;
+  color:#111827;
+}
+
+:root[data-theme="dark"] body,
+body[data-theme="dark"]{
+  background-color:#111827;
+  color:#e5e7eb;
+}
+
+/* /MW_InSeed_LangAndTheme_Toggles_v1 */

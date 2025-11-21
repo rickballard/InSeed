@@ -24,12 +24,31 @@
     <a href="/contact/">Contact</a>
     <a href="/engagement/">Engagement</a>
     <span style="flex:1"></span>
-    <a href="/" class="lang">EN</a>
-    <span class="muted" aria-hidden="true">&nbsp;·&nbsp;</span>
-    <a href="/gibberlink/" class="lang"
-       onclick="this.href='/gibberlink/?from='+encodeURIComponent(location.pathname+location.search+location.hash)">
-       CoPortal
-    </a>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -43,6 +62,7 @@
 We’re trying to help this site “co-evolve” based on what’s useful. If you choose to submit answers or feedback, your responses may be used - anonymously - to improve content and create better checklists. We do <em>not</em> store personal info, do not set tracking cookies, and do not sell or share your data. You can clear your answers at any time (they’re saved in your browser only). If you request deletion of a submission, we’ll remove it. Thanks for helping make this more useful.</p>
 </main>
 </body></html>
+
 
 
 
