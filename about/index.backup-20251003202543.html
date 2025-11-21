@@ -15,27 +15,22 @@
 <!-- CSP (soft): tighten later if needed -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
 </head><body>
-<nav class="topnav"><div class="container">
-  <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
-  <div class="nav-right" style="margin-left:auto;display:flex;gap:.75rem;align-items:center">
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Light/Dark">🌓</button>
-    <div class="lang-dropdown">
-      <button class="lang-button" aria-expanded="false" aria-haspopup="true">Language ▾</button>
-      <ul class="lang-menu" role="menu">
-  <li class="lang-item" data-lang="en"><span class="native">English</span><span class="english">English</span></li>
-  <li class="lang-item" data-lang="gl"><span class="native">Gibberlink</span><span class="english">Preview (machine+rules)</span></li>
-  <li class="lang-item" data-lang="fr"><span class="native">Français</span><span class="english">French</span></li>
-  <li class="lang-item" data-lang="es"><span class="native">Español</span><span class="english">Spanish</span></li>
-  <li class="lang-item" data-lang="de"><span class="native">Deutsch</span><span class="english">German</span></li>
-  <li class="lang-item" data-lang="pt"><span class="native">Português</span><span class="english">Portuguese</span></li>
-  <li class="lang-item" data-lang="zh"><span class="native">中文</span><span class="english">Chinese</span></li>
-  <li class="lang-item" data-lang="ja"><span class="native">日本語</span><span class="english">Japanese</span></li>
-  <li class="lang-item" data-lang="ar"><span class="native">العربية</span><span class="english">Arabic</span></li>
-  <li class="lang-item" data-lang="hi"><span class="native">हिन्दी</span><span class="english">Hindi</span></li>
-</ul>
-    </div>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+    <a href="/" class="lang">EN</a>
+    <span class="muted" aria-hidden="true">&nbsp;·&nbsp;</span>
+    <a href="/gibberlink/" class="lang"
+       onclick="this.href='/gibberlink/?from='+encodeURIComponent(location.pathname+location.search+location.hash)">
+       CoPortal
+    </a>
   </div>
- </div></nav>
+</nav>
 
 
 
@@ -43,14 +38,14 @@
 
 </div><main class="container" style="max-width:900px;padding:1rem">
   <h1>About InSeed</h1>
-<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted">Hero placeholder</span></div>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
 <!-- about: origins-intent v1 -->
 <section id="origins" class="container" style="max-width:900px;padding:1rem">
   <h2>Origins &amp; intent</h2>
   <p><strong>InSeed began as an angel fund for traditional software developers who disliked meetings and management theatre.</strong> 
   We evolved into a systems-integration and business-strategy boutique in the datacoms sector, based in Denver and serving U.S. venture firms launching new datacoms businesses. 
-  A few unicorns later, most of our team no longer has to work. We remain humble—and clear-eyed—about a world in trouble: democratic norms erode, authoritarians press in, ethics feels optional.</p>
-  <p><strong>We believe hybrid society—human&nbsp;+&nbsp;AI—can restore freedom and widen opportunity.</strong> 
+  A few unicorns later, most of our team no longer has to work. We remain humble - and clear-eyed - about a world in trouble: democratic norms erode, authoritarians press in, ethics feels optional.</p>
+  <p><strong>We believe hybrid society - human&nbsp;+&nbsp;AI - can restore freedom and widen opportunity.</strong> 
   Fewer boundaries. Fewer hierarchies. Less scarcity of chance. Our work now points at that future.</p>
   <figure>
     <img src="/assets/diagram-about-timeline.svg" alt="InSeed timeline: 1990–1998 Pre-SI consulting (Toronto) → 1998–2004 Angel fund & global setup (Denver/The Hague/Sydney) → 2004–2022 Angel investments (software products) → 2024–present Pre-SI strategy & CoCivium&trade;">
@@ -60,7 +55,7 @@
   <p><strong>CoCivium&trade;</strong> is our not-for-profit, open-source community for hybrid-identity pairings (human+AI) that build the next generation of organizational and civic toolsets. 
   InSeed’s current incarnation is a pre-Systems-Integration strategy boutique realigning executive teams with futures they actually want to own.</p>
   <aside class="wp-card">
-    <strong>No corruption. No coercion. No crowns.</strong> All proceeds from InSeed work fund CoCivium&trade; and its toolsets—unowned, free to all, and uncapturable by political, commercial, or ideological demagogues.
+    <strong>No corruption. No coercion. No crowns.</strong> All proceeds from InSeed work fund CoCivium&trade; and its toolsets - unowned, free to all, and uncapturable by political, commercial, or ideological demagogues.
   </aside>
 </section>
 <section id="history" class="container" style="max-width:900px;padding:1rem">
@@ -98,6 +93,10 @@
 </main>
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </body></html>
+
+
+
+
 
 
 

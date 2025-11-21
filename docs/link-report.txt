@@ -1,4 +1,4 @@
-InSeed link/stub audit — 2025-10-05T05:05:59
+InSeed link/stub audit  -  2025-10-05T05:05:59
 Repo: C:\Users\Chris\Documents\GitHub\InSeed
 ---------------------------------------------
 checklist/index.html -> MISSING: /__t
@@ -23,3 +23,4 @@ contact.html -> NO HERO PLACEHOLDER
 index.html.bak-20250914-235102.html -> NO HERO PLACEHOLDER
 index.html.bak-20250915-000816.html -> NO HERO PLACEHOLDER
 index.html.bak-20250915-114014.html -> NO HERO PLACEHOLDER
+

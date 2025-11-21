@@ -16,27 +16,41 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </head><body>
-<nav class="topnav"><div class="container">
-  <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
-  <div class="nav-right" style="margin-left:auto;display:flex;gap:.75rem;align-items:center">
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Light/Dark">🌓</button>
-    <div class="lang-dropdown">
-      <button class="lang-button" aria-expanded="false" aria-haspopup="true">Language ▾</button>
-      <ul class="lang-menu" role="menu">
-  <li class="lang-item" data-lang="en"><span class="native">English</span><span class="english">English</span></li>
-  <li class="lang-item" data-lang="gl"><span class="native">Gibberlink</span><span class="english">Preview (machine+rules)</span></li>
-  <li class="lang-item" data-lang="fr"><span class="native">Français</span><span class="english">French</span></li>
-  <li class="lang-item" data-lang="es"><span class="native">Español</span><span class="english">Spanish</span></li>
-  <li class="lang-item" data-lang="de"><span class="native">Deutsch</span><span class="english">German</span></li>
-  <li class="lang-item" data-lang="pt"><span class="native">Português</span><span class="english">Portuguese</span></li>
-  <li class="lang-item" data-lang="zh"><span class="native">中文</span><span class="english">Chinese</span></li>
-  <li class="lang-item" data-lang="ja"><span class="native">日本語</span><span class="english">Japanese</span></li>
-  <li class="lang-item" data-lang="ar"><span class="native">العربية</span><span class="english">Arabic</span></li>
-  <li class="lang-item" data-lang="hi"><span class="native">हिन्दी</span><span class="english">Hindi</span></li>
-</ul>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
     </div>
   </div>
- </div></nav>
+</nav>
 
 
 
@@ -44,9 +58,9 @@
 
 
 </div><main class="container" style="max-width:900px;padding:1rem">
-<div class="card"><h3>Legacy vs <abbr class="tt" data-def="Steward CEO style—delegates decisions to the edge, learns weekly">Steward</abbr> (Exec Summary)</h3><p>A quick contrast for busy CEOs; read the Executive Summary for detail.</p><p><a href="/resources/insights/ceo-steward-exec-summary.html">Read →</a></p></div>
+<div class="card"><h3>Legacy vs <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr> (Exec Summary)</h3><p>A quick contrast for busy CEOs; read the Executive Summary for detail.</p><p><a href="/resources/insights/ceo-steward-exec-summary.html">Read →</a></p></div>
 <h1>Resources</h1>
-<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted">Hero placeholder</span></div>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
 <p>Curated papers, briefs, and examples from InSeed and CoAgent.</p>
 <ul>
 <li><a href="/resources/insights/ceo-steward-exec-summary.html">ceo-survival-guide</a> <small>(10 KB)</small></li>
@@ -113,6 +127,34 @@
 
 
 
+
+
+
+
+
+
+<!-- MW_InSeed_Triage_v1 resources -->
+<section class="mw-inseed-resources-intro">
+  <p>Curated briefings and whitepapers from InSeed on AI, governance, and transformation.</p>
+  <ul>
+    <li>CEO Survival Guide – full whitepaper (PDF)</li>
+    <li>Legacy vs Steward – Exec summary (web)</li>
+    <li>CEO Survival Guide – transcript</li>
+    <li>CEO Survival Guide – full references (living document)</li>
+  </ul>
+</section>
+<!-- /MW_InSeed_Triage_v1 resources -->
+
+
+
+<!-- MW_InSeed_Resources_Deck_v1 -->
+<section class="mw-inseed-legacy-deck">
+  <h2>Legacy slide decks (for contrast)</h2>
+  <p>A tongue-in-cheek, old-school deck that shows how static slides feel once you start thinking like a Steward CEO.</p>
+  <p><a href="/assets/legacy-vs-steward-deck.pdf">Download the deck (PDF) →</a></p>
+  <p class="muted">Static, non-AI, intentionally old-school. Use it to brief legacy leadership or to laugh at how we all used to work.</p>
+</section>
+<!-- /MW_InSeed_Resources_Deck_v1 -->
 
 
 

@@ -22,15 +22,49 @@ input[type=text],textarea,select{width:100%;padding:.5rem;border:1px solid var(-
 .small{font-size:.9em;opacity:.85}
 </style>
 </head><body>
-<nav class="topnav"><div class="container"><a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/resources/">Resources</a> </div></nav>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
 <main id="main" class="container" style="max-width:900px;padding:1rem">
   <h1>Shared feedback</h1>
-<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted">Hero placeholder</span></div>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
   <p class="small">Hello <strong data-uid></strong>. We don’t store personal data unless you explicitly approve. Answers can be copied locally and emailed to us. If you tick “approve anonymous upload,” you consent to depersonalized, aggregate use.</p>
 
   <h2>Quick questions</h2>
   <div class="form-row"><label>Which concept needs the most sharpening?</label>
-    <select id="q1"><option>Assemble vs Buy</option><option><abbr class="tt" data-def="Steward CEO style—delegates decisions to the edge, learns weekly">Steward</abbr> vs Legacy CEO</option><option>CoFlow cadence</option><option><abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">Guardrails</abbr> & <abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">evaluation</abbr></option><option>Vendor <abbr class="tt" data-def="Being stuck with one vendor because your differentiators live in their UI/DB">lock-in</abbr></option></select>
+    <select id="q1"><option>Assemble vs Buy</option><option><abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr> vs Legacy CEO</option><option>CoFlow cadence</option><option><abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">Guardrails</abbr> & <abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">evaluation</abbr></option><option>Vendor <abbr class="tt" data-def="Being stuck with one vendor because your differentiators live in their UI/DB">lock-in</abbr></option></select>
   </div>
   <div class="form-row"><label>Biggest risk you see with our approach?</label><textarea id="q2" rows="4"></textarea></div>
   <div class="form-row"><label>One question you wish we answered:</label><textarea id="q3" rows="3"></textarea></div>
@@ -74,6 +108,11 @@ input[type=text],textarea,select{width:100%;padding:.5rem;border:1px solid var(-
 })();
 </script>
 </body></html>
+
+
+
+
+
 
 
 

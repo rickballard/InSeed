@@ -4,27 +4,41 @@
 <meta http-equiv="Expires" content="0">
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </head><body>
-<nav class="topnav"><div class="container">
-  <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
-  <div class="nav-right" style="margin-left:auto;display:flex;gap:.75rem;align-items:center">
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Light/Dark">🌓</button>
-    <div class="lang-dropdown">
-      <button class="lang-button" aria-expanded="false" aria-haspopup="true">Language ▾</button>
-      <ul class="lang-menu" role="menu">
-  <li class="lang-item" data-lang="en"><span class="native">English</span><span class="english">English</span></li>
-  <li class="lang-item" data-lang="gl"><span class="native">Gibberlink</span><span class="english">Preview (machine+rules)</span></li>
-  <li class="lang-item" data-lang="fr"><span class="native">Français</span><span class="english">French</span></li>
-  <li class="lang-item" data-lang="es"><span class="native">Español</span><span class="english">Spanish</span></li>
-  <li class="lang-item" data-lang="de"><span class="native">Deutsch</span><span class="english">German</span></li>
-  <li class="lang-item" data-lang="pt"><span class="native">Português</span><span class="english">Portuguese</span></li>
-  <li class="lang-item" data-lang="zh"><span class="native">中文</span><span class="english">Chinese</span></li>
-  <li class="lang-item" data-lang="ja"><span class="native">日本語</span><span class="english">Japanese</span></li>
-  <li class="lang-item" data-lang="ar"><span class="native">العربية</span><span class="english">Arabic</span></li>
-  <li class="lang-item" data-lang="hi"><span class="native">हिन्दी</span><span class="english">Hindi</span></li>
-</ul>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
     </div>
   </div>
- </div></nav>
+</nav>
 
 
 
@@ -71,7 +85,7 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
 })();</script><div class="container" style="max-width:800px;margin-top:24px">
   <h1>Content moved</h1>
-<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted">Hero placeholder</span></div>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
   <p>The Executive Summary and full text now live together here:
      <a href="/resources/insights/ceo-steward-exec-summary.html">CEO Survival Guide whitepaper</a>.</p>
   <p><a class="btn" href="/resources/insights/ceo-steward-exec-summary.html">Open the whitepaper</a></p>
@@ -129,6 +143,21 @@
 
 
 
+
+
+
+
+
+
+<!-- MW_InSeed_Triage_v1 exec-summary -->
+<section class="mw-inseed-exec-intro">
+  <p><strong>Intent:</strong> This page is a quick contrast for busy CEOs. The full CEO Survival Guide whitepaper is the canonical, downloadable reference.</p>
+  <ul>
+    <li>File-based prompts, flows, and evaluations stay portable so you can switch vendors without losing your work.</li>
+    <li>Evidence becomes a shared scoreboard and guardrails: lead time, rework %, and decision quality.</li>
+  </ul>
+</section>
+<!-- /MW_InSeed_Triage_v1 exec-summary -->
 
 
 

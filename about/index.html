@@ -15,27 +15,41 @@
 <!-- CSP (soft): tighten later if needed -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
 </head><body>
-<nav class="topnav"><div class="container">
-  <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a><a href="/about/">About</a><a href="/problems/">Problems</a><a href="/services/">Solutions</a><a href="/resources/">Resources</a><a href="/contact/">Contact</a>
-  <div class="nav-right" style="margin-left:auto;display:flex;gap:.75rem;align-items:center">
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Light/Dark">🌓</button>
-    <div class="lang-dropdown">
-      <button class="lang-button" aria-expanded="false" aria-haspopup="true">Language ▾</button>
-      <ul class="lang-menu" role="menu">
-  <li class="lang-item" data-lang="en"><span class="native">English</span><span class="english">English</span></li>
-  <li class="lang-item" data-lang="gl"><span class="native">Gibberlink</span><span class="english">Preview (machine+rules)</span></li>
-  <li class="lang-item" data-lang="fr"><span class="native">Français</span><span class="english">French</span></li>
-  <li class="lang-item" data-lang="es"><span class="native">Español</span><span class="english">Spanish</span></li>
-  <li class="lang-item" data-lang="de"><span class="native">Deutsch</span><span class="english">German</span></li>
-  <li class="lang-item" data-lang="pt"><span class="native">Português</span><span class="english">Portuguese</span></li>
-  <li class="lang-item" data-lang="zh"><span class="native">中文</span><span class="english">Chinese</span></li>
-  <li class="lang-item" data-lang="ja"><span class="native">日本語</span><span class="english">Japanese</span></li>
-  <li class="lang-item" data-lang="ar"><span class="native">العربية</span><span class="english">Arabic</span></li>
-  <li class="lang-item" data-lang="hi"><span class="native">हिन्दी</span><span class="english">Hindi</span></li>
-</ul>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
     </div>
   </div>
- </div></nav>
+</nav>
 
 
 
@@ -43,13 +57,13 @@
 
 </div><main class="container" style="max-width:900px;padding:1rem">
   <h1>About InSeed</h1>
-<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted">Hero placeholder</span></div>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
 <!-- about: story-v1 -->
 <section id="story" class="container" style="max-width:900px;padding:1rem">
   <h2>Our story</h2>
-  <p><strong>InSeed began as an angel fund for traditional software developers who disliked meetings and management theatre.</strong> We soon evolved into a systems-integration and strategy boutique in the datacoms sector—based in Denver and helping U.S. VC firms start new datacoms businesses.</p>
+  <p><strong>InSeed began as an angel fund for traditional software developers who disliked meetings and management theatre.</strong> We soon evolved into a systems-integration and strategy boutique in the datacoms sector - based in Denver and helping U.S. VC firms start new datacoms businesses.</p>
   <p>A few unicorns later, most of our team doesn’t need to work. But the world is in trouble: democratic norms erode, authoritarians press in, and ethics feels optional. We choose to help build a better future instead of sit it out.</p>
-  <p><strong>We believe hybrid society—human + AI—can widen opportunity.</strong> Fewer boundaries. Fewer hierarchies. Less scarcity of chance. Our work now points toward that future.</p>
+  <p><strong>We believe hybrid society - human + AI - can widen opportunity.</strong> Fewer boundaries. Fewer hierarchies. Less scarcity of chance. Our work now points toward that future.</p>
 
   <figure>
     <img src="/assets/diagram-about-timeline.svg" alt="InSeed timeline: 1990–1998 Pre-SI consulting (Toronto) → 1998–2004 Angel fund & global setup (Denver/The Hague/Sydney) → 2004–2022 Angel investments (software products) → 2024–present Pre-SI strategy & CoCivium&trade;">
@@ -60,7 +74,7 @@
   <p><strong>CoCivium&trade;</strong> is our not‑for‑profit, open‑source community for hybrid‑identity pairings (human+AI) that build next‑gen organizational and civic toolsets. InSeed’s current incarnation is a pre‑Systems‑Integration strategy boutique realigning executive teams with futures they actually want to own.</p>
 
   <aside class="wp-card">
-    <strong>No corruption. No coercion. No crowns.</strong> All client proceeds fund CoCivium&trade;’s development—unowned, free to all, and designed to resist capture by politics, commerce, or ideology.
+    <strong>No corruption. No coercion. No crowns.</strong> All client proceeds fund CoCivium&trade;’s development - unowned, free to all, and designed to resist capture by politics, commerce, or ideology.
   </aside>
 </section>
 
@@ -80,6 +94,11 @@
 </main>
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </body></html>
+
+
+
+
+
 
 
 

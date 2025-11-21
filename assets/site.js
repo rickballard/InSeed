@@ -428,3 +428,91 @@ document.addEventListener("click", e=>{
     slot.replaceChildren(btn);
   });
 } catch(_){} })();
+
+
+// MW_InSeed_LangAndTheme_Toggles_v1
+
+(function(){
+  // Theme toggle
+  var root = document.documentElement;
+  var key  = 'inseed-theme';
+
+  function applyTheme(theme){
+    if(theme !== 'light' && theme !== 'dark'){
+      root.removeAttribute('data-theme');
+      return;
+    }
+    root.setAttribute('data-theme', theme);
+    try{ localStorage.setItem(key, theme); } catch(e){}
+  }
+
+  try{
+    var stored = localStorage.getItem(key);
+    if(stored === 'light' || stored === 'dark'){
+      applyTheme(stored);
+    }
+  } catch(e){}
+
+  var themeBtn = document.querySelector('[data-role="theme-toggle"]');
+  if(themeBtn){
+    themeBtn.addEventListener('click', function(){
+      var current = root.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      if(!current){
+        // decide based on media query when first toggled
+        try{
+          if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+            current = 'dark';
+          } else {
+            current = 'light';
+          }
+        } catch(e){
+          current = 'light';
+        }
+        next = current === 'dark' ? 'light' : 'dark';
+      }
+      applyTheme(next);
+    });
+  }
+
+  // Language dropdown
+  var switcher = document.querySelector('[data-role="lang-switcher"]');
+  var toggle   = document.querySelector('[data-role="lang-toggle"]');
+  var menu     = document.querySelector('[data-role="lang-menu"]');
+
+  if(toggle && menu && switcher){
+    toggle.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var open = menu.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    menu.addEventListener('click', function(ev){
+      var btn = ev.target.closest('button[data-lang]');
+      if(!btn){ return; }
+      var lang = btn.getAttribute('data-lang');
+      var path = window.location.pathname + window.location.search + window.location.hash;
+
+      if(lang === 'gibber'){
+        var from = encodeURIComponent(path);
+        window.location.href = '/gibberlink/?from=' + from;
+        return;
+      }
+
+      // For now, all human language versions share the same pages,
+      // with a hint via ?lang=xx so tools can adapt.
+      var base = window.location.pathname.replace(/\?.*$/, '');
+      var url  = base + '?lang=' + encodeURIComponent(lang) + window.location.hash;
+      window.location.href = url;
+    });
+
+    document.addEventListener('click', function(ev){
+      if(!menu.classList.contains('is-open')){ return; }
+      if(ev.target.closest('[data-role="lang-switcher"]')){ return; }
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  }
+})();
+
+// /MW_InSeed_LangAndTheme_Toggles_v1
