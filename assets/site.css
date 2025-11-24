@@ -719,3 +719,45 @@ body[data-theme="dark"]{
 }
 
 /* /MW_InSeed_LangAndTheme_Toggles_v1 */
+
+
+/* MW_InSeed_TopnavContrast_v1: improve nav legibility in light/dark */
+
+@media (prefers-color-scheme: light) {
+  nav.topnav {
+    background-color: #ffffff;
+    color: #111827;
+  }
+
+  nav.topnav a {
+    color: #111827;
+  }
+
+  nav.topnav a:hover,
+  nav.topnav a:focus {
+    color: #1d4ed8;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  nav.topnav {
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+
+  nav.topnav a {
+    color: #e5e7eb;
+  }
+
+  nav.topnav a:hover,
+  nav.topnav a:focus {
+    color: #f9fafb;
+  }
+
+  .topnav .theme-toggle,
+  .topnav .lang-current {
+    border-color: rgba(148,163,184,0.7);
+  }
+}
+
+/* /MW_InSeed_TopnavContrast_v1 */
