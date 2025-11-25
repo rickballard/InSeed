@@ -1,6 +1,6 @@
-﻿{
+{
     "endpoint":  "https://your-worker.workers.dev",
-    "to":  "rballard@InSeed.com",
+    "to":  "contact@InSeed.com",
     "allow":  [
                   "https://inseed.com",
                   "https://groupbuild.org",
@@ -15,3 +15,4 @@
                 },
     "version":  "1"
 }
+

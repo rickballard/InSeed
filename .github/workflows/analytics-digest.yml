@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: InSeed traffic digest (last 24h)
           from: InSeed Analytics <analytics@inseed.com>
-          to: rballard@inseed.com
+          to: contact@InSeed.com
           secure: true
           content_type: text/plain; charset=utf-8
           body: file://body.txt
