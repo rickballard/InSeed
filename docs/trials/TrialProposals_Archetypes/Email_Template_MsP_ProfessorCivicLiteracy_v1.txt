@@ -1,0 +1,30 @@
+Target archetype: "Ms P" – professor or teaching stream academic working on visual literacy, multimodal communication, student identity and civic or public space.
+
+Hi [ProfessorName],
+
+Thank you again for our conversation about art, writing and how students are learning to navigate AI in their everyday lives. I keep coming back to your work on visual literacies, work integrated learning and the ways students narrate their own transitions into professional life, because it is very close to what I am trying to explore with a project called CoCivium.
+
+CoCivium is an open source civic tech effort that asks how humans and AI might share civic and institutional spaces in ways that remain answerable to people, not just platforms or elite owners. A lot of the early work has gone into scaffolding and governance, but the questions that matter most are the ones you work with every day:
+
+- How do people see themselves in these systems?
+- What do the images, stories and interfaces say about who counts and who is peripheral?
+- How do students learn to read these spaces critically, the way you have written about reading images, diagrams and public markings as contemporary hieroglyphics of power and resistance?
+
+Alongside CoCivium we are developing a tool called CoAgent, which acts as an AI assisted workflow and reflection partner. It is not a grading tool. The idea is to sit with existing reflective practices such as journaling, drawing and mapping, and see whether AI can help students surface questions, patterns and tensions, rather than judge them.
+
+I would like to explore, in a small and bounded way, whether there is a nook where these ideas might intersect with your teaching and research interests. For example:
+
+- a short visual research exercise around how AI mediated systems are pictured and narrated, or
+- a small, course adjacent module where students use an AI partner to reflect on placements, creative work or community projects, while keeping their own voices primary.
+
+At this stage I am not looking for endorsement or a large commitment. What would be most helpful is:
+
+- your first impressions of the current concepts and visuals,
+- your sense of where projects like this might help or harm students’ sense of agency, identity or belonging,
+- and any ideas you may have for a small, time boxed, paid collaboration that feels manageable and interesting from your side.
+
+If this sparks any curiosity, I would be glad to send a refreshed starter pack and, if it suits you, set up a short, no pressure call to explore it further.
+
+Warmly,
+[YourName]
+[YourContact]

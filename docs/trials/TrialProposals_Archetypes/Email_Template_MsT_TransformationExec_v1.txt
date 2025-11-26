@@ -1,0 +1,49 @@
+Target archetype: "Ms T" – senior leader responsible for transformation, transitions or business change in a large professional services partnership or similar firm.
+
+Hi [ExecName],
+
+I hope you are doing well.
+
+I have been thinking about our conversations around transformation, governance and how people actually experience change inside large professional services firms. You work in a space where strategy, human stories and operational realities collide, and where AI is already reshaping expectations faster than traditional change management models were designed for.
+
+Over the last few years we have been building a software product called CoAgent, as part of a larger civic tech project called CoCivium. CoAgent is not another chatbot; it is an AI orchestrated workflow layer that coordinates multiple AI tools, people and data sources into repeatable, auditable processes. One way to picture it is as a set of AIs sharing the same keyboard and browser windows, with additional systems to ensure they obey guardrails and ethical constraints.
+
+CoAgent is designed to sit inside the real mess of transitions, rotations, portfolio rituals and change programmes. It is not there to take decisions away from humans, but to take friction, inconsistency and blind spots out of the system.
+
+I would like to explore how a small, time boxed proof of execution "Lighthouse Trial" might work inside an organisation like [FirmName]. The idea would be to focus on one or two narrow workflows, such as:
+
+- a recurring transition office ritual, for example how people are prepared and briefed when they step into new roles, or
+- how a transitions or transformation team captures and acts on qualitative signals from people going through change (concerns, risks, opportunities) in a way that is more visible, more consistent and more fair.
+
+The intention is not to automate leadership judgment, but to let CoAgent:
+
+- bring the right information and context together before decisions,
+- standardize the steps so nobody gets lost in the shuffle,
+- create a clear audit trail for how decisions were made (without surveilling anyone), and
+- free your team to focus on the conversations that actually need a human.
+
+I have attached two short documents:
+
+1. A one pager on the CoAgent proof of execution "Lighthouse Trial" format.
+   It outlines how a 6 to 8 week, low friction, fully reversible experiment could run in a large professional services partnership.
+
+2. A generic proposal draft for large professional services firms.
+   This is intentionally de branded and not addressed to any specific firm. It is the kind of document that could be adapted for organisations like yours and for other firms in the same ecosystem.
+
+Nothing in the attached material is a proposal to [FirmName]. The packaging is meant to show how we see the ROI logic, the service ladder (CoAudit -> Lighthouse -> executive retrain -> industry council), and the broader industry wide opportunity. It is structured so that multiple firms could participate in parallel, with appropriate fences, each learning privately while helping shape how the industry adapts to AI.
+
+What I would value most at this stage is your professional perspective on whether this framing feels realistic, ethical and useful for firms like yours.
+
+If this sparks any curiosity, I would be glad to set up a short conversation to walk through:
+
+- how your current transitions and change routines operate,
+- whether the Lighthouse framing feels like a safe, realistic experiment, and
+- what an ethical, non conflicted path into a large professional services partnership might look like, given that this would be a prototype trial run primarily for learning and ROI discovery.
+
+If it ever moved toward commercial discussions, my strong preference would be to handle pricing directly with the appropriate leadership (for example CEO, CFO or procurement) so that you are never placed in a conflict of interest position.
+
+If the timing is not right, no worries at all. I am grateful for any advice you are willing to share, and for the way you are thinking about the future of leadership in a sector that may change more in five years than it has in fifty.
+
+Warmly,
+[YourName]
+[YourContact]
