@@ -825,3 +825,44 @@ body[data-theme="light"] nav.topnav{
 }
 
 /* /MW_InSeed_TopnavContrast_v2 */
+
+
+/* MW_InSeed_HeroOffersCSS_v1: calm the hero bullet list */
+.hero-blurb ol.hero-offers{
+  margin: 0.75rem 0 1.25rem 1.5rem;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.hero-blurb ol.hero-offers li{
+  margin-bottom: 0.3rem;
+}
+
+/* /MW_InSeed_HeroOffersCSS_v1 */
+
+
+/* MW_InSeed_TopnavContrast_v4: final override for legible top nav in all themes */
+.site-shell > nav.topnav{
+  background-color:#020617;
+  color:#f9fafb;
+  position: sticky;
+  top:0;
+  z-index:50;
+}
+.site-shell > nav.topnav a,
+.site-shell > nav.topnav button{
+  color:#ffffff;
+  font-weight:600;
+  font-size:0.95rem;
+  letter-spacing:0.03em;
+  text-shadow:0 0 3px rgba(15,23,42,0.9);
+}
+.site-shell > nav.topnav a:hover,
+.site-shell > nav.topnav a:focus,
+.site-shell > nav.topnav button:hover,
+.site-shell > nav.topnav button:focus{
+  color:#bfdbfe;
+}
+
+/* /MW_InSeed_TopnavContrast_v4 */
