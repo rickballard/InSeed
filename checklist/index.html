@@ -51,7 +51,7 @@
       </button>
       <div class="lang-menu" data-role="lang-menu">
         <button type="button" data-lang="en">English (default)</button>
-        <button type="button" data-lang="gibber">Gibber (CoPortal)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
         <button type="button" data-lang="es">Español</button>
         <button type="button" data-lang="zh">中文</button>
         <button type="button" data-lang="de">Deutsch</button>
@@ -71,15 +71,15 @@
   <p>Answer a few quick Yes/No questions. Tips appear as you go. <a href="/privacy/">Privacy</a>.</p>
   <div class="stepbar" id="bar"></div>
 
-  <details class="q" data-id="q1"><summary><header><strong>Q1.</strong> Are vendor contracts limiting your ability to move data between systems?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+  <details class="q" data-id="q1"><summary></summary>
     <div class="advice"><strong>Tip:</strong> Map “data egress” clauses per vendor; negotiate a standing export job to S3/Blob.</div>
   </details>
 
-  <details class="q" data-id="q2"><summary><header><strong>Q2.</strong> Do you rely on manual spreadsheet joins for weekly metrics?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+  <details class="q" data-id="q2"><summary></summary>
     <div class="advice"><strong>Tip:</strong> Stand up a tiny ELT (one table) into a governed store; add one metric a week.</div>
   </details>
 
-  <details class="q" data-id="q3"><summary><header><strong>Q3.</strong> Is there tension between “AI pilots” and production teams?<span class="btns"><button class="btn" data-yes>No</button><button class="btn" data-yes="1">Yes</button></span></header></summary>
+  <details class="q" data-id="q3"><summary></summary>
     <div class="advice"><strong>Tip:</strong> Create a one-page “TOS-AI” runway: intake → sandbox → pilot → <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">guardrails</abbr> → service.</div>
   </details>
 </main>
@@ -103,6 +103,8 @@
 })();
 </script>
 </body></html>
+
+
 
 
 

@@ -875,3 +875,30 @@ header summary[aria-label="Language selector"] {
 }
 
 /* == end nav dropdown contrast == */
+    
+/* == MW_InSeed_HeaderAndHero_Tidy_v1 == */
+
+/* Normalise hero offers list typography */
+.hero-offers,
+.hero-offers ul {
+  margin: 1.25rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.hero-offers li {
+  font-size: 1rem;      /* bring closer to body text */
+  line-height: 1.6;
+}
+
+/* Shared content width shell for main content on large screens */
+@media (min-width: 1024px) {
+  main,
+  .page-shell,
+  .content-shell {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* == end MW_InSeed_HeaderAndHero_Tidy_v1 == */
