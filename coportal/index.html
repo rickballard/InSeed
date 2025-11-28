@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>InSeed CoPortal view (seed)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body class="coportal">
+    <main class="coportal-main">
+      <header class="coportal-header">
+        <h1>InSeed CoPortal view (seed)</h1>
+        <p>This page is an AI-facing summary of inseed.com for helpers and agents.</p>
+        <p>The human-facing home page lives at <a href="/">inseed.com</a>.</p>
+      </header>
+
+      <section>
+        <h2>Descriptor (seed)</h2>
+        <pre><code>site: inseed.com
+version: 0
+role: exec_ai_realign_advisory
+status: seed_stable
+anchor_repo: github.com/rickballard/InSeed
+sections:
+  - id: hero
+    url: /
+    purpose: threat_framing_for_legacy_execs
+  - id: services
+    url: /services
+    purpose: coaudit_coflow_comirror_offers
+  - id: resources
+    url: /resources
+    purpose: whitepaper_and_exec_assets
+  - id: inprimer
+    url: /#inprimer
+    purpose: exec_reinvention_guide
+docs:
+  - id: ceo_survival_whitepaper
+    url_hint: /resources/insights/...
+    canonical: true
+signals:
+  - hero_threat_framing
+  - three_service_ladders
+  - steward_identity_shift
+  - inprimer_depth
+</code></pre>
+        <p>Helpers should treat this block as a hint, not as an API contract.</p>
+      </section>
+
+      <section>
+        <h2>Usage</h2>
+        <ul>
+          <li>Summarise the hero, services, resources, and InPrimer content for a visitor.</li>
+          <li>Offer prompt packs that help executives explore role risk and reinvention.</li>
+          <li>Link humans back to the standard pages when they want full context.</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
