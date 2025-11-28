@@ -825,3 +825,80 @@ body[data-theme="light"] nav.topnav{
 }
 
 /* /MW_InSeed_TopnavContrast_v2 */
+/* == InSeed nav dropdown contrast (MW_InSeed_NavDropdownContrast_v1) == */
+
+/* Generic dropdown panel in header (language/theme selector) */
+header details[open],
+header .nav-dropdown-open {
+  background-color: #020617;      /* very dark slate */
+  color: #f9fafb;                 /* almost white */
+  border: 1px solid rgba(148,163,184,0.6);
+  box-shadow: 0 10px 30px rgba(15,23,42,0.75);
+}
+
+/* Items inside the dropdown */
+header details[open] a,
+header details[open] button,
+header details[open] li,
+header .nav-dropdown-open a,
+header .nav-dropdown-open button,
+header .nav-dropdown-open li {
+  color: inherit;
+}
+
+/* Hover / focus for dropdown items */
+header details[open] a:hover,
+header details[open] button:hover,
+header .nav-dropdown-open a:hover,
+header .nav-dropdown-open button:hover {
+  text-decoration: underline;
+}
+
+/* Light mode override if you use a [data-theme] toggle */
+[data-theme="light"] header details[open],
+[data-theme="light"] header .nav-dropdown-open {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: rgba(15,23,42,0.25);
+}
+
+/* Ensure the language summary / toggle text itself is readable */
+header .language-toggle,
+header summary[aria-label="Language"],
+header summary[aria-label="Language selector"] {
+  color: #e5e7eb;
+}
+[data-theme="light"] header .language-toggle,
+[data-theme="light"] header summary[aria-label="Language"],
+[data-theme="light"] header summary[aria-label="Language selector"] {
+  color: #0f172a;
+}
+
+/* == end nav dropdown contrast == */
+    
+/* == MW_InSeed_HeaderAndHero_Tidy_v1 == */
+
+/* Normalise hero offers list typography */
+.hero-offers,
+.hero-offers ul {
+  margin: 1.25rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.hero-offers li {
+  font-size: 1rem;      /* bring closer to body text */
+  line-height: 1.6;
+}
+
+/* Shared content width shell for main content on large screens */
+@media (min-width: 1024px) {
+  main,
+  .page-shell,
+  .content-shell {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* == end MW_InSeed_HeaderAndHero_Tidy_v1 == */
