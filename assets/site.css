@@ -964,3 +964,18 @@ header summary[aria-label="Language selector"] {
 }
 
 /* == end MW_InSeed_CoPortalAndHero_v2 == */
+  
+/* == MW_InSeed_AboutNav_QuickReaction_v1 == */
+
+.page-shell {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-feedback-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.75rem;
+}
+
+/* == end MW_InSeed_AboutNav_QuickReaction_v1 == */
