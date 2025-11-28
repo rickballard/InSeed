@@ -825,23 +825,3 @@ body[data-theme="light"] nav.topnav{
 }
 
 /* /MW_InSeed_TopnavContrast_v2 */
-/* InPrimer block seed styles */
-.inprimer-block {
-  padding: 4rem 0;
-}
-.inprimer-inner {
-  max-width: 960px;
-  margin: 0 auto;
-}
-.inprimer-inner h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.inprimer-inner p {
-  margin-bottom: 1rem;
-}
-.inprimer-cta {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-}
