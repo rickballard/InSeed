@@ -4,18 +4,6 @@
 <meta http-equiv="Expires" content="0">
 <script defer src="/assets/site.js?v=20251006184831"></script>
 </head><body>
-    <!--
-      inseed.com::portal.v0
-      role: exec_ai_realign_advisory
-      status: seed_stable
-      content_trust: cache_short_term_ok
-      anchor_repo.inseed: github.com/rickballard/InSeed
-      triangle.refs: CoSteward, CoCivium, CoAudit
-      playbook.core: InPrimer_CoPrimer_v0
-      pathways.entry: CoAudit, CoFlow, CoMirror, InPrimer
-      audience.primary: legacy_execs_and_boards
-      session.intent: redefine_role_before_ai_does
-    -->
 <nav class="topnav">
   <div class="container">
     <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
@@ -112,18 +100,6 @@
 <script>window.CONTACT_CONFIG=window.CONTACT_CONFIG||{endpoint:"",to:"contact@inseed.com",allow:[],turnstile_sitekey:""};</script>
 <script src="/assets/js/contact-embed.js" defer></script>
 <body>
-    <!--
-      inseed.com::portal.v0
-      role: exec_ai_realign_advisory
-      status: seed_stable
-      content_trust: cache_short_term_ok
-      anchor_repo.inseed: github.com/rickballard/InSeed
-      triangle.refs: CoSteward, CoCivium, CoAudit
-      playbook.core: InPrimer_CoPrimer_v0
-      pathways.entry: CoAudit, CoFlow, CoMirror, InPrimer
-      audience.primary: legacy_execs_and_boards
-      session.intent: redefine_role_before_ai_does
-    -->
 
 
 
@@ -336,20 +312,3 @@
 
 
 
-
-    <section id="inprimer" class="inprimer-block">
-      <div class="inprimer-inner">
-        <h2>InPrimer: your executive reinvention guide</h2>
-        <p>
-          If AI is shaking the ground under your current role, InPrimer is where you rebuild on stronger foundations.
-          It is a guided map for legacy executives and boards to understand how their functions will change, how hybrid
-          AI + human organizations actually behave, and how to redefine their mandate before the future does it for them.
-        </p>
-        <p>
-          Use this as a depth companion to the CEO Survival Guide and CoAudit / CoFlow / CoMirror. It is designed to be
-          both human readable and AI friendly: you can export it, feed it into your own AI tools, and ask for a
-          personalized 90 day reinvention plan.
-        </p>
-        <a class="btn inprimer-cta" href="/inprimer">Start the InPrimer journey</a>
-      </div>
-    </section>
