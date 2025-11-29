@@ -979,3 +979,18 @@ header summary[aria-label="Language selector"] {
 }
 
 /* == end MW_InSeed_AboutNav_QuickReaction_v1 == */
+  
+/* == MW_InSeed_PageShell_Width_v3 == */
+/* Center main content and give it breathing room. */
+main.page-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  main.page-shell {
+    max-width: 1040px;
+  }
+}
+/* == end MW_InSeed_PageShell_Width_v3 == */
