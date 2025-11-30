@@ -1,0 +1,2 @@
+# Temporary alias file. Mirrors coportal while we migrate to 'frontdoor' schema.
+site: inseed.com version: 0 role: exec_ai_realign_advisory status: seed_stable anchor_repo: github.com/rickballard/InSeed  routes:   home: /   services: /services   resources: /resources   inprimer: /#inprimer   coportal: /coportal  docs:   ceo_survival_whitepaper:     url_hint: /resources/insights/...     type: pdf     audience: legacy_execs_and_boards  signals:   - hero_threat_framing   - three_service_ladders   - steward_identity_shift   - inprimer_depth
