@@ -20,7 +20,7 @@ Role: Exec-facing primer page for AI-driven seismic change and InSeed's role.
 ## 3. What we do (very briefly)
 
 - Bullet list of core InSeed offerings.
-- Tie each to CoCivium ideas (edge control, CoStewardship, CoPortals) in exec language.
+- Tie each to CoCivium ideas (edge control, CoStewardship, System.Func`2[System.Text.RegularExpressions.Match,System.String]) in exec language.
 
 ## 4. Call to action
 
