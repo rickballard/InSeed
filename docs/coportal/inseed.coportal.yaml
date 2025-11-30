@@ -22,3 +22,16 @@ signals:
   - three_service_ladders
   - steward_identity_shift
   - inprimer_depth
+ai_face:
+  glyphs:
+    - '⧉ coindex://inseed'
+    - '⚙ portal://inseed.com'
+    - '∞ gib:inseed.exec_ai_realign'
+  colors:
+    - '#020617'   # base
+    - '#0f172a'   # shell
+    - '#38bdf8'   # highlight
+  neighbors:
+    - 'coportal://cocivium.org'
+    - 'coportal://costeward.local'
+  coindex_hint: 'coindex://inseed'

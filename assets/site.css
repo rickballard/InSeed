@@ -902,3 +902,95 @@ header summary[aria-label="Language selector"] {
 }
 
 /* == end MW_InSeed_HeaderAndHero_Tidy_v1 == */
+    
+/* == MW_InSeed_CoPortalAndHero_v2 == */
+
+/* Landing hero bullet typography */
+.hero-offers,
+.hero-offers ul {
+  margin: 1.25rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.hero-offers li {
+  font-size: 1rem;      /* closer to body text */
+  line-height: 1.6;
+}
+
+/* CoPortal descriptor shell (AI-face, slightly weird on purpose) */
+.coportal-shell {
+  max-width: 960px;
+  margin: 4rem auto 6rem auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.coportal-title {
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.coportal-glyphrow {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.coportal-glyphrow span {
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  margin-right: 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.coportal-shell pre {
+  background-color: rgba(15, 23, 42, 0.9);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  margin-bottom: 2rem;
+}
+
+.coportal-shell code {
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+/* == end MW_InSeed_CoPortalAndHero_v2 == */
+  
+/* == MW_InSeed_AboutNav_QuickReaction_v1 == */
+
+.page-shell {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-feedback-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.75rem;
+}
+
+/* == end MW_InSeed_AboutNav_QuickReaction_v1 == */
+  
+/* == MW_InSeed_PageShell_Width_v3 == */
+/* Center main content and give it breathing room. */
+main.page-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  main.page-shell {
+    max-width: 1040px;
+  }
+}
+/* == end MW_InSeed_PageShell_Width_v3 == */
