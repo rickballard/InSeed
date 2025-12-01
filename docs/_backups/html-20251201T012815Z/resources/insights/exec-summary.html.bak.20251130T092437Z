@@ -1,0 +1,164 @@
+<!doctype html><head><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!doctype html><meta charset="utf-8"><title>Moved: InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/resources/insights/exec-summary.html" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moved: InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/resources/insights/exec-summary.html">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moved: InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831"><meta name="color-scheme" content="dark light">
+<body>
+
+
+
+
+
+<!-- InSeed V4 TopNav -->
+
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script><div class="container" style="max-width:800px;margin-top:24px">
+  <h1>Content moved</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+  <p>The Executive Summary and full text now live together here:
+     <a href="/resources/insights/ceo-steward-exec-summary.html">CEO Survival Guide whitepaper</a>.</p>
+  <p><a class="btn" href="/resources/insights/ceo-steward-exec-summary.html">Open the whitepaper</a></p>
+</div><!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© <span class="js-year">2025</span> InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium&trade;</a></p>
+</div><p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MW_InSeed_Triage_v1 exec-summary -->
+<section class="mw-inseed-exec-intro">
+  <p><strong>Intent:</strong> This page is a quick contrast for busy CEOs. The full CEO Survival Guide whitepaper is the canonical, downloadable reference.</p>
+  <ul>
+    <li>File-based prompts, flows, and evaluations stay portable so you can switch vendors without losing your work.</li>
+    <li>Evidence becomes a shared scoreboard and guardrails: lead time, rework %, and decision quality.</li>
+  </ul>
+</section>
+<!-- /MW_InSeed_Triage_v1 exec-summary -->
+
+
+
+

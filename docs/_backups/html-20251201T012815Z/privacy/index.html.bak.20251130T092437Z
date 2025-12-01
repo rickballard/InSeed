@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy • InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/privacy/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy • InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/privacy/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy • InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<main class="container" style="max-width:900px;padding:1rem">
+<h1>Privacy at InSeed</h1>
+<p><strong>How we use feedback</strong><br>
+We’re trying to help this site “co-evolve” based on what’s useful. If you choose to submit answers or feedback, your responses may be used - anonymously - to improve content and create better checklists. We do <em>not</em> store personal info, do not set tracking cookies, and do not sell or share your data. You can clear your answers at any time (they’re saved in your browser only). If you request deletion of a submission, we’ll remove it. Thanks for helping make this more useful.</p>
+</main>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

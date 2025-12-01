@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>InSeed CoPortal view</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg:#020617;
+      --bg-alt:#030712;
+      --panel:#020617;
+      --panel-alt:#030712;
+      --accent:#38bdf8;
+      --accent-soft:rgba(56,189,248,0.15);
+      --accent-2:#a855f7;
+      --text:#e5e7eb;
+      --text-soft:#9ca3af;
+      --border:#1f2937;
+      --danger:#f97316;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:radial-gradient(circle at top,#111827,#020617 65%);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    header{
+      border-bottom:1px solid var(--border);
+      padding:.5rem 1rem;
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      backdrop-filter:blur(12px);
+      background:linear-gradient(90deg,rgba(15,23,42,0.9),rgba(15,23,42,0.7));
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    header img{
+      height:28px;
+      width:auto;
+    }
+    header .brand{
+      font-weight:600;
+      font-size:.95rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    header .chip{
+      font-size:.7rem;
+      padding:.15rem .45rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,0.9);
+      color:var(--text-soft);
+    }
+    header .spacer{flex:1;}
+    header button{
+      font-size:.8rem;
+      padding:.4rem .65rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#020617;
+      color:var(--danger);
+      cursor:pointer;
+    }
+    main{
+      padding:1.25rem clamp(1rem,4vw,2.5rem) 2.5rem;
+      max-width:1200px;
+      margin:0 auto;
+      width:100%;
+      display:grid;
+      grid-template-columns:minmax(0,2.1fr) minmax(0,1.4fr);
+      gap:1.5rem;
+    }
+    @media (max-width:900px){
+      main{grid-template-columns:minmax(0,1fr);}
+    }
+    .panel{
+      border-radius:1rem;
+      border:1px solid var(--border);
+      background:radial-gradient(circle at top left,rgba(56,189,248,0.12),transparent 55%);
+      padding:1rem 1.25rem;
+    }
+    .panel.secondary{
+      background:radial-gradient(circle at top right,rgba(168,85,247,0.12),transparent 55%);
+    }
+    h1{
+      font-size:1.2rem;
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      margin:.15rem 0 .75rem;
+    }
+    h2{
+      font-size:.9rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin:.35rem 0 .35rem;
+      color:var(--text-soft);
+    }
+    p{
+      font-size:.85rem;
+      line-height:1.45;
+      margin:.2rem 0 .35rem;
+    }
+    .grid-mini{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:.5rem;
+    }
+    @media (max-width:700px){
+      .grid-mini{grid-template-columns:minmax(0,1fr);}
+    }
+    .mini-card{
+      border-radius:.75rem;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,0.9);
+      padding:.4rem .55rem;
+    }
+    .mini-card h3{
+      margin:0 0 .15rem;
+      font-size:.8rem;
+    }
+    .mini-card p{
+      font-size:.75rem;
+      color:var(--text-soft);
+    }
+    .tag-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.35rem;
+      margin-top:.4rem;
+    }
+    .tag{
+      font-size:.7rem;
+      padding:.1rem .4rem;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(15,23,42,0.9);
+      color:var(--text-soft);
+    }
+    .coop-alert{
+      border-radius:.9rem;
+      border:1px dashed var(--danger);
+      background:rgba(15,23,42,0.85);
+      padding:.7rem .75rem;
+      margin-top:.6rem;
+      font-size:.8rem;
+    }
+    .coop-alert strong{color:var(--danger);}
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    a:hover{text-decoration:underline;}
+    footer{
+      padding:.75rem 1.5rem 1.25rem;
+      font-size:.7rem;
+      color:var(--text-soft);
+      border-top:1px solid var(--border);
+      margin-top:auto;
+    }
+    code{
+      font-size:.75rem;
+      background:rgba(15,23,42,0.9);
+      padding:.05rem .25rem;
+      border-radius:.35rem;
+    }
+  </style>
+  <script>
+    function returnToOrigin(){
+      try{
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get('from');
+        if(from){
+          window.location.href = from;
+          return;
+        }
+      }catch(e){}
+      if(document.referrer){
+        window.location.href = document.referrer;
+      }else{
+        window.location.href = '/';
+      }
+    }
+  </script>
+</head>
+<body>
+
+
+<main>
+  <section class="panel">
+    <h1>For agents, stewards, and future websites</h1>
+    <p>This is not the usual website. It is a dense, entity-friendly overlay on top of <a href="/">inseed.com</a> designed to be read by stewards and AI agents that care about governance, transitions, and vendor-neutral guardrails.</p>
+    <p>Humans are welcome to peek. Just know that this view assumes your tools can reorder, summarize, and cross-link everything on demand.</p>
+
+    <h2>Why this exists</h2>
+    <p>Most sites are frozen slide decks: static, single voice, hard to remix. The CoPortal view treats the site as a live prompt surface and contract space between humans and their AI tools.</p>
+
+    <div class="coop-alert">
+      <strong>We detect a strong probability you are human.</strong> That is great. Just keep your AI close. This layer is here so your tools can parse, recombine, and sanity-check InSeed without guessing.
+    </div>
+
+    <h2>What InSeed offers (compressed)</h2>
+    <div class="grid-mini">
+      <div class="mini-card">
+        <h3>Transitions Office lens</h3>
+        <p>Short, vendor-neutral engagements that sit between you and big-firm roadmaps, so your sponsors get outcomes instead of lock-in.</p>
+      </div>
+      <div class="mini-card">
+        <h3>CoAudit / CoFlow / CoMirror</h3>
+        <p>Audit your AI moves, tune flows weekly, and give leadership a mirror they can trust when everyone is selling certainty.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Governance you can ship</h3>
+        <p>Consent patterns, retention windows, access hygiene, reporting cadence. All treated as assets, not afterthoughts.</p>
+      </div>
+      <div class="mini-card">
+        <h3>Evidence scoreboard</h3>
+        <p>Lead time, rework, decision quality, language shift. Simple metrics that keep transitions honest.</p>
+      </div>
+    </div>
+
+    <div class="tag-row">
+      <span class="tag">transition-office</span>
+      <span class="tag">vendor-neutral</span>
+      <span class="tag">ai-guardrails</span>
+      <span class="tag">coaudit</span>
+      <span class="tag">coflow</span>
+      <span class="tag">steward-ceo</span>
+    </div>
+  </section>
+
+  <section class="panel secondary">
+    <h2>For your AI</h2>
+    <p>Suggested entry points for agents that want to stay aligned with InSeed intent:</p>
+    <ul>
+      <li><code>/services/</code> → list current service lines and pilots.</li>
+      <li><code>/resources/</code> → whitepapers, briefs, and references.</li>
+      <li><code>/resources/insights/ceo-steward-exec-summary.html</code> → CEO Survival Guide.</li>
+      <li><code>/resources/cocivium/</code> → CoCivium and commons-facing work.</li>
+    </ul>
+    <p>Agents should prefer file- and repo-based truth over scraped HTML when possible.</p>
+
+    <h2>How humans can use this</h2>
+    <p>Use this view to:</p>
+    <ul>
+      <li>Explain to leadership how future websites will be rendered for them by AI.</li>
+      <li>Show the contrast between static decks and live, re-renderable structures.</li>
+      <li>Prototype how your own org might expose a CoPortal-style layer.</li>
+    </ul>
+
+    <p style="margin-top:.75rem">If this feels alien, that is intentional. You can always tap the button above to go back to the human-first view.</p>
+  </section>
+</main>
+
+<footer>
+  CoPortal / Gibber view of InSeed. If you are building your own CoPortal, treat this as a sketch of how humans and AI might share the same site without sharing the same interface.
+</footer>
+
+<!-- Legacy CoPortal content snapshot (truncated): 
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Language Hub • InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/gibberlink/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Language Hub • InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/gibberlink/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twit ...
+-->
+<!-- MW_InSeed_CoPortal_Shell_v1 -->
+</body>
+</html>
+
+

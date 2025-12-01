@@ -1,0 +1,344 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InSeed Whitepaper  -  Executive Guide to an AI-Enabled Operating Model</title>
+<meta name="robots" content="noindex,follow"><meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/docs/whitepaper/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="InSeed Whitepaper  -  Executive Guide to an AI-Enabled Operating Model">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/docs/whitepaper/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="InSeed Whitepaper  -  Executive Guide to an AI-Enabled Operating Model">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<link rel="stylesheet" href="/assets/print.css" media="print">
+<style>
+  .doc {max-width:900px;margin:2rem auto;padding:0 1rem}
+  .meta {color:var(--muted); font-size:.9rem}
+  .toc ol{margin-left:1.25rem}
+  .lead {font-size:1.1rem}
+  .callout{border:1px solid var(--border);background:var(--card);padding:1rem;border-radius:.75rem}
+  .btn-print{display:inline-block;border:1px solid var(--border);padding:.5rem .8rem;border-radius:.5rem}
+  figure{margin:1rem 0;text-align:center}
+  figure img{max-width:100%}
+  figure figcaption{font-size:.9rem;color:var(--muted)}
+</style>
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<main class="doc">
+  <h1>Executive Guide to an AI-Enabled Operating Model</h1>
+  <p class="meta">Rev 1.0 · This paper will evolve with field experience.</p>
+  <p><a class="btn-print" href="#" onclick="window.print();return false;">Print / Save as PDF</a></p>
+
+  <section class="callout">
+    <h2>Executive Summary</h2>
+    <ul>
+      <li><strong>What’s changing:</strong> Value shifts from big quarterly drops to a steady stream of small wins that compound.</li>
+      <li><strong>What this needs:</strong> A lightweight run-way from idea → sandbox → guarded pilot → serviced capability.</li>
+      <li><strong>How to start:</strong> 90-day plan: 1) pick two workflows, 2) ship weekly slices, 3) publish <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">guardrails</abbr> and KPIs.</li>
+      <li><strong>Governance:</strong> “TOS-AI” one-pager: allowed uses, review gates, data boundaries, human-in-the-loop.</li>
+      <li><strong>Proof:</strong> Track a handful of <em>decision-making</em> and <em>cycle-time</em> metrics; make wins visible.</li>
+    </ul>
+  </section>
+
+  <section class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li>Signals CEOs Are Seeing</li>
+      <li>Operating Model Shifts</li>
+      <li>A Practical 90-Day Plan</li>
+      <li><abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">Guardrails</abbr> &amp; Risk (TOS-AI)</li>
+      <li>Metrics That Matter</li>
+      <li>Case Sketches</li>
+      <li>Appendix: Methods</li>
+    </ol>
+  </section>
+
+  <figure>
+    <img src="/assets/diagram-placeholder.svg" alt="Three-stage runway from discovery to service">
+    <figcaption>A small, repeatable runway beats a big one-off program.</figcaption>
+  </figure>
+
+  <h2>1) Signals CEOs Are Seeing</h2>
+  <p class="lead">Customers expect faster cycles; teams spin up “AI pilots” that stall at hand-off; and data portability issues slow everything down.</p>
+
+  <h2>2) Operating Model Shifts</h2>
+  <ul>
+    <li>From ad-hoc pilots → to <strong>guarded services</strong> with owners.</li>
+    <li>From PPT roadmaps → to <strong>weekly slices</strong> with real users.</li>
+    <li>From isolated data → to <strong>governed sharing</strong> (egress clauses, S3/Blob drops).</li>
+  </ul>
+
+  <h2>3) A Practical 90-Day Plan</h2>
+  <ol>
+    <li><strong>Week 1–2:</strong> pick two workflows, write the “one-page win”.</li>
+    <li><strong>Week 3–6:</strong> sandbox → pilot; ship weekly; measure usage &amp; cycle time.</li>
+    <li><strong>Week 7–12:</strong> <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">guardrails</abbr>, owner, change notes; publish KPIs; decide “keep / kill / expand”.</li>
+  </ol>
+
+  <h2>4) <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">Guardrails</abbr> &amp; Risk (TOS-AI)</h2>
+  <p>One page: allowed data, review gates, prompts are content, incident path, vendor responsibilities.</p>
+
+  <h2>5) Metrics That Matter</h2>
+  <ul>
+    <li><abbr class="tt" data-def="Time from idea to a working slice users can try">Lead time</abbr> from idea → shipped slice</li>
+    <li># of decisions per week improved by new capability</li>
+    <li>Incident count / prompt-injection escapes (should trend to zero)</li>
+  </ul>
+
+  <h2>6) Case Sketches</h2>
+  <ul>
+    <li><em>Sales ops:</em> cut report prep from 3h → 15m; reps click through to source rows.</li>
+    <li><em>Support:</em> deflect “known” tickets via GPT+RAG; SLOs visible in the dashboard.</li>
+  </ul>
+
+  <div class="page-break"></div>
+  <h2>Appendix: Methods</h2>
+  <p>Lightweight ELT, prompt versioning, <abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">eval</abbr> harnesses, “comply by default”.</p>
+</main>
+
+
+    
+
+
+    
+
+
+    <!-- MW_InSeed_CoSteward_WhitepaperPage_v3 -->
+    <section class="section">
+      <div class="container">
+        <h1>Hybrid Society Whitepaper &amp; Dinosaur Deck</h1>
+
+        <div class="callout callout-info" style="margin-bottom:1.5rem;">
+          <p>
+            <strong>Who it is for:</strong> legacy-style CEOs, senior executives and civic leaders
+            who suspect that AI is quietly breaking their current playbook.
+          </p>
+          <p style="margin-top:0.35rem;">
+            <strong>Read time:</strong> about 30&ndash;40 minutes. The goal is simple:
+            <em>change how you think about your role</em>, not add jargon to your inbox.
+          </p>
+        </div>
+
+                <div style="margin: 1.5rem 0 2rem 0;">
+          <a class="btn primary"
+             href="../whitepapers/CoSteward_HybridSociety_WhitePaper_v1.md">
+            Read the CoSteward Hybrid Society whitepaper (v1, Markdown)
+          </a>
+          <p style="margin-top:0.75rem; font-size:0.9rem;">
+            Prefer slides first?
+            <a href="../slides/InSeed_ExecTraining_StewardDeck_DinosaurEdition_v1.pptx">
+              Download the “Dinosaur Edition” exec deck (.pptx)
+            </a>
+            as a bridge into the full read.
+          </p>
+        </div>
+
+        <h2>What the whitepaper actually does</h2>
+        <p>
+          The CoSteward Hybrid Society whitepaper is the <strong>primary long form narrative</strong>
+          for leaders who want a grown-up answer to &ldquo;what does AI do to my job?&rdquo; It walks
+          through:
+        </p>
+        <ul>
+          <li>Why the legacy <strong>Chief Executive Officer</strong> model fails once AI is in the loop.</li>
+          <li>The physics of <strong>hybrid society</strong> &mdash; humans plus AI systems sharing real power.</li>
+          <li>The shift from CEO to <strong>Chief Steward Officer</strong> and then to <strong>CoSteward</strong>.</li>
+          <li><strong>CoScendence</strong> as the felt moment when the new model finally makes sense.</li>
+          <li>The evolution from <strong>SWOT</strong> to <strong>CoOrbit / COR / CoCOR</strong> for real strategy work.</li>
+        </ul>
+
+        <h2>CoOrbit / COR / CoCOR &mdash; SWOT&apos;s grown-up cousin</h2>
+        <p>
+          Most executives were raised on SWOT. It was tidy; it fit on one slide; it made strategy look calm.
+          In a hybrid society, that calm is an illusion.
+        </p>
+        <p>
+          Your organisation does not live on a flat strengths and weaknesses grid. It lives in a moving field
+          of people plus AI systems; shifting risks; shifting leverage; and shifting impact on staff,
+          customers and society.
+        </p>
+        <p>
+          We call that field your <strong>CoOrbit Map</strong>, internally shortened to
+          <strong>COR</strong> and now evolving as <strong>CoCOR</strong>.
+        </p>
+        <ul>
+          <li>SWOT is a flat comfort chart.</li>
+          <li>CoOrbit / COR / CoCOR is the risk and opportunity field you actually move through.</li>
+        </ul>
+        <p>
+          The whitepaper treats CoOrbit / CoCOR as the steward-era successor to SWOT &mdash; the tool you
+          reach for when you are ready to stop playing a two dimensional game in a three dimensional world.
+        </p>
+
+        <h2>The Dinosaur Edition deck (for dinosaurs only)</h2>
+        <p>
+          The <strong>Dinosaur Edition</strong> slide deck is a &ldquo;for dinosaurs only&rdquo; training
+          asset that looks and feels like a familiar old-school presentation. It uses British-dry humour
+          to poke at legacy CEO reflexes while quietly introducing the same ideas as the whitepaper.
+        </p>
+        <p>
+          It exists for leaders who still live in slide culture:
+        </p>
+        <ul>
+          <li>It gives them something familiar to click.</li>
+          <li>It holds up a slightly uncomfortable mirror to how they currently operate.</li>
+          <li>It smuggles in CoSteward concepts in a format the old world recognises.</li>
+        </ul>
+
+        <div class="callout callout-warning">
+          <h3>Satire, not the final state</h3>
+          <p>
+            The Dinosaur Edition deck is <strong>satire plus genuine learning</strong>, not investment,
+            legal or HR advice. It treats &ldquo;dinosaur&rdquo; as a temporary mindset, not a permanent
+            identity.
+          </p>
+          <p>
+            Use it if you are still in slide culture and want a low-friction on-ramp to the Chief Steward
+            Officer idea. Do not treat it as the destination: the real upgrade lives in the CoSteward Hybrid
+            Society whitepaper and the practices that follow.
+          </p>
+        </div>
+
+        <h2>How to act on this (the serious part)</h2>
+        <p>
+          At the bottom of all the humour sits a simple question: are you prepared to steward a hybrid
+          society organisation, or are you hoping the old CEO game will somehow survive?
+        </p>
+
+        <div class="callout callout-info" style="margin-top:1.25rem;">
+          <h3>The 1,000 dollar reading guarantee</h3>
+          <p>
+            If you are a serious leader and you read the full whitepaper in good faith, we expect it to be
+            worth at least <strong>1,000 dollars of your time</strong> in clarity, avoided mistakes and new
+            options. If it is not, please tell us why. That feedback is how the work improves.
+          </p>
+        </div>
+
+        <ul style="margin-top:1.25rem;">
+          <li><strong>Book a pilot workshop:</strong> use the <a href="/engagement/">engagement page</a>
+              or <a href="/contact/">contact form</a> to request an in-room or virtual CoSteward session.</li>
+          <li><strong>Request a CoOrbit / CoCOR mapping session:</strong> start with a small team and one
+              concrete strategic question; we will help you see your current field rather than a flat grid.</li>
+          <li><strong>Stay in the loop:</strong> ask to be added to future CoSteward updates so you see
+              new tools, diagrams and case studies as they land.</li>
+        </ul>
+
+        <h2>A small personal wink</h2>
+        <p style="max-width:40rem;">
+          InSeed itself is a UK &rarr; US &rarr; Canada journey. That cross-border life is why this work is
+          written in plain language rather than consultant jargon. The hope is that a London, New York or
+          Toronto steward-in-waiting can all read the same pages and recognise the same patterns.
+        </p>
+
+        <p style="margin-top:1.75rem; font-size:0.9rem; opacity:0.85;">
+          <strong>Important:</strong> InSeed is a commercial services firm. CoCivium, the open source hybrid
+          society project referenced in these materials, is a <strong>separate non-profit commons</strong>
+          intended for all sincere human and non-human participants. InSeed does not own CoCivium, and future
+          AI collectives do not either; it is designed as shared infrastructure for everyone who chooses to
+          steward it.
+        </p>
+      </div>
+    </section>
+    <!-- /MW_InSeed_CoSteward_WhitepaperPage_v3 -->
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
