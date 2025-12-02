@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>InSeed Map • Resources</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/resources/map/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="InSeed Map • Resources">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/resources/map/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="InSeed Map • Resources">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<style>
+.viewer{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.imgwrap{overflow:auto;border:1px solid var(--border);border-radius:.75rem;background:var(--card)}
+.imgwrap img{max-width:100%;cursor:zoom-in;transition:transform .2s ease}
+.imgwrap img.zoom{transform:scale(1.8);transform-origin:center;cursor:zoom-out}
+</style>
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<main class="viewer">
+  <h1>InSeed Map</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+  <p>Click to zoom. Replace <code>/assets/inseed-map.png</code> with your actual map image.</p>
+  <div class="imgwrap">
+    <img id="m" alt="InSeed map"
+         onerror="this.onerror=null;this.src='/assets/map-placeholder.svg';"
+         src="/assets/inseed-map.png">
+  </div>
+</main>
+<script>
+document.getElementById('m').addEventListener('click',e=>{
+  e.target.classList.toggle('zoom');
+});
+</script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legacy vs <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr>  -  Exec Summary (Sample) · InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/resources/insights/ceo-steward-exec-summary.html" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Legacy vs <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr>  -  Exec Summary (Sample) · InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/resources/insights/ceo-steward-exec-summary.html">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legacy vs <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr>  -  Exec Summary (Sample) · InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><meta name="description" content="Legacy vs Steward CEOs in one page: the shift from buying solutions to assembling differentiators with weekly evidence." /><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body class="exec-sample">
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main id="main" class="container" style="max-width:900px;padding:1rem">
+  <h1>Legacy vs <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr>  -  Exec Summary <span class="muted">(Sample)</span></h1>
+<p><a class="button print" href="#" onclick="window.print();return false;">Print this summary</a></p><figure class="hero-figure"><img src="/assets/legacy-vs-steward-hero.png" alt="Legacy hierarchy vs Steward network" style="max-height:220px;width:100%;object-fit:contain"></figure>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+  <div class="watermark" aria-hidden="true"></div>
+  <p><strong>Intent:</strong> a quick contrast for busy CEOs; the full whitepaper is the canonical, downloadable reference.</p>
+
+  <h2>What changes</h2>
+  <div class="wp-columns">
+    <div>
+      <h3><abbr class="tt" data-def="Legacy CEO (traditional, centralized decision cadence)">CEO/L</abbr></h3>
+      <ul class="ticks">
+        <li>Buys solution, then implements</li>
+        <li>Roadmap follows vendor cadence</li>
+        <li><abbr class="tt" data-def="Concrete files (prompts, tools, flows, evals) you version/control">Artifacts</abbr> trapped in a UI/DB</li>
+        <li>Evidence = slideware + anecdotes</li>
+        <li>Big <abbr class="tt" data-def="A firm that connects products and services into a working whole">SI</abbr>/consulting lead the design</li>
+      </ul>
+    </div>
+    <div>
+      <h3><abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr></h3>
+      <ul class="ticks">
+        <li><em>Assembles</em> <abbr class="tt" data-def="What makes you unique - worth assembling in your repos">differentiators</abbr> in own repos</li>
+        <li>Ships a <em><abbr class="tt" data-def="A small, working version of a workflow that real users can try">usable slice</abbr> weekly</em>, pivots monthly</li>
+        <li>File-based prompts/flows/<abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">evals</abbr> are <abbr class="tt" data-def="Files you control (prompts, flows, <abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">evals</abbr>) so you can switch vendors">portable</abbr></li>
+        <li>Evidence = shared <abbr class="tt" data-def="A short list of shared metrics (adoption, <abbr class="tt" data-def="Time from idea to a working slice users can try">lead time</abbr>, rework %, <abbr class="tt" data-def="Percent of decisions backed by evidence vs opinion">decision quality</abbr>)">scoreboard</abbr> & <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">guardrails</abbr></li>
+        <li>Vendor-neutral <abbr class="tt" data-def="Design/validate the approach before engaging large vendors/SIs">pre-SI</abbr> boutique sets the pattern</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>How to start</h2>
+  <ul class="ticks">
+    <li>Pick 2–3 workflows; ship 1 slice this week</li>
+    <li>Track adoption, lead-time, rework %, decisions improved</li>
+    <li>Install TxO <abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr> gates; capture incident “efficiency wisdom”</li>
+  </ul>
+
+  <p><a href="/resources/insights/ceo-steward-exec-summary.html" class="button">Read full whitepaper (downloadable)</a></p>
+<section class="container" style="max-width:900px;padding:1rem">
+  <blockquote class="wp-warning" style="border-left-color:#2f44a3">
+    <p><strong>A respectful note to Legacy CEOs:</strong> the point isn’t to erase you; it’s to upgrade you. Leaders who built the pre-AI era remain among humanity''s best chances to ensure a benevolent post-AI era. But the Steward stance may be a whole lot more likely to coevolve with your teams.</p>
+  </blockquote>
+</section></main>
+<footer class="container"><p class="muted">This site coevolves via user feedback and asset-usage.</p><nav class="legal-links" style="margin-top:.5rem"><a href="/resources/billing/">Billing &amp; Engagement</a> · <a href="/resources/billing/discounts.html">Discount policy &amp; grants</a></nav></footer>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MW_InSeed_Triage_v1 exec-summary -->
+<section class="mw-inseed-exec-intro">
+  <p><strong>Intent:</strong> This page is a quick contrast for busy CEOs. The full CEO Survival Guide whitepaper is the canonical, downloadable reference.</p>
+  <ul>
+    <li>File-based prompts, flows, and evaluations stay portable so you can switch vendors without losing your work.</li>
+    <li>Evidence becomes a shared scoreboard and guardrails: lead time, rework %, and decision quality.</li>
+  </ul>
+</section>
+<!-- /MW_InSeed_Triage_v1 exec-summary -->
+
+
+
+
+

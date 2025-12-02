@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "id": "hero",
+    "title": "Hero Section",
+    "purpose": "Immediate clarity for federal decision-makers",
+    "elements": [
+      "headline",
+      "subheadline",
+      "primary_cta",
+      "secondary_cta",
+      "supporting_visual"
+    ]
+  },
+  "why_this_matters": {
+    "id": "why_this_matters",
+    "title": "Why This Matters",
+    "purpose": "Explain urgency and public-trust context",
+    "elements": [
+      "intro_paragraph",
+      "problem_bullets"
+    ]
+  },
+  "what_moonshot_provides": {
+    "id": "what_moonshot_provides",
+    "title": "What Moonshot Provides",
+    "purpose": "Explain offer in practical terms",
+    "elements": [
+      "feature_cards"
+    ]
+  },
+  "who_its_for": {
+    "id": "who_its_for",
+    "title": "Who It\u2019s For",
+    "purpose": "Let visitors self-identify",
+    "elements": [
+      "audience_list",
+      "audience_tiles"
+    ]
+  },
+  "how_pilot_works": {
+    "id": "how_pilot_works",
+    "title": "How a Pilot Works",
+    "purpose": "Make engagement steps clear and low-risk",
+    "elements": [
+      "step_sequence"
+    ]
+  },
+  "what_makes_different": {
+    "id": "what_makes_different",
+    "title": "What Makes Moonshot Different",
+    "purpose": "Differentiate from generic AI vendors",
+    "elements": [
+      "differentiator_blocks"
+    ]
+  },
+  "cta_lower": {
+    "id": "cta_lower",
+    "title": "Lower CTA",
+    "purpose": "Provide calmer second invitation to act",
+    "elements": [
+      "cta_heading",
+      "cta_support",
+      "cta_button"
+    ]
+  },
+  "footer": {
+    "id": "footer",
+    "title": "Footer + Transparency Link",
+    "purpose": "Close with trust and standard navigational elements",
+    "elements": [
+      "site_footer_nav",
+      "transparency_link"
+    ]
+  }
+}

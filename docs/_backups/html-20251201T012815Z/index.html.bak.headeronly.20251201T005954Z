@@ -1,0 +1,370 @@
+<!doctype html><head><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="logo" href="/">InSeed</a>
+    <nav class="main-nav">
+      <a href="/services/">Services</a>
+      <a href="/resources/">Resources</a>
+      <a href="/contact/">Contact</a>
+      <a href="/engagement/">Engagement</a>
+      <a href="/feedback/">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+</div><!-- InSeed V4 TopNav -->
+
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{
+    const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey);
+    document.documentElement.dataset.theme=n;
+  });
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script>
+<!-- InSeed V4 TopNav -->
+
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script><!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="/assets/icons/favicon-48.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:site_name" content="InSeed">
+<meta property="og:type" content="website">
+<meta property="og:title" content="InSeed: AI interim executives & delivery bench">
+<meta property="og:description" content="The business model faces enough threats. AI should not be one of them. Pivot the organization around better support systems, business processes and better self-governance.">
+<meta property="og:image" content="https://inseed.com/assets/hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/css/base.css">
+<script>window.CONTACT_CONFIG=window.CONTACT_CONFIG||{endpoint:"",to:"contact@inseed.com",allow:[],turnstile_sitekey:""};</script>
+<script src="/assets/js/contact-embed.js" defer></script>
+<body>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="logo" href="/">InSeed</a>
+    <nav class="main-nav">
+      <a href="/services/">Services</a>
+      <a href="/resources/">Resources</a>
+      <a href="/contact/">Contact</a>
+      <a href="/engagement/">Engagement</a>
+      <a href="/feedback/">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+<!-- InSeed V4 TopNav -->
+
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{
+    const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey);
+    document.documentElement.dataset.theme=n;
+  });
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script>
+<!-- InSeed V4 TopNav -->
+
+<script>(function(){
+  const themeKey='inseed-theme', langKey='inseed-lang';
+  const t=localStorage.getItem(themeKey); if(t){document.documentElement.dataset.theme=t}
+  document.getElementById('themeToggle')?.addEventListener('click',()=>{const n=document.documentElement.dataset.theme==='light'?'':'light';
+    if(n) localStorage.setItem(themeKey,n); else localStorage.removeItem(themeKey); document.documentElement.dataset.theme=n;});
+  const langs=[{code:'en',label:'English',href:'/'},{code:'gib',label:'Gibberlink (AI)',href:'/gibberlink/'},
+    {code:'de',label:'Deutsch',href:'/intl/de/'},{code:'fr',label:'Français',href:'/intl/fr/'},{code:'ja',label:'日本語',href:'/intl/ja/'},
+    {code:'ko',label:'한국어',href:'/intl/ko/'},{code:'zh',label:'简体中文',href:'/intl/zh/'},{code:'et',label:'Eesti',href:'/intl/et/'},{code:'he',label:'עברית',href:'/intl/he/'}];
+  const by=Object.fromEntries(langs.map(l=>[l.code,l])), here=(document.documentElement.getAttribute('lang')||'en').toLowerCase();
+  const cur=localStorage.getItem(langKey)||here||'en';
+  function ordered(p){const rest=langs.filter(l=>l.code!==p && l.code!=='gib'); return (p==='gib')?[by.gib,by.en,...rest]:[by[p]||by.en,by.gib,...rest];}
+  const ch=document.getElementById('langChooser'), hd=document.getElementById('langHead'), mn=document.getElementById('langMenu');
+  function render(c){const arr=ordered(c); hd.querySelector('.l1').textContent=arr[0].label; hd.querySelector('.l2').textContent=arr[1]?.label||'';
+    mn.innerHTML=''; arr.forEach(l=>{const b=document.createElement('button'); b.className='lang-item'; b.setAttribute('role','option');
+    b.setAttribute('aria-selected', l.code===c ? 'true':'false'); b.textContent=l.label; b.addEventListener('click',()=>{localStorage.setItem(langKey,l.code);
+    location.href=l.href;}); mn.appendChild(b);});}
+  render(cur); hd.addEventListener('click',()=>{const o=ch.classList.toggle('open'); ch.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',e=>{if(!ch.contains(e.target)){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){ch.classList.remove('open'); ch.setAttribute('aria-expanded','false');}});
+})();</script>
+<!-- InSeed V4 TopNav -->
+
+
+  <div class="container">
+    
+
+    <section class="section hero">
+      <div class="narrow">
+        <img class="resp" src="/assets/hero.png?v=4" alt="InSeed hero">
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h1 class="h1"><div class="container hero-blurb">
+  <section class="about-snippet">
+  <p><strong>Your business model faces enough threats, AI should not be one of them.</strong></p>
+  <p>InSeed provides:</p>
+<ul>
+  <li>immediate-term planning and vendor-engagement audits;</li>
+  <li>strategy executive and board advisory services;</li>
+  <li>toolsets to implement AI more safely into auto-evolutionary plans and workflows.</li>
+</ul>
+
+<p>
+  We typically focus on technology realignments for government-scale systems and global
+  professional-services partnerships, where AI is already reshaping market demand and competitor
+  offerings, and where old-school thinking is an existential threat to market fit. As automation
+  scales, each employee effectively becomes their own organisation with access to millions of
+  virtual staff, so the role of humans – and thus every executive – moves up the value chain:
+  less grind, more vision, more facilitation from within new systems that can auto-evolve.
+</p>
+
+<p>
+  Your role is only destined to become obsolete if you let it. We are all in this together, and
+  together we can fix the world. It is perspective and re-orchestration, not brain surgery.
+</p>
+  <p><a href="/about/">Read more →</a></p>
+</section>
+</div>Three ways to start</h2>
+        <div class="packages">
+          <div class="pkg">
+            <h3>CoAudit</h3>
+            <p class="small">Rapid audit of product and process with a risk and opportunity map plus a 30-60-90 plan.</p>
+            <p><a class="btn" href="/services/#coaudit">Details</a></p>
+          </div>
+          <div class="pkg">
+            <h3>CoFlow</h3>
+            <p class="small">Weekly workflow upgrades and instrumentation so shipped changes stick and show up on a scoreboard.</p>
+            <p><a class="btn" href="/services/#coflow">Details</a></p>
+          </div>
+          <div class="pkg">
+            <h3>CoMirror (leadership day)</h3>
+            <p class="small">Executive offsite: align on principles, choose bets, set constraints, commit to a 90-day scoreboard.</p>
+            <p><a class="btn" href="/services/#comirror">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <h2 class="h1">CEO Survival Guide</h2>
+        <p class="lead">Legacy CEO vs TOS-AI: the more networked executive function.</p>
+        <ul>
+          <li><a href="https://rickballard.github.io/CoCivium/insights/insights_TOS-AI_Whitepaper_execsum_draft_1of2.md"><a href="/resources/insights/exec-summary.html">Executive summary</a></a></li>
+          <li><a href="https://rickballard.github.io/CoCivium/insights/insights_TOS-AI_Whitepaper_transcript_draft_2of2.md"><a href="/resources/insights/transcript.html">Working transcript</a></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow">
+        <div class="card" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="/contact/">Start a conversation</a>
+          <a class="btn btn-mini" href="/problems/">See the real problems</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- InSeed V4 SiteFooter -->
+
+  </div>
+
+
+  <!-- MW_InSeed_StewardNote_v1 -->
+  <section class="section">
+    <div class="narrow">
+      <section class="steward-note">
+        <p class="steward-note-label">A note from Rick Ballard, CoSteward</p>
+        <p>
+          My expertise is in how you will organize and work next year, when you are ready
+          to make AIs part of daily work-life. I am not the best resource to learn how
+          legacy AI workflows currently operate; I am an inventor of new workflows.
+        </p>
+        <p>
+          I can help you find people better than me if you want to look back or sideways,
+          if you want to stay comfortable as long as possible, or if you want to strategize
+          in a more traditional way. Despite valiant attempts, I seek your guidance to help
+          me become a better and more useful version of myself, for you.
+        </p>
+        <p class="steward-note-link">
+          Bio / purpose:
+          <a href="https://github.com/rickballard" target="_blank" rel="noopener">
+            github.com/rickballard
+          </a>
+        </p>
+      </section>
+    </div>
+  </section>
+  <!-- /MW_InSeed_StewardNote_v1 -->
+
+<!-- InSeed V4 CTA -->
+<section class="inseed-v4-cta" style="margin:24px 0">
+  <p>
+     </p>
+</section>
+
+
+<p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
