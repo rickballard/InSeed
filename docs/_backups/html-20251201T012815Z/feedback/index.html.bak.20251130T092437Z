@@ -1,0 +1,149 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shared feedback · InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/feedback/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shared feedback · InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/feedback/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shared feedback · InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+<style>
+.form-row{margin:.5rem 0}
+label{display:block;font-weight:600}
+input[type=text],textarea,select{width:100%;padding:.5rem;border:1px solid var(--border,#b8c2ea);border-radius:.4rem;background:var(--card,#fff);color:inherit}
+.small{font-size:.9em;opacity:.85}
+</style>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<main id="main" class="container" style="max-width:900px;padding:1rem">
+  <h1>Shared feedback</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+  <p class="small">Hello <strong data-uid></strong>. We don’t store personal data unless you explicitly approve. Answers can be copied locally and emailed to us. If you tick “approve anonymous upload,” you consent to depersonalized, aggregate use.</p>
+
+  <h2>Quick questions</h2>
+  <div class="form-row"><label>Which concept needs the most sharpening?</label>
+    <select id="q1"><option>Assemble vs Buy</option><option><abbr class="tt" data-def="Steward CEO style - delegates decisions to the edge, learns weekly">Steward</abbr> vs Legacy CEO</option><option>CoFlow cadence</option><option><abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">Guardrails</abbr> & <abbr class="tt" data-def="Repeatable tests to measure quality and catch regressions">evaluation</abbr></option><option>Vendor <abbr class="tt" data-def="Being stuck with one vendor because your differentiators live in their UI/DB">lock-in</abbr></option></select>
+  </div>
+  <div class="form-row"><label>Biggest risk you see with our approach?</label><textarea id="q2" rows="4"></textarea></div>
+  <div class="form-row"><label>One question you wish we answered:</label><textarea id="q3" rows="3"></textarea></div>
+
+  <h3>Score the site today</h3>
+  <div class="form-row"><label>Clarity of argument (0–10)</label><input id="m1" type="text" value="7"></div>
+  <div class="form-row"><label>Actionability for CEOs (0–10)</label><input id="m2" type="text" value="7"></div>
+  <div class="form-row"><label>Trust/independence signal (0–10)</label><input id="m3" type="text" value="8"></div>
+
+  <div class="form-row"><label>Optional comments</label><textarea id="notes" rows="4"></textarea></div>
+  <div class="form-row"><label><input id="approve" type="checkbox"> I approve anonymous, depersonalized use of my answers</label></div>
+
+  <p><a href="#" class="button" id="copy">Copy answers</a> <a href="#" class="button" id="email">Email answers</a></p>
+</main>
+<footer class="container"><p class="muted">This site coevolves via user feedback and asset-usage.</p><nav class="legal-links" style="margin-top:.5rem"><a href="/resources/billing/">Billing &amp; Engagement</a> · <a href="/resources/billing/discounts.html">Discount policy &amp; grants</a></nav></footer>
+
+<script>
+(function(){
+  function uid(){ return document.querySelector("[data-uid]")?.textContent || "User0000000000" }
+  function data(){
+    return {
+      uid: uid(),
+      approve: document.getElementById("approve").checked,
+      concept: document.getElementById("q1").value,
+      risk: document.getElementById("q2").value,
+      question: document.getElementById("q3").value,
+      scores:{clarity:document.getElementById("m1").value, actionability:document.getElementById("m2").value, trust:document.getElementById("m3").value},
+      notes: document.getElementById("notes").value,
+      ts: new Date().toISOString()
+    };
+  }
+  document.getElementById("copy").addEventListener("click", e=>{
+    e.preventDefault(); const j = JSON.stringify(data(),null,2);
+    navigator.clipboard.writeText(j);
+    alert("Copied to clipboard. Paste into an email if you like.");
+  });
+  document.getElementById("email").addEventListener("click", e=>{
+    e.preventDefault(); const j = encodeURIComponent(JSON.stringify(data()));
+    location.href = "mailto:hello@inseed.com?subject=InSeed%20feedback&body="+j;
+  });
+})();
+</script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

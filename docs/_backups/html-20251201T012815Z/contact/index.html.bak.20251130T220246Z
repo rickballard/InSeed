@@ -1,0 +1,178 @@
+<!doctype html><head><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+</div><!doctype html><meta charset="utf-8"><title>Contact: InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/contact/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact: InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/contact/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact: InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831"><meta name="color-scheme" content="dark light">
+<body>
+
+
+
+
+
+<!-- InSeed V4 TopNav -->
+
+
+  <div class="container" style="padding-top:24px">
+    <h1>Contact</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+
+    <details open style="margin:12px 0">
+      <summary style="font-size:1.1rem;cursor:pointer"><strong>InSeed: Toronto & London (click to toggle)</strong></summary>
+      <div style="margin-top:8px">
+        <div><a href="mailto:contact@inseed.com"><span class="js-email-reveal"></span></a> · +1 416-414-8100</div>
+        <div><a href="https://maps.google.com/?q=Toronto%2CON" target="_blank" rel="noopener">Open in Google Maps</a></div>
+      </div>
+    </details>
+
+    <div style="border:1px solid #1f2937;border-radius:12px;overflow:hidden">
+      <figure class="contact-map"><a href="/assets/maps/Map_Toronto_NY.png"><img src="/assets/maps/Map_Toronto_NY.png" alt="Corridor view: Detroit → Toronto → Buffalo → NYC region" loading="lazy"></a><figcaption>Based near Toronto, Canada, with a second base near Guildford, UK (plus remote and board work).</figcaption></figure>
+    </div>
+
+    <p style="margin-top:16px"></p>
+  </div>
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© <span class="js-year">2025</span> InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium&trade;</a></p>
+</div><p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MW_InSeed_Triage_v1 contact -->
+<section class="mw-inseed-contact-intro">
+  <p>If you are facing a significant AI or data decision – or want to get ahead of the next one – start a conversation with InSeed.</p>
+</section>
+<!-- /MW_InSeed_Triage_v1 contact -->
+
+
+<!-- MW_InSeed_ContactBlock_v1 -->
+<section class="mw-inseed-contact-main">
+  <p>If you are facing a significant AI or data decision – or want to get ahead of the next one – start a conversation with InSeed.</p>
+  <p>
+    Email: <a href="mailto:contact@InSeed.com">contact@InSeed.com</a><br />
+    Mobile: <a href="tel:+14164148100">+1.416.414.8100</a><br />
+    Address: c/o Ballard, 1673 Lakeshore Rd. W., Mississauga, ON
+  </p>
+</section>
+<!-- /MW_InSeed_ContactBlock_v1 -->
+
+
+
+
+
+

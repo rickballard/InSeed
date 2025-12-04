@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOS-AI Steward: What it is</title>
+<link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><meta name="description" content="TOS-AI: Transition Office Steward with AI specialties. Temporary hire that guards scope, decisions, and outcomes during big pivots.">
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:24px;line-height:1.5;max-width:800px}
+.btn{display:inline-block;padding:8px 12px;border:1px solid #111;border-radius:8px;text-decoration:none}
+.muted{color:#555} ul{margin-left:1.2rem}
+</style>  <meta property="og:title" content="TOS-AI Steward: InSeed">
+  <meta property="og:description" content="Temporary role guarding scope, decisions, outcomes during big pivots.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inseed.com/resources/tos-ai/">
+  <meta property="og:image" content="https://inseed.com/assets/diagrams/og-inseed-v4.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TOS-AI Steward: InSeed">
+  <meta name="twitter:description" content="Temporary role guarding scope, decisions, outcomes during big pivots.">
+  <meta name="twitter:image" content="https://inseed.com/assets/diagrams/og-inseed-v4.png">
+<style media=""print"">
+  .print-hide { display: none !important; }
+  body { color: #000; }
+  a { color: #000; text-decoration: none; }
+  .label, .btn { border: 1px solid #000 !important; }
+</style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script defer data-domain="inseed.com" src="https://plausible.io/js/script.js"></script>
+<script defer src="/assets/track.js"></script>
+<link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- InSeed V4 TopNav -->
+
+
+<p><a class="btn" href="/">← Back to InSeed</a></p>
+<h1>TOS-AI Steward</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+<p class="print-hide"><button onclick="window.print()" style="padding:6px 10px;border:1px solid #111;border-radius:8px;background:#fff;cursor:pointer">Print to PDF</button></p>
+<p><strong>TOS-AI</strong> stands for <em>Transition Office Steward with AI specialties</em>. It is a temporary executive role that supports or stands up a Transition Office during a high-stakes pivot.</p>
+<ul>
+  <li><strong>Guardrails:</strong> protects scope, decision rights, and cultural non-negotiables</li>
+  <li><strong>Board-safe:</strong> clear metrics and auditable methods</li>
+  <li><strong>Vendor-neutral:</strong> aligns external firms to your frame, not the other way round</li>
+  <li><strong>Short duration:</strong> InSeed supplies interim leaders; we do not build dependency</li>
+</ul>
+<p>See also: <a href="/resources/global-strategy-firms/">CEO Survival Guide</a> • </p>
+<p class="muted">Contact: +1.416.414.8100 • contact@inseed.com • inseed.com</p>
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+
+<!-- InSeed V4 SiteFooter -->
+<footer class="site-footer"><div class="container">
+  <p>© <span class="js-year">2025</span> InSeed · <a href="/services/">Services</a> · <a href="/resources/">Resources</a> · <a href="/resources/billing/">Billing</a> · <a href="/resources/tos-ai/">TOS-AI</a> · <a href="/resources/partners/">Partners</a> · <a href="/resources/testimonials/">Testimonials</a> · <a href="/resources/cocivium/">CoCivium&trade;</a></p>
+</div><p class="micro"><p class="micro">Rev 24B-B1E-26F · This site adjusts in quiet, continuous steps. <a href="/contact/?topic=feedback">Share a thought</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

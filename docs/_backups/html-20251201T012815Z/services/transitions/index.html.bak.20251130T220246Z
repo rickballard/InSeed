@@ -1,0 +1,163 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CoFlow • InSeed</title>
+<meta name="description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<link rel="canonical" href="https://inseed.com/services/coflow/" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="CoFlow • InSeed">
+<meta property="og:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta property="og:url" content="https://inseed.com/services/coflow/">
+<meta property="og:image" content="/assets/maps/Map_Toronto_NY.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CoFlow • InSeed">
+<meta name="twitter:description" content="InSeed: Week-0 CoAudit, Steward cadence, and evidence-driven outcomes for CEOs and boards.">
+<meta name="twitter:image" content="/assets/maps/Map_Toronto_NY.png">
+<!-- CSP (soft): tighten later if needed -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; connect-src 'self'"><link rel="shortcut icon" href="/assets/favicon.ico?v=20251005042435"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=20251005042435"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=20251005042435"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=20251005042435"><link rel="stylesheet" href="/assets/site.css?v=20251006184831">
+</head><body>
+<nav class="topnav">
+  <div class="container">
+    <a class="brand" href="/"><img src="/assets/inseed-logo-128.png" alt="InSeed"></a>
+    <a href="/services/">Services</a>
+    <a href="/resources/">Resources</a>
+    <a href="/contact/">Contact</a>
+    <a href="/engagement/">Engagement</a>
+    <span style="flex:1"></span>
+
+    <button type="button"
+            class="theme-toggle"
+            data-role="theme-toggle"
+            aria-label="Toggle theme">
+      ☼
+    </button>
+
+    <div class="lang-switcher" data-role="lang-switcher">
+      <button type="button"
+              class="lang-current"
+              data-role="lang-toggle"
+              aria-haspopup="true"
+              aria-expanded="false">
+        EN / Gibber ▾
+      </button>
+      <div class="lang-menu" data-role="lang-menu">
+        <button type="button" data-lang="en">English (default)</button>
+        <button type="button" data-lang="gibber"><a href="/coportal">Gibber (CoPortal)</a></button>
+        <button type="button" data-lang="es">Español</button>
+        <button type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="de">Deutsch</button>
+        <button type="button" data-lang="fr">Français</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<main class="container" style="max-width:900px;padding:1rem">
+  <h1>Transitions pilot (6–8 weeks)</h1>
+<div class="hero" style="margin:.75rem 0;border:1px dashed var(--border);border-radius:.75rem;aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent,#eef2ff),transparent)"><span class="muted"></span></div>
+<figure><img src="/assets/diagram-coflow.svg" alt="CoFlow cadence"><figcaption>Quarterly rhythm: weekly shipped slice, monthly pivots.</figcaption></figure>
+  <p class="lead">Iterate strategy through real workflows: surface pivots, define needs and vendor approaches, frame engagements (including non-InSeed resources), and ship weekly improvements with clear success metrics.</p>
+
+  <h2>What we do</h2>
+  <ul>
+    <li>Find the workflows that most need upgrading (value, feasibility, risk)</li>
+    <li>Frame approaches and vendors; draft solution briefs and RFP language</li>
+    <li>Ship weekly slices in sandbox/pilot with <abbr class="tt" data-def="Practical rules and checks for safety, data, and compliance">guardrails</abbr> (TOS-AI)</li>
+    <li>Define and track metrics (<abbr class="tt" data-def="Time from idea to a working slice users can try">lead time</abbr>, quality, decisions improved)</li>
+  </ul>
+
+  <h2>How we work</h2>
+  <ul>
+    <li><strong>Starter (4–6 weeks):</strong> two priority workflows; weekly ship cadence</li>
+    <li><strong>Quarterly rhythm:</strong> one small capability per week; monthly review with execs</li>
+    <li><strong>Open sourcing:</strong> bring in non-InSeed specialists as needed; avoid vendor <abbr class="tt" data-def="Being stuck with one vendor because your differentiators live in their UI/DB">lock-in</abbr></li>
+  </ul>
+
+  <p><a href="/contact/">Talk through your top two workflows →</a></p>
+</main>
+<script defer src="/assets/site.js?v=20251006184831"></script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MW_InSeed_PilotPage_v1 -->
+<section class="mw-inseed-pilot">
+  <h2>What this pilot is for</h2>
+  <p>We help leadership teams navigate handovers with less friction and more measurable buy-in. This 6–8 week pilot is designed to prove the pattern in one setting, with clear evidence of what works and where governance or workflows need tightening.</p>
+
+  <h3>How the pilot works</h3>
+  <ul>
+    <li>Co-design a transition scenario with your Transition or Transformation Office.</li>
+    <li>Run a small number of structured sessions with a "listener in the corner" capturing discussion signals.</li>
+    <li>Distinguish process-building habits from purely tribal ones.</li>
+    <li>Return debriefs, playbooks, and governance templates your teams can reuse.</li>
+  </ul>
+
+  <h3>Governance and privacy</h3>
+  <ul>
+    <li>Explicit consent patterns for participants.</li>
+    <li>Clear retention windows for recordings and notes.</li>
+    <li>Role hygiene: who can see what, and when.</li>
+    <li>Reporting cadence that keeps sponsors informed without overexposing individuals.</li>
+  </ul>
+
+  <h3>What you get at the end</h3>
+  <ul>
+    <li>A repeatable transition exercise and facilitator kit.</li>
+    <li>Signals and metrics: engagement, language shift, follow-ups, time-to-competency.</li>
+    <li>Governance assets (consent, retention, access control) reusable across clients or business units.</li>
+    <li>A simple scoreboard format that can be extended to Multi-site and Program levels.</li>
+  </ul>
+
+  <p style="margin-top:1rem">
+    <a class="btn" href="/contact/">Talk to us about running a pilot →</a>
+  </p>
+</section>
+<!-- /MW_InSeed_PilotPage_v1 -->
+
+
+
+
